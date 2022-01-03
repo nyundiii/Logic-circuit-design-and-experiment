@@ -1,0 +1,238 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Thu Dec 23 02:16:36 2021
+# Process ID: 3446
+# Log file: /home/ise/xilinx_project/project_final/planAhead_run_1/planAhead.log
+# Journal file: /home/ise/xilinx_project/project_final/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /home/ise/xilinx_project/project_final/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin V1 [get_ports {dipswitch[0]}]
+endgroup
+startgroup
+set_property package_pin Y2 [get_ports {dipswitch[1]}]
+endgroup
+startgroup
+set_property package_pin U4 [get_ports {dipswitch[2]}]
+endgroup
+startgroup
+set_property package_pin K3 [get_ports {Keypad[11]}]
+endgroup
+set_property package_pin "" [get_ports [list  {Keypad[9]}]]
+startgroup
+set_property package_pin L1 [get_ports {Keypad[0]}]
+endgroup
+startgroup
+set_property package_pin K2 [get_ports {Keypad[1]}]
+endgroup
+startgroup
+set_property package_pin M3 [get_ports {Keypad[2]}]
+endgroup
+startgroup
+set_property package_pin M1 [get_ports {Keypad[3]}]
+endgroup
+startgroup
+set_property package_pin N3 [get_ports {Keypad[4]}]
+endgroup
+startgroup
+set_property package_pin N1 [get_ports {Keypad[5]}]
+endgroup
+startgroup
+set_property package_pin M2 [get_ports {Keypad[6]}]
+endgroup
+startgroup
+set_property package_pin L3 [get_ports {Keypad[7]}]
+endgroup
+startgroup
+set_property package_pin K4 [get_ports {Keypad[8]}]
+endgroup
+startgroup
+set_property package_pin K1 [get_ports {Keypad[9]}]
+endgroup
+startgroup
+set_property package_pin C8 [get_ports {LCD_DATA[0]}]
+endgroup
+startgroup
+set_property package_pin C6 [get_ports {LCD_DATA[1]}]
+endgroup
+startgroup
+set_property package_pin D10 [get_ports {LCD_DATA[2]}]
+endgroup
+startgroup
+set_property package_pin D8 [get_ports {LCD_DATA[3]}]
+endgroup
+startgroup
+set_property package_pin C7 [get_ports {LCD_DATA[4]}]
+endgroup
+startgroup
+set_property package_pin C5 [get_ports {LCD_DATA[5]}]
+endgroup
+startgroup
+set_property package_pin D9 [get_ports {LCD_DATA[6]}]
+endgroup
+startgroup
+set_property package_pin D7 [get_ports {LCD_DATA[7]}]
+endgroup
+startgroup
+set_property package_pin E6 [get_ports a]
+endgroup
+startgroup
+set_property package_pin E5 [get_ports b]
+endgroup
+startgroup
+set_property package_pin D5 [get_ports c]
+endgroup
+startgroup
+set_property package_pin D6 [get_ports d]
+endgroup
+startgroup
+set_property package_pin J6 [get_ports e]
+endgroup
+startgroup
+set_property package_pin H8 [get_ports f]
+endgroup
+startgroup
+set_property package_pin H6 [get_ports g]
+endgroup
+startgroup
+set_property package_pin G7 [get_ports com1]
+endgroup
+startgroup
+set_property package_pin G6 [get_ports com2]
+endgroup
+startgroup
+set_property package_pin F7 [get_ports com3]
+endgroup
+startgroup
+set_property package_pin F5 [get_ports com4]
+endgroup
+set_property package_pin "" [get_ports [list  com5]]
+startgroup
+set_property package_pin F7 [get_ports com3]
+endgroup
+startgroup
+set_property package_pin G7 [get_ports com1]
+endgroup
+startgroup
+set_property package_pin K7 [get_ports com5]
+endgroup
+startgroup
+set_property package_pin K6 [get_ports com6]
+endgroup
+set_property package_pin "" [get_ports [list  com8]]
+startgroup
+set_property package_pin K5 [get_ports com7]
+endgroup
+startgroup
+set_property package_pin J7 [get_ports com8]
+endgroup
+startgroup
+set_property package_pin AB16 [get_ports clk]
+endgroup
+set_property package_pin "" [get_ports [list  blue]]
+set_property package_pin "" [get_ports [list  blue2]]
+startgroup
+set_property package_pin U3 [get_ports blue1]
+endgroup
+startgroup
+set_property package_pin V2 [get_ports blue2]
+endgroup
+startgroup
+set_property package_pin P1 [get_ports blue3]
+endgroup
+startgroup
+set_property package_pin T3 [get_ports blue4]
+endgroup
+startgroup
+set_property package_pin P1 [get_ports blue3]
+endgroup
+startgroup
+set_property package_pin T1 [get_ports green1]
+endgroup
+startgroup
+set_property package_pin V3 [get_ports green2]
+endgroup
+startgroup
+set_property package_pin P2 [get_ports green3]
+endgroup
+startgroup
+set_property package_pin R1 [get_ports green4]
+endgroup
+startgroup
+set_property package_pin C11 [get_ports LCD_E]
+endgroup
+startgroup
+set_property package_pin C9 [get_ports LCD_R]
+endgroup
+startgroup
+set_property package_pin C10 [get_ports LCD_RW]
+endgroup
+startgroup
+set_property package_pin K8 [get_ports led1]
+endgroup
+startgroup
+set_property package_pin M4 [get_ports led2]
+endgroup
+startgroup
+set_property package_pin M6 [get_ports led3]
+endgroup
+startgroup
+set_property package_pin M8 [get_ports led4]
+endgroup
+startgroup
+set_property package_pin L6 [get_ports led5]
+endgroup
+startgroup
+set_property package_pin M5 [get_ports led6]
+endgroup
+startgroup
+set_property package_pin M7 [get_ports led7]
+endgroup
+startgroup
+set_property package_pin N4 [get_ports led8]
+endgroup
+startgroup
+set_property package_pin P5 [get_ports psega]
+endgroup
+startgroup
+set_property package_pin P4 [get_ports psegb]
+endgroup
+startgroup
+set_property package_pin N7 [get_ports psegc]
+endgroup
+startgroup
+set_property package_pin N6 [get_ports psegd]
+endgroup
+startgroup
+set_property package_pin R4 [get_ports psege]
+endgroup
+startgroup
+set_property package_pin P8 [get_ports psegf]
+endgroup
+startgroup
+set_property package_pin P7 [get_ports psegg]
+endgroup
+set_property package_pin "" [get_ports [list  red]]
+startgroup
+set_property package_pin T2 [get_ports red1]
+endgroup
+startgroup
+set_property package_pin U1 [get_ports red2]
+endgroup
+startgroup
+set_property package_pin P3 [get_ports red3]
+endgroup
+startgroup
+set_property package_pin R3 [get_ports red4]
+endgroup
+startgroup
+set_property package_pin L4 [get_ports rst]
+endgroup
+save_constraints
+startgroup
+set_property package_pin T4 [get_ports sw8]
+endgroup
+save_constraints

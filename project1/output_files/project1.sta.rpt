@@ -1,0 +1,1136 @@
+Timing Analyzer report for project1
+Thu Dec 23 13:37:54 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'clk'
+ 12. Setup: 'test5:inst47|test4:inst11|con2:inst9|fstate.state2'
+ 13. Setup: 'test5:inst47|test4:inst11|con3:inst13|fstate.state2'
+ 14. Setup: 'test5:inst47|test4:inst11|con1:inst1|fstate.state2'
+ 15. Setup: 'rnd2_player:inst1|trigger:inst1119|inst2'
+ 16. Setup: 'rnd2_player:inst1|trigger:inst1118|inst2'
+ 17. Hold: 'clk'
+ 18. Hold: 'test5:inst47|test4:inst11|con1:inst1|fstate.state2'
+ 19. Hold: 'test5:inst47|test4:inst11|con3:inst13|fstate.state2'
+ 20. Hold: 'test5:inst47|test4:inst11|con2:inst9|fstate.state2'
+ 21. Hold: 'rnd2_player:inst1|trigger:inst1118|inst2'
+ 22. Hold: 'rnd2_player:inst1|trigger:inst1119|inst2'
+ 23. Recovery: 'clk'
+ 24. Recovery: 'rnd2_player:inst1|trigger:inst1118|inst2'
+ 25. Recovery: 'rnd2_player:inst1|trigger:inst1119|inst2'
+ 26. Removal: 'rnd2_player:inst1|trigger:inst1119|inst2'
+ 27. Removal: 'clk'
+ 28. Removal: 'rnd2_player:inst1|trigger:inst1118|inst2'
+ 29. Setup Transfers
+ 30. Hold Transfers
+ 31. Recovery Transfers
+ 32. Removal Transfers
+ 33. Report TCCS
+ 34. Report RSKM
+ 35. Unconstrained Paths Summary
+ 36. Clock Status Summary
+ 37. Unconstrained Input Ports
+ 38. Unconstrained Output Ports
+ 39. Unconstrained Input Ports
+ 40. Unconstrained Output Ports
+ 41. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; project1                                            ;
+; Device Family         ; MAX V                                               ;
+; Device Name           ; 5M1270ZT144C4                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Slow Model                                          ;
+; Rise/Fall Delays      ; Unavailable                                         ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                                   ;
++-----------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------------------------------+
+; Clock Name                                          ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                                 ;
++-----------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------------------------------+
+; clk                                                 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                                                 ;
+; rnd2_player:inst1|trigger:inst1118|inst2            ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { rnd2_player:inst1|trigger:inst1118|inst2 }            ;
+; rnd2_player:inst1|trigger:inst1119|inst2            ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { rnd2_player:inst1|trigger:inst1119|inst2 }            ;
+; test5:inst47|test4:inst11|con1:inst1|fstate.state2  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { test5:inst47|test4:inst11|con1:inst1|fstate.state2 }  ;
+; test5:inst47|test4:inst11|con2:inst9|fstate.state2  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { test5:inst47|test4:inst11|con2:inst9|fstate.state2 }  ;
+; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { test5:inst47|test4:inst11|con3:inst13|fstate.state2 } ;
++-----------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Fmax Summary                                                                   ;
++------------+-----------------+------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                               ; Note ;
++------------+-----------------+------------------------------------------+------+
+; 73.75 MHz  ; 73.75 MHz       ; clk                                      ;      ;
+; 432.9 MHz  ; 432.9 MHz       ; rnd2_player:inst1|trigger:inst1119|inst2 ;      ;
+; 452.69 MHz ; 452.69 MHz      ; rnd2_player:inst1|trigger:inst1118|inst2 ;      ;
++------------+-----------------+------------------------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------------------------------------------------------+
+; Setup Summary                                                                 ;
++-----------------------------------------------------+---------+---------------+
+; Clock                                               ; Slack   ; End Point TNS ;
++-----------------------------------------------------+---------+---------------+
+; clk                                                 ; -12.559 ; -1133.224     ;
+; test5:inst47|test4:inst11|con2:inst9|fstate.state2  ; -1.955  ; -7.038        ;
+; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; -1.849  ; -6.135        ;
+; test5:inst47|test4:inst11|con1:inst1|fstate.state2  ; -1.728  ; -4.149        ;
+; rnd2_player:inst1|trigger:inst1119|inst2            ; -1.310  ; -3.450        ;
+; rnd2_player:inst1|trigger:inst1118|inst2            ; -1.209  ; -3.249        ;
++-----------------------------------------------------+---------+---------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Summary                                                                 ;
++-----------------------------------------------------+--------+---------------+
+; Clock                                               ; Slack  ; End Point TNS ;
++-----------------------------------------------------+--------+---------------+
+; clk                                                 ; -1.959 ; -22.782       ;
+; test5:inst47|test4:inst11|con1:inst1|fstate.state2  ; 0.174  ; 0.000         ;
+; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; 0.831  ; 0.000         ;
+; test5:inst47|test4:inst11|con2:inst9|fstate.state2  ; 0.926  ; 0.000         ;
+; rnd2_player:inst1|trigger:inst1118|inst2            ; 1.384  ; 0.000         ;
+; rnd2_player:inst1|trigger:inst1119|inst2            ; 1.384  ; 0.000         ;
++-----------------------------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------------+
+; Recovery Summary                                                  ;
++------------------------------------------+--------+---------------+
+; Clock                                    ; Slack  ; End Point TNS ;
++------------------------------------------+--------+---------------+
+; clk                                      ; -4.215 ; -310.138      ;
+; rnd2_player:inst1|trigger:inst1118|inst2 ; -2.669 ; -8.007        ;
+; rnd2_player:inst1|trigger:inst1119|inst2 ; -1.464 ; -4.392        ;
++------------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------+
+; Removal Summary                                                  ;
++------------------------------------------+-------+---------------+
+; Clock                                    ; Slack ; End Point TNS ;
++------------------------------------------+-------+---------------+
+; rnd2_player:inst1|trigger:inst1119|inst2 ; 2.014 ; 0.000         ;
+; clk                                      ; 2.740 ; 0.000         ;
+; rnd2_player:inst1|trigger:inst1118|inst2 ; 3.219 ; 0.000         ;
++------------------------------------------+-------+---------------+
+
+
++------------------------------------------------------------------------------+
+; Minimum Pulse Width Summary                                                  ;
++-----------------------------------------------------+--------+---------------+
+; Clock                                               ; Slack  ; End Point TNS ;
++-----------------------------------------------------+--------+---------------+
+; clk                                                 ; -2.289 ; -2.289        ;
+; rnd2_player:inst1|trigger:inst1118|inst2            ; 0.284  ; 0.000         ;
+; rnd2_player:inst1|trigger:inst1119|inst2            ; 0.284  ; 0.000         ;
+; test5:inst47|test4:inst11|con1:inst1|fstate.state2  ; 0.500  ; 0.000         ;
+; test5:inst47|test4:inst11|con2:inst9|fstate.state2  ; 0.500  ; 0.000         ;
+; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; 0.500  ; 0.000         ;
++-----------------------------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clk'                                                                                                                                    ;
++---------+------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node                    ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; -12.559 ; before_game:inst3333|CNT[24] ; before_game:inst3333|LCD_DATA[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 13.288     ;
+; -12.535 ; before_game:inst3333|CNT[16] ; before_game:inst3333|LCD_DATA[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 13.264     ;
+; -12.482 ; before_game:inst3333|CNT[23] ; before_game:inst3333|LCD_DATA[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 13.211     ;
+; -12.410 ; before_game:inst3333|CNT[13] ; before_game:inst3333|LCD_DATA[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 13.139     ;
+; -12.409 ; before_game:inst3333|CNT[12] ; before_game:inst3333|LCD_DATA[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 13.138     ;
+; -12.394 ; before_game:inst3333|CNT[17] ; before_game:inst3333|LCD_DATA[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 13.123     ;
+; -12.341 ; before_game:inst3333|CNT[21] ; before_game:inst3333|LCD_DATA[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 13.070     ;
+; -12.318 ; before_game:inst3333|CNT[24] ; before_game:inst3333|LCD_DATA[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 13.047     ;
+; -12.294 ; before_game:inst3333|CNT[16] ; before_game:inst3333|LCD_DATA[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 13.023     ;
+; -12.275 ; before_game:inst3333|CNT[10] ; before_game:inst3333|LCD_DATA[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 13.004     ;
+; -12.241 ; before_game:inst3333|CNT[23] ; before_game:inst3333|LCD_DATA[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.970     ;
+; -12.169 ; before_game:inst3333|CNT[13] ; before_game:inst3333|LCD_DATA[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.898     ;
+; -12.168 ; before_game:inst3333|CNT[12] ; before_game:inst3333|LCD_DATA[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.897     ;
+; -12.160 ; before_game:inst3333|CNT[18] ; before_game:inst3333|LCD_DATA[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.889     ;
+; -12.153 ; before_game:inst3333|CNT[17] ; before_game:inst3333|LCD_DATA[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.882     ;
+; -12.144 ; before_game:inst3333|CNT[9]  ; before_game:inst3333|LCD_DATA[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.873     ;
+; -12.142 ; before_game:inst3333|CNT[14] ; before_game:inst3333|LCD_DATA[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.871     ;
+; -12.100 ; before_game:inst3333|CNT[21] ; before_game:inst3333|LCD_DATA[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.829     ;
+; -12.038 ; before_game:inst3333|CNT[20] ; before_game:inst3333|LCD_DATA[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.767     ;
+; -12.034 ; before_game:inst3333|CNT[10] ; before_game:inst3333|LCD_DATA[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.763     ;
+; -11.919 ; before_game:inst3333|CNT[18] ; before_game:inst3333|LCD_DATA[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.648     ;
+; -11.903 ; before_game:inst3333|CNT[9]  ; before_game:inst3333|LCD_DATA[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.632     ;
+; -11.901 ; before_game:inst3333|CNT[14] ; before_game:inst3333|LCD_DATA[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.630     ;
+; -11.867 ; before_game:inst3333|CNT[11] ; before_game:inst3333|LCD_DATA[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.596     ;
+; -11.851 ; before_game:inst3333|CNT[15] ; before_game:inst3333|LCD_DATA[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.580     ;
+; -11.841 ; before_game:inst3333|CNT[24] ; before_game:inst3333|LCD_DATA[6] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.570     ;
+; -11.817 ; before_game:inst3333|CNT[16] ; before_game:inst3333|LCD_DATA[6] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.546     ;
+; -11.806 ; before_game:inst3333|CNT[22] ; before_game:inst3333|LCD_DATA[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.535     ;
+; -11.797 ; before_game:inst3333|CNT[20] ; before_game:inst3333|LCD_DATA[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.526     ;
+; -11.764 ; before_game:inst3333|CNT[23] ; before_game:inst3333|LCD_DATA[6] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.493     ;
+; -11.737 ; before_game:inst3333|CNT[19] ; before_game:inst3333|LCD_DATA[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.466     ;
+; -11.692 ; before_game:inst3333|CNT[13] ; before_game:inst3333|LCD_DATA[6] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.421     ;
+; -11.691 ; before_game:inst3333|CNT[12] ; before_game:inst3333|LCD_DATA[6] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.420     ;
+; -11.690 ; before_game:inst3333|CNT[25] ; before_game:inst3333|LCD_DATA[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.419     ;
+; -11.676 ; before_game:inst3333|CNT[17] ; before_game:inst3333|LCD_DATA[6] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.405     ;
+; -11.626 ; before_game:inst3333|CNT[11] ; before_game:inst3333|LCD_DATA[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.355     ;
+; -11.623 ; before_game:inst3333|CNT[21] ; before_game:inst3333|LCD_DATA[6] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.352     ;
+; -11.610 ; before_game:inst3333|CNT[15] ; before_game:inst3333|LCD_DATA[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.339     ;
+; -11.565 ; before_game:inst3333|CNT[22] ; before_game:inst3333|LCD_DATA[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.294     ;
+; -11.557 ; before_game:inst3333|CNT[10] ; before_game:inst3333|LCD_DATA[6] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.286     ;
+; -11.496 ; before_game:inst3333|CNT[19] ; before_game:inst3333|LCD_DATA[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.225     ;
+; -11.449 ; before_game:inst3333|CNT[25] ; before_game:inst3333|LCD_DATA[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.178     ;
+; -11.442 ; before_game:inst3333|CNT[18] ; before_game:inst3333|LCD_DATA[6] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.171     ;
+; -11.426 ; before_game:inst3333|CNT[9]  ; before_game:inst3333|LCD_DATA[6] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.155     ;
+; -11.424 ; before_game:inst3333|CNT[14] ; before_game:inst3333|LCD_DATA[6] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.153     ;
+; -11.320 ; before_game:inst3333|CNT[20] ; before_game:inst3333|LCD_DATA[6] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.049     ;
+; -11.300 ; before_game:inst3333|CNT[4]  ; before_game:inst3333|LCD_DATA[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.029     ;
+; -11.300 ; before_game:inst3333|CNT[27] ; before_game:inst3333|LCD_DATA[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 12.029     ;
+; -11.149 ; before_game:inst3333|CNT[11] ; before_game:inst3333|LCD_DATA[6] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.878     ;
+; -11.133 ; before_game:inst3333|CNT[15] ; before_game:inst3333|LCD_DATA[6] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.862     ;
+; -11.122 ; before_game:inst3333|CNT[26] ; before_game:inst3333|LCD_DATA[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.851     ;
+; -11.088 ; before_game:inst3333|CNT[22] ; before_game:inst3333|LCD_DATA[6] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.817     ;
+; -11.059 ; before_game:inst3333|CNT[4]  ; before_game:inst3333|LCD_DATA[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.788     ;
+; -11.059 ; before_game:inst3333|CNT[27] ; before_game:inst3333|LCD_DATA[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.788     ;
+; -11.019 ; before_game:inst3333|CNT[19] ; before_game:inst3333|LCD_DATA[6] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.748     ;
+; -10.999 ; before_game:inst3333|CNT[29] ; before_game:inst3333|LCD_DATA[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.728     ;
+; -10.972 ; before_game:inst3333|CNT[25] ; before_game:inst3333|LCD_DATA[6] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.701     ;
+; -10.881 ; before_game:inst3333|CNT[26] ; before_game:inst3333|LCD_DATA[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.610     ;
+; -10.862 ; before_game:inst3333|CNT[28] ; before_game:inst3333|LCD_DATA[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.591     ;
+; -10.851 ; before_game:inst3333|CNT[31] ; before_game:inst3333|LCD_DATA[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.580     ;
+; -10.808 ; before_game:inst3333|CNT[24] ; before_game:inst3333|LCD_DATA[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.537     ;
+; -10.784 ; before_game:inst3333|CNT[16] ; before_game:inst3333|LCD_DATA[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.513     ;
+; -10.758 ; before_game:inst3333|CNT[29] ; before_game:inst3333|LCD_DATA[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.487     ;
+; -10.741 ; before_game:inst3333|CNT[30] ; before_game:inst3333|LCD_DATA[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.470     ;
+; -10.731 ; before_game:inst3333|CNT[23] ; before_game:inst3333|LCD_DATA[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.460     ;
+; -10.659 ; before_game:inst3333|CNT[13] ; before_game:inst3333|LCD_DATA[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.388     ;
+; -10.658 ; before_game:inst3333|CNT[12] ; before_game:inst3333|LCD_DATA[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.387     ;
+; -10.655 ; before_game:inst3333|CNT[8]  ; before_game:inst3333|LCD_DATA[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.384     ;
+; -10.643 ; before_game:inst3333|CNT[17] ; before_game:inst3333|LCD_DATA[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.372     ;
+; -10.626 ; before_game:inst3333|CNT[24] ; before_game:inst3333|CNT[26]     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.355     ;
+; -10.626 ; before_game:inst3333|CNT[24] ; before_game:inst3333|CNT[27]     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.355     ;
+; -10.626 ; before_game:inst3333|CNT[24] ; before_game:inst3333|CNT[28]     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.355     ;
+; -10.626 ; before_game:inst3333|CNT[24] ; before_game:inst3333|CNT[29]     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.355     ;
+; -10.626 ; before_game:inst3333|CNT[24] ; before_game:inst3333|CNT[30]     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.355     ;
+; -10.626 ; before_game:inst3333|CNT[24] ; before_game:inst3333|CNT[31]     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.355     ;
+; -10.621 ; before_game:inst3333|CNT[28] ; before_game:inst3333|LCD_DATA[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.350     ;
+; -10.610 ; before_game:inst3333|CNT[31] ; before_game:inst3333|LCD_DATA[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.339     ;
+; -10.602 ; before_game:inst3333|CNT[16] ; before_game:inst3333|CNT[26]     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.331     ;
+; -10.602 ; before_game:inst3333|CNT[16] ; before_game:inst3333|CNT[27]     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.331     ;
+; -10.602 ; before_game:inst3333|CNT[16] ; before_game:inst3333|CNT[28]     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.331     ;
+; -10.602 ; before_game:inst3333|CNT[16] ; before_game:inst3333|CNT[29]     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.331     ;
+; -10.602 ; before_game:inst3333|CNT[16] ; before_game:inst3333|CNT[30]     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.331     ;
+; -10.602 ; before_game:inst3333|CNT[16] ; before_game:inst3333|CNT[31]     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.331     ;
+; -10.590 ; before_game:inst3333|CNT[21] ; before_game:inst3333|LCD_DATA[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.319     ;
+; -10.582 ; before_game:inst3333|CNT[4]  ; before_game:inst3333|LCD_DATA[6] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.311     ;
+; -10.582 ; before_game:inst3333|CNT[27] ; before_game:inst3333|LCD_DATA[6] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.311     ;
+; -10.549 ; before_game:inst3333|CNT[23] ; before_game:inst3333|CNT[26]     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.278     ;
+; -10.549 ; before_game:inst3333|CNT[23] ; before_game:inst3333|CNT[27]     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.278     ;
+; -10.549 ; before_game:inst3333|CNT[23] ; before_game:inst3333|CNT[28]     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.278     ;
+; -10.549 ; before_game:inst3333|CNT[23] ; before_game:inst3333|CNT[29]     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.278     ;
+; -10.549 ; before_game:inst3333|CNT[23] ; before_game:inst3333|CNT[30]     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.278     ;
+; -10.549 ; before_game:inst3333|CNT[23] ; before_game:inst3333|CNT[31]     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.278     ;
+; -10.524 ; before_game:inst3333|CNT[10] ; before_game:inst3333|LCD_DATA[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.253     ;
+; -10.500 ; before_game:inst3333|CNT[30] ; before_game:inst3333|LCD_DATA[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.229     ;
+; -10.477 ; before_game:inst3333|CNT[13] ; before_game:inst3333|CNT[26]     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.206     ;
+; -10.477 ; before_game:inst3333|CNT[13] ; before_game:inst3333|CNT[27]     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.206     ;
+; -10.477 ; before_game:inst3333|CNT[13] ; before_game:inst3333|CNT[28]     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.206     ;
+; -10.477 ; before_game:inst3333|CNT[13] ; before_game:inst3333|CNT[29]     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.206     ;
+; -10.477 ; before_game:inst3333|CNT[13] ; before_game:inst3333|CNT[30]     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.206     ;
+; -10.477 ; before_game:inst3333|CNT[13] ; before_game:inst3333|CNT[31]     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.206     ;
++---------+------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'test5:inst47|test4:inst11|con2:inst9|fstate.state2'                                                                                                                                                            ;
++--------+---------------------------------------------+----------------------------------------------------+--------------+----------------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                                   ; To Node                                            ; Launch Clock ; Latch Clock                                        ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------+----------------------------------------------------+--------------+----------------------------------------------------+--------------+------------+------------+
+; -1.955 ; test5:inst47|test4:inst11|random:inst|inst5 ; test5:inst47|test4:inst11|con2:inst9|temprandom[1] ; clk          ; test5:inst47|test4:inst11|con2:inst9|fstate.state2 ; 0.500        ; 1.908      ; 2.538      ;
+; -1.828 ; test5:inst47|test4:inst11|random:inst|inst  ; test5:inst47|test4:inst11|con2:inst9|temprandom[0] ; clk          ; test5:inst47|test4:inst11|con2:inst9|fstate.state2 ; 0.500        ; 1.638      ; 2.200      ;
+; -1.694 ; test5:inst47|test4:inst11|random:inst|inst7 ; test5:inst47|test4:inst11|con2:inst9|temprandom[3] ; clk          ; test5:inst47|test4:inst11|con2:inst9|fstate.state2 ; 0.500        ; 1.641      ; 2.110      ;
+; -1.561 ; test5:inst47|test4:inst11|random:inst|inst6 ; test5:inst47|test4:inst11|con2:inst9|temprandom[2] ; clk          ; test5:inst47|test4:inst11|con2:inst9|fstate.state2 ; 0.500        ; 1.642      ; 2.068      ;
++--------+---------------------------------------------+----------------------------------------------------+--------------+----------------------------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'test5:inst47|test4:inst11|con3:inst13|fstate.state2'                                                                                                                                                             ;
++--------+---------------------------------------------+-----------------------------------------------------+--------------+-----------------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                                   ; To Node                                             ; Launch Clock ; Latch Clock                                         ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------+-----------------------------------------------------+--------------+-----------------------------------------------------+--------------+------------+------------+
+; -1.849 ; test5:inst47|test4:inst11|random:inst|inst5 ; test5:inst47|test4:inst11|con3:inst13|temprandom[1] ; clk          ; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; 0.500        ; 1.833      ; 2.213      ;
+; -1.504 ; test5:inst47|test4:inst11|random:inst|inst6 ; test5:inst47|test4:inst11|con3:inst13|temprandom[2] ; clk          ; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; 0.500        ; 1.354      ; 1.762      ;
+; -1.457 ; test5:inst47|test4:inst11|random:inst|inst  ; test5:inst47|test4:inst11|con3:inst13|temprandom[0] ; clk          ; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; 0.500        ; 1.400      ; 1.842      ;
+; -1.325 ; test5:inst47|test4:inst11|random:inst|inst7 ; test5:inst47|test4:inst11|con3:inst13|temprandom[3] ; clk          ; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; 0.500        ; 1.343      ; 1.674      ;
++--------+---------------------------------------------+-----------------------------------------------------+--------------+-----------------------------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'test5:inst47|test4:inst11|con1:inst1|fstate.state2'                                                                                                                                                            ;
++--------+---------------------------------------------+----------------------------------------------------+--------------+----------------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                                   ; To Node                                            ; Launch Clock ; Latch Clock                                        ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------+----------------------------------------------------+--------------+----------------------------------------------------+--------------+------------+------------+
+; -1.728 ; test5:inst47|test4:inst11|random:inst|inst6 ; test5:inst47|test4:inst11|con1:inst1|temprandom[2] ; clk          ; test5:inst47|test4:inst11|con1:inst1|fstate.state2 ; 0.500        ; 1.562      ; 2.165      ;
+; -0.939 ; test5:inst47|test4:inst11|random:inst|inst7 ; test5:inst47|test4:inst11|con1:inst1|temprandom[3] ; clk          ; test5:inst47|test4:inst11|con1:inst1|fstate.state2 ; 0.500        ; 1.559      ; 1.233      ;
+; -0.772 ; test5:inst47|test4:inst11|random:inst|inst  ; test5:inst47|test4:inst11|con1:inst1|temprandom[0] ; clk          ; test5:inst47|test4:inst11|con1:inst1|fstate.state2 ; 0.500        ; 1.560      ; 1.641      ;
+; -0.710 ; test5:inst47|test4:inst11|random:inst|inst5 ; test5:inst47|test4:inst11|con1:inst1|temprandom[1] ; clk          ; test5:inst47|test4:inst11|con1:inst1|fstate.state2 ; 0.500        ; 1.671      ; 1.513      ;
++--------+---------------------------------------------+----------------------------------------------------+--------------+----------------------------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'rnd2_player:inst1|trigger:inst1119|inst2'                                                                                                                                                                                   ;
++--------+----------------------------------------------+----------------------------------------------+------------------------------------------+------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                                    ; To Node                                      ; Launch Clock                             ; Latch Clock                              ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------+----------------------------------------------+------------------------------------------+------------------------------------------+--------------+------------+------------+
+; -1.310 ; rnd2_player:inst1|five_counter:inst356|inst  ; rnd2_player:inst1|five_counter:inst356|inst1 ; rnd2_player:inst1|trigger:inst1119|inst2 ; rnd2_player:inst1|trigger:inst1119|inst2 ; 1.000        ; 0.000      ; 2.039      ;
+; -1.306 ; rnd2_player:inst1|five_counter:inst356|inst  ; rnd2_player:inst1|five_counter:inst356|inst  ; rnd2_player:inst1|trigger:inst1119|inst2 ; rnd2_player:inst1|trigger:inst1119|inst2 ; 1.000        ; 0.000      ; 2.035      ;
+; -1.052 ; rnd2_player:inst1|five_counter:inst356|inst1 ; rnd2_player:inst1|five_counter:inst356|inst  ; rnd2_player:inst1|trigger:inst1119|inst2 ; rnd2_player:inst1|trigger:inst1119|inst2 ; 1.000        ; 0.000      ; 1.781      ;
+; -1.040 ; rnd2_player:inst1|five_counter:inst356|inst1 ; rnd2_player:inst1|five_counter:inst356|inst1 ; rnd2_player:inst1|trigger:inst1119|inst2 ; rnd2_player:inst1|trigger:inst1119|inst2 ; 1.000        ; 0.000      ; 1.769      ;
+; -0.838 ; rnd2_player:inst1|five_counter:inst356|inst2 ; rnd2_player:inst1|five_counter:inst356|inst  ; rnd2_player:inst1|trigger:inst1119|inst2 ; rnd2_player:inst1|trigger:inst1119|inst2 ; 1.000        ; 0.000      ; 1.567      ;
+; -0.837 ; rnd2_player:inst1|five_counter:inst356|inst2 ; rnd2_player:inst1|five_counter:inst356|inst1 ; rnd2_player:inst1|trigger:inst1119|inst2 ; rnd2_player:inst1|trigger:inst1119|inst2 ; 1.000        ; 0.000      ; 1.566      ;
+; -0.834 ; rnd2_player:inst1|five_counter:inst356|inst2 ; rnd2_player:inst1|five_counter:inst356|inst2 ; rnd2_player:inst1|trigger:inst1119|inst2 ; rnd2_player:inst1|trigger:inst1119|inst2 ; 1.000        ; 0.000      ; 1.563      ;
++--------+----------------------------------------------+----------------------------------------------+------------------------------------------+------------------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'rnd2_player:inst1|trigger:inst1118|inst2'                                                                                                                                                                             ;
++--------+-------------------------------------------+-------------------------------------------+------------------------------------------+------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                                 ; To Node                                   ; Launch Clock                             ; Latch Clock                              ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------+-------------------------------------------+------------------------------------------+------------------------------------------+--------------+------------+------------+
+; -1.209 ; rnd2_player:inst1|five_counter:inst|inst  ; rnd2_player:inst1|five_counter:inst|inst1 ; rnd2_player:inst1|trigger:inst1118|inst2 ; rnd2_player:inst1|trigger:inst1118|inst2 ; 1.000        ; 0.000      ; 1.938      ;
+; -1.206 ; rnd2_player:inst1|five_counter:inst|inst  ; rnd2_player:inst1|five_counter:inst|inst  ; rnd2_player:inst1|trigger:inst1118|inst2 ; rnd2_player:inst1|trigger:inst1118|inst2 ; 1.000        ; 0.000      ; 1.935      ;
+; -1.035 ; rnd2_player:inst1|five_counter:inst|inst1 ; rnd2_player:inst1|five_counter:inst|inst  ; rnd2_player:inst1|trigger:inst1118|inst2 ; rnd2_player:inst1|trigger:inst1118|inst2 ; 1.000        ; 0.000      ; 1.764      ;
+; -1.031 ; rnd2_player:inst1|five_counter:inst|inst1 ; rnd2_player:inst1|five_counter:inst|inst1 ; rnd2_player:inst1|trigger:inst1118|inst2 ; rnd2_player:inst1|trigger:inst1118|inst2 ; 1.000        ; 0.000      ; 1.760      ;
+; -0.842 ; rnd2_player:inst1|five_counter:inst|inst2 ; rnd2_player:inst1|five_counter:inst|inst1 ; rnd2_player:inst1|trigger:inst1118|inst2 ; rnd2_player:inst1|trigger:inst1118|inst2 ; 1.000        ; 0.000      ; 1.571      ;
+; -0.840 ; rnd2_player:inst1|five_counter:inst|inst2 ; rnd2_player:inst1|five_counter:inst|inst  ; rnd2_player:inst1|trigger:inst1118|inst2 ; rnd2_player:inst1|trigger:inst1118|inst2 ; 1.000        ; 0.000      ; 1.569      ;
+; -0.834 ; rnd2_player:inst1|five_counter:inst|inst2 ; rnd2_player:inst1|five_counter:inst|inst2 ; rnd2_player:inst1|trigger:inst1118|inst2 ; rnd2_player:inst1|trigger:inst1118|inst2 ; 1.000        ; 0.000      ; 1.563      ;
++--------+-------------------------------------------+-------------------------------------------+------------------------------------------+------------------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clk'                                                                                                                                                                                                                           ;
++--------+--------------------------------------------------------+--------------------------------------------------------+-----------------------------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                              ; To Node                                                ; Launch Clock                                        ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------------+--------------------------------------------------------+-----------------------------------------------------+-------------+--------------+------------+------------+
+; -1.959 ; rnd2_player:inst1|trigger:inst1118|inst2               ; rnd2_player:inst1|trigger:inst1118|inst3               ; rnd2_player:inst1|trigger:inst1118|inst2            ; clk         ; 0.000        ; 3.103      ; 1.628      ;
+; -1.881 ; rnd2_player:inst1|trigger:inst1119|inst2               ; rnd2_player:inst1|trigger:inst1119|inst3               ; rnd2_player:inst1|trigger:inst1119|inst2            ; clk         ; 0.000        ; 3.103      ; 1.706      ;
+; -1.831 ; test5:inst47|test4:inst11|con1:inst1|fstate.state2     ; test5:inst47|test4:inst11|con1:inst1|fstate.state2     ; test5:inst47|test4:inst11|con1:inst1|fstate.state2  ; clk         ; 0.000        ; 3.103      ; 1.756      ;
+; -1.554 ; test5:inst47|test4:inst11|con2:inst9|fstate.state2     ; test5:inst47|test4:inst11|four_bit_reg_ce:inst2|inst3  ; test5:inst47|test4:inst11|con2:inst9|fstate.state2  ; clk         ; 0.000        ; 3.103      ; 2.033      ;
+; -1.543 ; test5:inst47|test4:inst11|con1:inst1|fstate.state2     ; test5:inst47|test4:inst11|four_bit_reg_ce:inst12|inst  ; test5:inst47|test4:inst11|con1:inst1|fstate.state2  ; clk         ; 0.000        ; 3.103      ; 2.044      ;
+; -1.543 ; test5:inst47|test4:inst11|con1:inst1|fstate.state2     ; test5:inst47|test4:inst11|four_bit_reg_ce:inst12|inst3 ; test5:inst47|test4:inst11|con1:inst1|fstate.state2  ; clk         ; 0.000        ; 3.103      ; 2.044      ;
+; -1.459 ; rnd2_player:inst1|trigger:inst1118|inst2               ; rnd2_player:inst1|trigger:inst1118|inst3               ; rnd2_player:inst1|trigger:inst1118|inst2            ; clk         ; -0.500       ; 3.103      ; 1.628      ;
+; -1.381 ; rnd2_player:inst1|trigger:inst1119|inst2               ; rnd2_player:inst1|trigger:inst1119|inst3               ; rnd2_player:inst1|trigger:inst1119|inst2            ; clk         ; -0.500       ; 3.103      ; 1.706      ;
+; -1.331 ; test5:inst47|test4:inst11|con1:inst1|fstate.state2     ; test5:inst47|test4:inst11|con1:inst1|fstate.state2     ; test5:inst47|test4:inst11|con1:inst1|fstate.state2  ; clk         ; -0.500       ; 3.103      ; 1.756      ;
+; -1.248 ; test5:inst47|test4:inst11|con2:inst9|fstate.state2     ; test5:inst47|test4:inst11|four_bit_reg_ce:inst2|inst1  ; test5:inst47|test4:inst11|con2:inst9|fstate.state2  ; clk         ; 0.000        ; 3.103      ; 2.339      ;
+; -1.248 ; test5:inst47|test4:inst11|con2:inst9|fstate.state2     ; test5:inst47|test4:inst11|four_bit_reg_ce:inst2|inst   ; test5:inst47|test4:inst11|con2:inst9|fstate.state2  ; clk         ; 0.000        ; 3.103      ; 2.339      ;
+; -1.248 ; test5:inst47|test4:inst11|con2:inst9|fstate.state2     ; test5:inst47|test4:inst11|four_bit_reg_ce:inst2|inst2  ; test5:inst47|test4:inst11|con2:inst9|fstate.state2  ; clk         ; 0.000        ; 3.103      ; 2.339      ;
+; -1.244 ; test5:inst47|test4:inst11|con3:inst13|fstate.state2    ; test5:inst47|test4:inst11|four_bit_reg_ce:inst4|inst1  ; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; clk         ; 0.000        ; 3.103      ; 2.343      ;
+; -1.244 ; test5:inst47|test4:inst11|con3:inst13|fstate.state2    ; test5:inst47|test4:inst11|four_bit_reg_ce:inst4|inst   ; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; clk         ; 0.000        ; 3.103      ; 2.343      ;
+; -1.244 ; test5:inst47|test4:inst11|con3:inst13|fstate.state2    ; test5:inst47|test4:inst11|four_bit_reg_ce:inst4|inst3  ; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; clk         ; 0.000        ; 3.103      ; 2.343      ;
+; -1.244 ; test5:inst47|test4:inst11|con3:inst13|fstate.state2    ; test5:inst47|test4:inst11|four_bit_reg_ce:inst4|inst2  ; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; clk         ; 0.000        ; 3.103      ; 2.343      ;
+; -1.223 ; test5:inst47|test4:inst11|con1:inst1|fstate.state2     ; test5:inst47|test4:inst11|four_bit_reg_ce:inst12|inst1 ; test5:inst47|test4:inst11|con1:inst1|fstate.state2  ; clk         ; 0.000        ; 3.103      ; 2.364      ;
+; -1.223 ; test5:inst47|test4:inst11|con1:inst1|fstate.state2     ; test5:inst47|test4:inst11|four_bit_reg_ce:inst12|inst2 ; test5:inst47|test4:inst11|con1:inst1|fstate.state2  ; clk         ; 0.000        ; 3.103      ; 2.364      ;
+; -1.214 ; test5:inst47|test4:inst11|con3:inst13|fstate.state2    ; test5:inst47|test4:inst11|con3:inst13|fstate.state2    ; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; clk         ; 0.000        ; 3.103      ; 2.373      ;
+; -1.054 ; test5:inst47|test4:inst11|con2:inst9|fstate.state2     ; test5:inst47|test4:inst11|four_bit_reg_ce:inst2|inst3  ; test5:inst47|test4:inst11|con2:inst9|fstate.state2  ; clk         ; -0.500       ; 3.103      ; 2.033      ;
+; -1.043 ; test5:inst47|test4:inst11|con1:inst1|fstate.state2     ; test5:inst47|test4:inst11|four_bit_reg_ce:inst12|inst  ; test5:inst47|test4:inst11|con1:inst1|fstate.state2  ; clk         ; -0.500       ; 3.103      ; 2.044      ;
+; -1.043 ; test5:inst47|test4:inst11|con1:inst1|fstate.state2     ; test5:inst47|test4:inst11|four_bit_reg_ce:inst12|inst3 ; test5:inst47|test4:inst11|con1:inst1|fstate.state2  ; clk         ; -0.500       ; 3.103      ; 2.044      ;
+; -0.748 ; test5:inst47|test4:inst11|con2:inst9|fstate.state2     ; test5:inst47|test4:inst11|four_bit_reg_ce:inst2|inst1  ; test5:inst47|test4:inst11|con2:inst9|fstate.state2  ; clk         ; -0.500       ; 3.103      ; 2.339      ;
+; -0.748 ; test5:inst47|test4:inst11|con2:inst9|fstate.state2     ; test5:inst47|test4:inst11|four_bit_reg_ce:inst2|inst   ; test5:inst47|test4:inst11|con2:inst9|fstate.state2  ; clk         ; -0.500       ; 3.103      ; 2.339      ;
+; -0.748 ; test5:inst47|test4:inst11|con2:inst9|fstate.state2     ; test5:inst47|test4:inst11|four_bit_reg_ce:inst2|inst2  ; test5:inst47|test4:inst11|con2:inst9|fstate.state2  ; clk         ; -0.500       ; 3.103      ; 2.339      ;
+; -0.744 ; test5:inst47|test4:inst11|con3:inst13|fstate.state2    ; test5:inst47|test4:inst11|four_bit_reg_ce:inst4|inst1  ; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; clk         ; -0.500       ; 3.103      ; 2.343      ;
+; -0.744 ; test5:inst47|test4:inst11|con3:inst13|fstate.state2    ; test5:inst47|test4:inst11|four_bit_reg_ce:inst4|inst   ; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; clk         ; -0.500       ; 3.103      ; 2.343      ;
+; -0.744 ; test5:inst47|test4:inst11|con3:inst13|fstate.state2    ; test5:inst47|test4:inst11|four_bit_reg_ce:inst4|inst3  ; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; clk         ; -0.500       ; 3.103      ; 2.343      ;
+; -0.744 ; test5:inst47|test4:inst11|con3:inst13|fstate.state2    ; test5:inst47|test4:inst11|four_bit_reg_ce:inst4|inst2  ; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; clk         ; -0.500       ; 3.103      ; 2.343      ;
+; -0.723 ; test5:inst47|test4:inst11|con1:inst1|fstate.state2     ; test5:inst47|test4:inst11|four_bit_reg_ce:inst12|inst1 ; test5:inst47|test4:inst11|con1:inst1|fstate.state2  ; clk         ; -0.500       ; 3.103      ; 2.364      ;
+; -0.723 ; test5:inst47|test4:inst11|con1:inst1|fstate.state2     ; test5:inst47|test4:inst11|four_bit_reg_ce:inst12|inst2 ; test5:inst47|test4:inst11|con1:inst1|fstate.state2  ; clk         ; -0.500       ; 3.103      ; 2.364      ;
+; -0.714 ; test5:inst47|test4:inst11|con3:inst13|fstate.state2    ; test5:inst47|test4:inst11|con3:inst13|fstate.state2    ; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; clk         ; -0.500       ; 3.103      ; 2.373      ;
+; -0.091 ; test5:inst47|test4:inst11|con2:inst9|fstate.state2     ; test5:inst47|test4:inst11|con2:inst9|fstate.state2     ; test5:inst47|test4:inst11|con2:inst9|fstate.state2  ; clk         ; 0.000        ; 3.103      ; 3.496      ;
+; 0.409  ; test5:inst47|test4:inst11|con2:inst9|fstate.state2     ; test5:inst47|test4:inst11|con2:inst9|fstate.state2     ; test5:inst47|test4:inst11|con2:inst9|fstate.state2  ; clk         ; -0.500       ; 3.103      ; 3.496      ;
+; 1.131  ; test5:inst47|four_bit_reg_ce:inst1117|inst1            ; test5:inst47|four_bit_reg_ce:inst1118|inst1            ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.310      ;
+; 1.141  ; rnd2_player:inst1|trigger:inst1114|inst2               ; rnd2_player:inst1|trigger:inst1114|inst3               ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.320      ;
+; 1.145  ; test5:inst47|SBO:inst1|fstate.state3                   ; test5:inst47|two_bit_reg_ce:inst|inst                  ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.324      ;
+; 1.152  ; rnd2_player:inst1|inst10                               ; rnd2_player:inst1|trigger:inst1117|inst2               ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.331      ;
+; 1.155  ; test5:inst47|SBO:inst3|fstate.state3                   ; test5:inst47|two_bit_reg_ce:inst6|inst                 ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.334      ;
+; 1.338  ; before_game:inst3333|STATE.ENTRY_MODE                  ; before_game:inst3333|LCD_DATA[1]                       ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.517      ;
+; 1.338  ; rnd2_player:inst1|Four_bit_Register_v3:inst011|inst    ; rnd2_player:inst1|four_bit_Register_v4:inst36|inst     ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.517      ;
+; 1.354  ; rnd2_player:inst1|rn2_fullcoler:inst51|fstate.state2   ; rnd2_player:inst1|rn2_fullcoler:inst51|fstate.state2   ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.533      ;
+; 1.354  ; test5:inst47|inst10                                    ; test5:inst47|inst10                                    ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.533      ;
+; 1.360  ; rnd2_player:inst1|inst14                               ; rnd2_player:inst1|inst14                               ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.539      ;
+; 1.365  ; rnd2_player:inst1|trigger:inst1113|inst3               ; rnd2_player:inst1|inst10                               ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.544      ;
+; 1.367  ; test5:inst47|test4:inst11|com:inst18|fstate.state2     ; test5:inst47|test4:inst11|com:inst18|fstate.state3     ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.546      ;
+; 1.369  ; rnd2_player:inst1|rnd2_ledcontrol:inst45|fstate.state1 ; rnd2_player:inst1|rnd2_ledcontrol:inst45|fstate.state1 ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.548      ;
+; 1.370  ; project2:inst41|four_bit_counter:inst20|inst8          ; project2:inst41|four_bit_counter:inst20|inst8          ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.549      ;
+; 1.374  ; project2:inst41|control_unit:inst30|fstate.state1      ; project2:inst41|control_unit:inst30|fstate.state1      ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.553      ;
+; 1.375  ; test5:inst47|four_bit_counter:inst20|inst7             ; test5:inst47|four_bit_counter:inst20|inst7             ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.554      ;
+; 1.378  ; test5:inst47|test4:inst11|com:inst16|fstate.state3     ; test5:inst47|test4:inst11|com:inst16|fstate.state3     ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.557      ;
+; 1.380  ; project2:inst41|rnd1:inst100|random:inst|inst5         ; project2:inst41|rnd1:inst100|random:inst|inst6         ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.559      ;
+; 1.380  ; test5:inst47|four_bit_counter:inst20|inst7             ; test5:inst47|four_bit_counter:inst20|inst8             ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.559      ;
+; 1.381  ; project2:inst41|control_unit:inst30|fstate.state7      ; project2:inst41|control_unit:inst30|fstate.state7      ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.560      ;
+; 1.384  ; rnd2_player:inst1|trigger:inst1113|inst2               ; rnd2_player:inst1|rn2_fullcoler:inst51|fstate.state1   ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.563      ;
+; 1.394  ; project2:inst41|four_bit_counter:inst12|inst7          ; project2:inst41|four_bit_counter:inst12|inst7          ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.573      ;
+; 1.408  ; test5:inst47|test4:inst11|com:inst17|fstate.state3     ; test5:inst47|test4:inst11|com:inst17|fstate.state3     ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.587      ;
+; 1.411  ; project2:inst41|rnd1:inst100|random:inst|inst          ; project2:inst41|rnd1:inst100|random:inst|inst5         ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.590      ;
+; 1.412  ; project2:inst41|rnd1:inst100|random:inst|inst7         ; project2:inst41|rnd1:inst100|random:inst|inst          ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.591      ;
+; 1.447  ; project2:inst41|four_bit_counter:inst11|inst7          ; project2:inst41|four_bit_counter:inst11|inst7          ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.626      ;
+; 1.448  ; project2:inst41|four_bit_counter:inst11|inst7          ; project2:inst41|four_bit_counter:inst11|inst8          ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.627      ;
+; 1.490  ; rnd2_player:inst1|Four_bit_Register_v3:inst011|inst    ; rnd2_player:inst1|Four_bit_Register_v3:inst2020|inst   ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.669      ;
+; 1.542  ; rnd2_player:inst1|rnd2_ledcontrol:inst13|fstate.state1 ; rnd2_player:inst1|rnd2_ledcontrol:inst13|fstate.state1 ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.721      ;
+; 1.544  ; test5:inst47|four_bit_reg_ce:inst1118|inst             ; test5:inst47|four_bit_reg_ce:inst1119|inst             ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.723      ;
+; 1.564  ; test5:inst47|test4:inst11|con3:inst13|fstate.state1    ; test5:inst47|test4:inst11|con3:inst13|fstate.state1    ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.743      ;
+; 1.573  ; rnd2_player:inst1|Four_bit_Register_v3:inst25|inst3    ; rnd2_player:inst1|Four_bit_Register_v3:inst25|inst3    ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.752      ;
+; 1.575  ; rnd2_player:inst1|inst10                               ; rnd2_player:inst1|inst10                               ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.754      ;
+; 1.577  ; test5:inst47|test4:inst11|com:inst16|fstate.state1     ; test5:inst47|test4:inst11|com:inst16|fstate.state1     ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.756      ;
+; 1.579  ; project2:inst41|four_bit_counter:inst12|inst8          ; project2:inst41|four_bit_counter:inst12|inst8          ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.758      ;
+; 1.579  ; rnd2_player:inst1|inst10                               ; rnd2_player:inst1|trigger:inst1115|inst2               ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.758      ;
+; 1.579  ; test5:inst47|test4:inst11|com:inst18|fstate.state1     ; test5:inst47|test4:inst11|com:inst18|fstate.state1     ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.758      ;
+; 1.582  ; rnd2_player:inst1|Four_bit_Register_v3:inst25|inst2    ; rnd2_player:inst1|Four_bit_Register_v3:inst25|inst2    ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.761      ;
+; 1.584  ; test5:inst47|test4:inst11|com:inst16|fstate.state1     ; test5:inst47|test4:inst11|com:inst16|fstate.state2     ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.763      ;
+; 1.585  ; test5:inst47|test4:inst11|com:inst18|fstate.state1     ; test5:inst47|test4:inst11|com:inst18|fstate.state2     ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.764      ;
+; 1.599  ; project2:inst41|control_unit:inst30|fstate.state5      ; project2:inst41|control_unit:inst30|fstate.state5      ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.778      ;
+; 1.600  ; project2:inst41|four_bit_counter:inst20|inst7          ; project2:inst41|four_bit_counter:inst20|inst7          ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.779      ;
+; 1.602  ; test5:inst47|SBO:inst1|fstate.state2                   ; test5:inst47|SBO:inst1|fstate.state1                   ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.781      ;
+; 1.602  ; test5:inst47|test4:inst11|four_bit_reg_ce:inst4|inst1  ; test5:inst47|test4:inst11|com:inst17|fstate.state1     ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.781      ;
+; 1.604  ; rnd2_player:inst1|rnd2_ledcontrol:inst13|fstate.state2 ; rnd2_player:inst1|rnd2_ledcontrol:inst13|fstate.state5 ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.783      ;
+; 1.605  ; rnd2_player:inst1|four_bit_Register_v4:inst23|inst     ; rnd2_player:inst1|four_bit_Register_v4:inst23|inst     ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.784      ;
+; 1.606  ; project2:inst41|control_unit:inst30|fstate.state5      ; project2:inst41|control_unit:inst30|fstate.state6      ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.785      ;
+; 1.606  ; project2:inst41|four_bit_counter:inst20|inst7          ; project2:inst41|four_bit_counter:inst20|inst8          ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.785      ;
+; 1.607  ; test5:inst47|test4:inst11|four_bit_reg_ce:inst4|inst1  ; test5:inst47|test4:inst11|com:inst17|fstate.state2     ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.786      ;
+; 1.631  ; project2:inst41|four_bit_counter:inst11|inst8          ; project2:inst41|four_bit_counter:inst11|inst8          ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.810      ;
+; 1.712  ; test5:inst47|test4:inst11|com:inst14|fstate.state1     ; test5:inst47|test4:inst11|com:inst14|fstate.state1     ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.891      ;
+; 1.719  ; before_game:inst3333|CNT[16]                           ; before_game:inst3333|CNT[16]                           ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.898      ;
+; 1.719  ; before_game:inst3333|CNT[6]                            ; before_game:inst3333|CNT[6]                            ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.898      ;
+; 1.720  ; before_game:inst3333|CNT[13]                           ; before_game:inst3333|CNT[13]                           ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.899      ;
+; 1.720  ; before_game:inst3333|CNT[23]                           ; before_game:inst3333|CNT[23]                           ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.899      ;
+; 1.727  ; rnd2_player:inst1|rnd2_ledcontrol:inst45|fstate.state4 ; rnd2_player:inst1|rnd2_ledcontrol:inst45|fstate.state4 ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.906      ;
+; 1.727  ; before_game:inst3333|CNT[17]                           ; before_game:inst3333|CNT[17]                           ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.906      ;
+; 1.727  ; before_game:inst3333|CNT[7]                            ; before_game:inst3333|CNT[7]                            ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.906      ;
+; 1.728  ; before_game:inst3333|CNT[15]                           ; before_game:inst3333|CNT[15]                           ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.907      ;
+; 1.728  ; before_game:inst3333|CNT[18]                           ; before_game:inst3333|CNT[18]                           ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.907      ;
+; 1.728  ; before_game:inst3333|CNT[25]                           ; before_game:inst3333|CNT[25]                           ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.907      ;
+; 1.728  ; before_game:inst3333|CNT[8]                            ; before_game:inst3333|CNT[8]                            ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.907      ;
+; 1.729  ; before_game:inst3333|CNT[3]                            ; before_game:inst3333|CNT[3]                            ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.908      ;
+; 1.731  ; test5:inst47|test4:inst11|com:inst16|fstate.state2     ; test5:inst47|test4:inst11|com:inst16|fstate.state3     ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.910      ;
+; 1.736  ; before_game:inst3333|STATE.LINE1                       ; before_game:inst3333|LCD_DATA[1]                       ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.915      ;
+; 1.741  ; before_game:inst3333|CNT[27]                           ; before_game:inst3333|CNT[27]                           ; clk                                                 ; clk         ; 0.000        ; 0.000      ; 1.920      ;
++--------+--------------------------------------------------------+--------------------------------------------------------+-----------------------------------------------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'test5:inst47|test4:inst11|con1:inst1|fstate.state2'                                                                                                                                                            ;
++-------+---------------------------------------------+----------------------------------------------------+--------------+----------------------------------------------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                            ; Launch Clock ; Latch Clock                                        ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+----------------------------------------------------+--------------+----------------------------------------------------+--------------+------------+------------+
+; 0.174 ; test5:inst47|test4:inst11|random:inst|inst7 ; test5:inst47|test4:inst11|con1:inst1|temprandom[3] ; clk          ; test5:inst47|test4:inst11|con1:inst1|fstate.state2 ; -0.500       ; 1.559      ; 1.233      ;
+; 0.342 ; test5:inst47|test4:inst11|random:inst|inst5 ; test5:inst47|test4:inst11|con1:inst1|temprandom[1] ; clk          ; test5:inst47|test4:inst11|con1:inst1|fstate.state2 ; -0.500       ; 1.671      ; 1.513      ;
+; 0.581 ; test5:inst47|test4:inst11|random:inst|inst  ; test5:inst47|test4:inst11|con1:inst1|temprandom[0] ; clk          ; test5:inst47|test4:inst11|con1:inst1|fstate.state2 ; -0.500       ; 1.560      ; 1.641      ;
+; 1.103 ; test5:inst47|test4:inst11|random:inst|inst6 ; test5:inst47|test4:inst11|con1:inst1|temprandom[2] ; clk          ; test5:inst47|test4:inst11|con1:inst1|fstate.state2 ; -0.500       ; 1.562      ; 2.165      ;
++-------+---------------------------------------------+----------------------------------------------------+--------------+----------------------------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'test5:inst47|test4:inst11|con3:inst13|fstate.state2'                                                                                                                                                             ;
++-------+---------------------------------------------+-----------------------------------------------------+--------------+-----------------------------------------------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                             ; Launch Clock ; Latch Clock                                         ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+-----------------------------------------------------+--------------+-----------------------------------------------------+--------------+------------+------------+
+; 0.831 ; test5:inst47|test4:inst11|random:inst|inst7 ; test5:inst47|test4:inst11|con3:inst13|temprandom[3] ; clk          ; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; -0.500       ; 1.343      ; 1.674      ;
+; 0.880 ; test5:inst47|test4:inst11|random:inst|inst5 ; test5:inst47|test4:inst11|con3:inst13|temprandom[1] ; clk          ; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; -0.500       ; 1.833      ; 2.213      ;
+; 0.908 ; test5:inst47|test4:inst11|random:inst|inst6 ; test5:inst47|test4:inst11|con3:inst13|temprandom[2] ; clk          ; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; -0.500       ; 1.354      ; 1.762      ;
+; 0.942 ; test5:inst47|test4:inst11|random:inst|inst  ; test5:inst47|test4:inst11|con3:inst13|temprandom[0] ; clk          ; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; -0.500       ; 1.400      ; 1.842      ;
++-------+---------------------------------------------+-----------------------------------------------------+--------------+-----------------------------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'test5:inst47|test4:inst11|con2:inst9|fstate.state2'                                                                                                                                                            ;
++-------+---------------------------------------------+----------------------------------------------------+--------------+----------------------------------------------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                            ; Launch Clock ; Latch Clock                                        ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+----------------------------------------------------+--------------+----------------------------------------------------+--------------+------------+------------+
+; 0.926 ; test5:inst47|test4:inst11|random:inst|inst6 ; test5:inst47|test4:inst11|con2:inst9|temprandom[2] ; clk          ; test5:inst47|test4:inst11|con2:inst9|fstate.state2 ; -0.500       ; 1.642      ; 2.068      ;
+; 0.969 ; test5:inst47|test4:inst11|random:inst|inst7 ; test5:inst47|test4:inst11|con2:inst9|temprandom[3] ; clk          ; test5:inst47|test4:inst11|con2:inst9|fstate.state2 ; -0.500       ; 1.641      ; 2.110      ;
+; 1.062 ; test5:inst47|test4:inst11|random:inst|inst  ; test5:inst47|test4:inst11|con2:inst9|temprandom[0] ; clk          ; test5:inst47|test4:inst11|con2:inst9|fstate.state2 ; -0.500       ; 1.638      ; 2.200      ;
+; 1.130 ; test5:inst47|test4:inst11|random:inst|inst5 ; test5:inst47|test4:inst11|con2:inst9|temprandom[1] ; clk          ; test5:inst47|test4:inst11|con2:inst9|fstate.state2 ; -0.500       ; 1.908      ; 2.538      ;
++-------+---------------------------------------------+----------------------------------------------------+--------------+----------------------------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'rnd2_player:inst1|trigger:inst1118|inst2'                                                                                                                                                                             ;
++-------+-------------------------------------------+-------------------------------------------+------------------------------------------+------------------------------------------+--------------+------------+------------+
+; Slack ; From Node                                 ; To Node                                   ; Launch Clock                             ; Latch Clock                              ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------+-------------------------------------------+------------------------------------------+------------------------------------------+--------------+------------+------------+
+; 1.384 ; rnd2_player:inst1|five_counter:inst|inst2 ; rnd2_player:inst1|five_counter:inst|inst2 ; rnd2_player:inst1|trigger:inst1118|inst2 ; rnd2_player:inst1|trigger:inst1118|inst2 ; 0.000        ; 0.000      ; 1.563      ;
+; 1.390 ; rnd2_player:inst1|five_counter:inst|inst2 ; rnd2_player:inst1|five_counter:inst|inst  ; rnd2_player:inst1|trigger:inst1118|inst2 ; rnd2_player:inst1|trigger:inst1118|inst2 ; 0.000        ; 0.000      ; 1.569      ;
+; 1.392 ; rnd2_player:inst1|five_counter:inst|inst2 ; rnd2_player:inst1|five_counter:inst|inst1 ; rnd2_player:inst1|trigger:inst1118|inst2 ; rnd2_player:inst1|trigger:inst1118|inst2 ; 0.000        ; 0.000      ; 1.571      ;
+; 1.581 ; rnd2_player:inst1|five_counter:inst|inst1 ; rnd2_player:inst1|five_counter:inst|inst1 ; rnd2_player:inst1|trigger:inst1118|inst2 ; rnd2_player:inst1|trigger:inst1118|inst2 ; 0.000        ; 0.000      ; 1.760      ;
+; 1.585 ; rnd2_player:inst1|five_counter:inst|inst1 ; rnd2_player:inst1|five_counter:inst|inst  ; rnd2_player:inst1|trigger:inst1118|inst2 ; rnd2_player:inst1|trigger:inst1118|inst2 ; 0.000        ; 0.000      ; 1.764      ;
+; 1.756 ; rnd2_player:inst1|five_counter:inst|inst  ; rnd2_player:inst1|five_counter:inst|inst  ; rnd2_player:inst1|trigger:inst1118|inst2 ; rnd2_player:inst1|trigger:inst1118|inst2 ; 0.000        ; 0.000      ; 1.935      ;
+; 1.759 ; rnd2_player:inst1|five_counter:inst|inst  ; rnd2_player:inst1|five_counter:inst|inst1 ; rnd2_player:inst1|trigger:inst1118|inst2 ; rnd2_player:inst1|trigger:inst1118|inst2 ; 0.000        ; 0.000      ; 1.938      ;
++-------+-------------------------------------------+-------------------------------------------+------------------------------------------+------------------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'rnd2_player:inst1|trigger:inst1119|inst2'                                                                                                                                                                                   ;
++-------+----------------------------------------------+----------------------------------------------+------------------------------------------+------------------------------------------+--------------+------------+------------+
+; Slack ; From Node                                    ; To Node                                      ; Launch Clock                             ; Latch Clock                              ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------+----------------------------------------------+------------------------------------------+------------------------------------------+--------------+------------+------------+
+; 1.384 ; rnd2_player:inst1|five_counter:inst356|inst2 ; rnd2_player:inst1|five_counter:inst356|inst2 ; rnd2_player:inst1|trigger:inst1119|inst2 ; rnd2_player:inst1|trigger:inst1119|inst2 ; 0.000        ; 0.000      ; 1.563      ;
+; 1.387 ; rnd2_player:inst1|five_counter:inst356|inst2 ; rnd2_player:inst1|five_counter:inst356|inst1 ; rnd2_player:inst1|trigger:inst1119|inst2 ; rnd2_player:inst1|trigger:inst1119|inst2 ; 0.000        ; 0.000      ; 1.566      ;
+; 1.388 ; rnd2_player:inst1|five_counter:inst356|inst2 ; rnd2_player:inst1|five_counter:inst356|inst  ; rnd2_player:inst1|trigger:inst1119|inst2 ; rnd2_player:inst1|trigger:inst1119|inst2 ; 0.000        ; 0.000      ; 1.567      ;
+; 1.590 ; rnd2_player:inst1|five_counter:inst356|inst1 ; rnd2_player:inst1|five_counter:inst356|inst1 ; rnd2_player:inst1|trigger:inst1119|inst2 ; rnd2_player:inst1|trigger:inst1119|inst2 ; 0.000        ; 0.000      ; 1.769      ;
+; 1.602 ; rnd2_player:inst1|five_counter:inst356|inst1 ; rnd2_player:inst1|five_counter:inst356|inst  ; rnd2_player:inst1|trigger:inst1119|inst2 ; rnd2_player:inst1|trigger:inst1119|inst2 ; 0.000        ; 0.000      ; 1.781      ;
+; 1.856 ; rnd2_player:inst1|five_counter:inst356|inst  ; rnd2_player:inst1|five_counter:inst356|inst  ; rnd2_player:inst1|trigger:inst1119|inst2 ; rnd2_player:inst1|trigger:inst1119|inst2 ; 0.000        ; 0.000      ; 2.035      ;
+; 1.860 ; rnd2_player:inst1|five_counter:inst356|inst  ; rnd2_player:inst1|five_counter:inst356|inst1 ; rnd2_player:inst1|trigger:inst1119|inst2 ; rnd2_player:inst1|trigger:inst1119|inst2 ; 0.000        ; 0.000      ; 2.039      ;
++-------+----------------------------------------------+----------------------------------------------+------------------------------------------+------------------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Recovery: 'clk'                                                                                                                                                             ;
++--------+--------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -4.215 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|inst10                                   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.944      ;
+; -4.172 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1116|inst1           ; clk          ; clk         ; 1.000        ; 0.000      ; 4.901      ;
+; -4.172 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1116|inst            ; clk          ; clk         ; 1.000        ; 0.000      ; 4.901      ;
+; -4.172 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1117|inst            ; clk          ; clk         ; 1.000        ; 0.000      ; 4.901      ;
+; -4.172 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1118|inst            ; clk          ; clk         ; 1.000        ; 0.000      ; 4.901      ;
+; -4.123 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst2020|inst  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.852      ;
+; -4.123 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst2020|inst1 ; clk          ; clk         ; 1.000        ; 0.000      ; 4.852      ;
+; -4.123 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst2020|inst2 ; clk          ; clk         ; 1.000        ; 0.000      ; 4.852      ;
+; -4.123 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst2020|inst3 ; clk          ; clk         ; 1.000        ; 0.000      ; 4.852      ;
+; -4.123 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst52|inst2   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.852      ;
+; -4.123 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst52|inst1   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.852      ;
+; -4.123 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst52|inst    ; clk          ; clk         ; 1.000        ; 0.000      ; 4.852      ;
+; -4.112 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|test4:inst11|random:inst|inst7           ; clk          ; clk         ; 1.000        ; 0.000      ; 4.841      ;
+; -4.112 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|test4:inst11|random:inst|inst            ; clk          ; clk         ; 1.000        ; 0.000      ; 4.841      ;
+; -4.104 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|test4:inst11|random:inst|inst6           ; clk          ; clk         ; 1.000        ; 0.000      ; 4.833      ;
+; -4.072 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|test4:inst11|random:inst|inst5           ; clk          ; clk         ; 1.000        ; 0.000      ; 4.801      ;
+; -3.752 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_counter:inst20|inst7            ; clk          ; clk         ; 1.000        ; 0.000      ; 4.481      ;
+; -3.752 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_counter:inst20|inst8            ; clk          ; clk         ; 1.000        ; 0.000      ; 4.481      ;
+; -3.675 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|two_bit_reg_ce:inst5|inst                ; clk          ; clk         ; 1.000        ; 0.000      ; 4.404      ;
+; -3.675 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|two_bit_reg_ce:inst7|inst                ; clk          ; clk         ; 1.000        ; 0.000      ; 4.404      ;
+; -3.675 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|two_bit_reg_ce:inst|inst                 ; clk          ; clk         ; 1.000        ; 0.000      ; 4.404      ;
+; -3.675 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|two_bit_reg_ce:inst6|inst                ; clk          ; clk         ; 1.000        ; 0.000      ; 4.404      ;
+; -3.675 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|two_bit_reg_ce:inst6|inst1               ; clk          ; clk         ; 1.000        ; 0.000      ; 4.404      ;
+; -3.675 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|two_bit_reg_ce:inst|inst1                ; clk          ; clk         ; 1.000        ; 0.000      ; 4.404      ;
+; -3.675 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|two_bit_reg_ce:inst5|inst1               ; clk          ; clk         ; 1.000        ; 0.000      ; 4.404      ;
+; -3.675 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|two_bit_reg_ce:inst7|inst1               ; clk          ; clk         ; 1.000        ; 0.000      ; 4.404      ;
+; -3.673 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|trigger:inst1113|inst2              ; clk          ; clk         ; 1.000        ; 0.000      ; 4.402      ;
+; -3.673 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|trigger:inst1113|inst3              ; clk          ; clk         ; 1.000        ; 0.000      ; 4.402      ;
+; -3.673 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|inst10                              ; clk          ; clk         ; 1.000        ; 0.000      ; 4.402      ;
+; -3.673 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|trigger:inst1117|inst2              ; clk          ; clk         ; 1.000        ; 0.000      ; 4.402      ;
+; -3.673 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|trigger:inst1115|inst2              ; clk          ; clk         ; 1.000        ; 0.000      ; 4.402      ;
+; -3.670 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1117|inst1           ; clk          ; clk         ; 1.000        ; 0.000      ; 4.399      ;
+; -3.670 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1118|inst1           ; clk          ; clk         ; 1.000        ; 0.000      ; 4.399      ;
+; -3.670 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1119|inst1           ; clk          ; clk         ; 1.000        ; 0.000      ; 4.399      ;
+; -3.664 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst11|inst    ; clk          ; clk         ; 1.000        ; 0.000      ; 4.393      ;
+; -3.664 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst11|inst1   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.393      ;
+; -3.664 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|four_bit_Register_v4:inst23|inst2   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.393      ;
+; -3.664 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst52|inst3   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.393      ;
+; -3.659 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst25|inst3   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.388      ;
+; -3.659 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst25|inst2   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.388      ;
+; -3.651 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|trigger:inst1119|inst2              ; clk          ; clk         ; 1.000        ; 0.000      ; 4.380      ;
+; -3.651 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|trigger:inst1118|inst2              ; clk          ; clk         ; 1.000        ; 0.000      ; 4.380      ;
+; -3.651 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|trigger:inst1118|inst3              ; clk          ; clk         ; 1.000        ; 0.000      ; 4.380      ;
+; -3.651 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst253|inst1  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.380      ;
+; -3.651 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst253|inst   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.380      ;
+; -3.649 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst11|inst3   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.378      ;
+; -3.649 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst11|inst2   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.378      ;
+; -3.642 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1116|inst2           ; clk          ; clk         ; 1.000        ; 0.000      ; 4.371      ;
+; -3.642 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1117|inst2           ; clk          ; clk         ; 1.000        ; 0.000      ; 4.371      ;
+; -3.642 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1118|inst2           ; clk          ; clk         ; 1.000        ; 0.000      ; 4.371      ;
+; -3.640 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst25|inst    ; clk          ; clk         ; 1.000        ; 0.000      ; 4.369      ;
+; -3.640 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst25|inst1   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.369      ;
+; -3.640 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst011|inst3  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.369      ;
+; -3.640 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|four_bit_Register_v4:inst36|inst2   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.369      ;
+; -3.640 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst011|inst2  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.369      ;
+; -3.608 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|trigger:inst1119|inst3              ; clk          ; clk         ; 1.000        ; 0.000      ; 4.337      ;
+; -3.608 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst253|inst2  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.337      ;
+; -3.608 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst253|inst3  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.337      ;
+; -3.598 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1117|inst3           ; clk          ; clk         ; 1.000        ; 0.000      ; 4.327      ;
+; -3.598 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1118|inst3           ; clk          ; clk         ; 1.000        ; 0.000      ; 4.327      ;
+; -3.598 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1119|inst3           ; clk          ; clk         ; 1.000        ; 0.000      ; 4.327      ;
+; -3.589 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|trigger:inst1113|inst2                   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.318      ;
+; -3.589 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|trigger:inst1113|inst3                   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.318      ;
+; -3.573 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|four_bit_Register_v4:inst36|inst    ; clk          ; clk         ; 1.000        ; 0.000      ; 4.302      ;
+; -3.573 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst011|inst   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.302      ;
+; -3.573 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst011|inst1  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.302      ;
+; -3.573 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|trigger:inst1117|inst3              ; clk          ; clk         ; 1.000        ; 0.000      ; 4.302      ;
+; -3.562 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|trigger:inst1114|inst2              ; clk          ; clk         ; 1.000        ; 0.000      ; 4.291      ;
+; -3.562 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|trigger:inst1114|inst3              ; clk          ; clk         ; 1.000        ; 0.000      ; 4.291      ;
+; -3.562 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|four_bit_Register_v4:inst36|inst1   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.291      ;
+; -3.562 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|four_bit_Register_v4:inst36|inst3   ; clk          ; clk         ; 1.000        ; 0.000      ; 4.291      ;
+; -3.495 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1119|inst            ; clk          ; clk         ; 1.000        ; 0.000      ; 4.224      ;
+; -3.495 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1119|inst2           ; clk          ; clk         ; 1.000        ; 0.000      ; 4.224      ;
+; -3.495 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1116|inst3           ; clk          ; clk         ; 1.000        ; 0.000      ; 4.224      ;
+; -3.347 ; rnd_reset_control:inst|fstate.state2 ; project2:inst41|four_bit_counter:inst12|inst8         ; clk          ; clk         ; 1.000        ; 0.000      ; 4.076      ;
+; -3.347 ; rnd_reset_control:inst|fstate.state2 ; project2:inst41|four_bit_counter:inst12|inst7         ; clk          ; clk         ; 1.000        ; 0.000      ; 4.076      ;
+; -3.105 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|four_bit_Register_v4:inst23|inst    ; clk          ; clk         ; 1.000        ; 0.000      ; 3.834      ;
+; -3.105 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|four_bit_Register_v4:inst23|inst1   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.834      ;
+; -3.105 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|four_bit_Register_v4:inst23|inst3   ; clk          ; clk         ; 1.000        ; 0.000      ; 3.834      ;
+; -3.010 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|inst14                              ; clk          ; clk         ; 1.000        ; 0.000      ; 3.739      ;
+; -2.900 ; rnd_reset_control:inst|fstate.state2 ; project2:inst41|rnd1:inst100|random:inst|inst6        ; clk          ; clk         ; 1.000        ; 0.000      ; 3.629      ;
+; -2.900 ; rnd_reset_control:inst|fstate.state2 ; project2:inst41|rnd1:inst100|random:inst|inst         ; clk          ; clk         ; 1.000        ; 0.000      ; 3.629      ;
+; -2.900 ; rnd_reset_control:inst|fstate.state2 ; project2:inst41|rnd1:inst100|random:inst|inst5        ; clk          ; clk         ; 1.000        ; 0.000      ; 3.629      ;
+; -2.900 ; rnd_reset_control:inst|fstate.state2 ; project2:inst41|rnd1:inst100|random:inst|inst7        ; clk          ; clk         ; 1.000        ; 0.000      ; 3.629      ;
+; -2.637 ; rnd_reset_control:inst|fstate.state1 ; project2:inst41|four_bit_counter:inst12|inst8         ; clk          ; clk         ; 1.000        ; 0.000      ; 3.366      ;
+; -2.637 ; rnd_reset_control:inst|fstate.state1 ; project2:inst41|four_bit_counter:inst12|inst7         ; clk          ; clk         ; 1.000        ; 0.000      ; 3.366      ;
+; -2.602 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|trigger:inst1115|inst3              ; clk          ; clk         ; 1.000        ; 0.000      ; 3.331      ;
+; -2.190 ; rnd_reset_control:inst|fstate.state1 ; project2:inst41|rnd1:inst100|random:inst|inst6        ; clk          ; clk         ; 1.000        ; 0.000      ; 2.919      ;
+; -2.190 ; rnd_reset_control:inst|fstate.state1 ; project2:inst41|rnd1:inst100|random:inst|inst         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.919      ;
+; -2.190 ; rnd_reset_control:inst|fstate.state1 ; project2:inst41|rnd1:inst100|random:inst|inst5        ; clk          ; clk         ; 1.000        ; 0.000      ; 2.919      ;
+; -2.190 ; rnd_reset_control:inst|fstate.state1 ; project2:inst41|rnd1:inst100|random:inst|inst7        ; clk          ; clk         ; 1.000        ; 0.000      ; 2.919      ;
++--------+--------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Recovery: 'rnd2_player:inst1|trigger:inst1118|inst2'                                                                                                                                         ;
++--------+--------------------------------------+-------------------------------------------+--------------+------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node                                   ; Launch Clock ; Latch Clock                              ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+-------------------------------------------+--------------+------------------------------------------+--------------+------------+------------+
+; -2.669 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|five_counter:inst|inst1 ; clk          ; rnd2_player:inst1|trigger:inst1118|inst2 ; 1.000        ; 0.341      ; 3.739      ;
+; -2.669 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|five_counter:inst|inst2 ; clk          ; rnd2_player:inst1|trigger:inst1118|inst2 ; 1.000        ; 0.341      ; 3.739      ;
+; -2.669 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|five_counter:inst|inst  ; clk          ; rnd2_player:inst1|trigger:inst1118|inst2 ; 1.000        ; 0.341      ; 3.739      ;
++--------+--------------------------------------+-------------------------------------------+--------------+------------------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Recovery: 'rnd2_player:inst1|trigger:inst1119|inst2'                                                                                                                                            ;
++--------+--------------------------------------+----------------------------------------------+--------------+------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node                                      ; Launch Clock ; Latch Clock                              ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+----------------------------------------------+--------------+------------------------------------------+--------------+------------+------------+
+; -1.464 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|five_counter:inst356|inst1 ; clk          ; rnd2_player:inst1|trigger:inst1119|inst2 ; 1.000        ; 1.138      ; 3.331      ;
+; -1.464 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|five_counter:inst356|inst2 ; clk          ; rnd2_player:inst1|trigger:inst1119|inst2 ; 1.000        ; 1.138      ; 3.331      ;
+; -1.464 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|five_counter:inst356|inst  ; clk          ; rnd2_player:inst1|trigger:inst1119|inst2 ; 1.000        ; 1.138      ; 3.331      ;
++--------+--------------------------------------+----------------------------------------------+--------------+------------------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removal: 'rnd2_player:inst1|trigger:inst1119|inst2'                                                                                                                                            ;
++-------+--------------------------------------+----------------------------------------------+--------------+------------------------------------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                                      ; Launch Clock ; Latch Clock                              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+----------------------------------------------+--------------+------------------------------------------+--------------+------------+------------+
+; 2.014 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|five_counter:inst356|inst1 ; clk          ; rnd2_player:inst1|trigger:inst1119|inst2 ; 0.000        ; 1.138      ; 3.331      ;
+; 2.014 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|five_counter:inst356|inst2 ; clk          ; rnd2_player:inst1|trigger:inst1119|inst2 ; 0.000        ; 1.138      ; 3.331      ;
+; 2.014 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|five_counter:inst356|inst  ; clk          ; rnd2_player:inst1|trigger:inst1119|inst2 ; 0.000        ; 1.138      ; 3.331      ;
++-------+--------------------------------------+----------------------------------------------+--------------+------------------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removal: 'clk'                                                                                                                                                             ;
++-------+--------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 2.740 ; rnd_reset_control:inst|fstate.state1 ; project2:inst41|rnd1:inst100|random:inst|inst6        ; clk          ; clk         ; 0.000        ; 0.000      ; 2.919      ;
+; 2.740 ; rnd_reset_control:inst|fstate.state1 ; project2:inst41|rnd1:inst100|random:inst|inst         ; clk          ; clk         ; 0.000        ; 0.000      ; 2.919      ;
+; 2.740 ; rnd_reset_control:inst|fstate.state1 ; project2:inst41|rnd1:inst100|random:inst|inst5        ; clk          ; clk         ; 0.000        ; 0.000      ; 2.919      ;
+; 2.740 ; rnd_reset_control:inst|fstate.state1 ; project2:inst41|rnd1:inst100|random:inst|inst7        ; clk          ; clk         ; 0.000        ; 0.000      ; 2.919      ;
+; 3.152 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|trigger:inst1115|inst3              ; clk          ; clk         ; 0.000        ; 0.000      ; 3.331      ;
+; 3.187 ; rnd_reset_control:inst|fstate.state1 ; project2:inst41|four_bit_counter:inst12|inst8         ; clk          ; clk         ; 0.000        ; 0.000      ; 3.366      ;
+; 3.187 ; rnd_reset_control:inst|fstate.state1 ; project2:inst41|four_bit_counter:inst12|inst7         ; clk          ; clk         ; 0.000        ; 0.000      ; 3.366      ;
+; 3.450 ; rnd_reset_control:inst|fstate.state2 ; project2:inst41|rnd1:inst100|random:inst|inst6        ; clk          ; clk         ; 0.000        ; 0.000      ; 3.629      ;
+; 3.450 ; rnd_reset_control:inst|fstate.state2 ; project2:inst41|rnd1:inst100|random:inst|inst         ; clk          ; clk         ; 0.000        ; 0.000      ; 3.629      ;
+; 3.450 ; rnd_reset_control:inst|fstate.state2 ; project2:inst41|rnd1:inst100|random:inst|inst5        ; clk          ; clk         ; 0.000        ; 0.000      ; 3.629      ;
+; 3.450 ; rnd_reset_control:inst|fstate.state2 ; project2:inst41|rnd1:inst100|random:inst|inst7        ; clk          ; clk         ; 0.000        ; 0.000      ; 3.629      ;
+; 3.560 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|inst14                              ; clk          ; clk         ; 0.000        ; 0.000      ; 3.739      ;
+; 3.655 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|four_bit_Register_v4:inst23|inst    ; clk          ; clk         ; 0.000        ; 0.000      ; 3.834      ;
+; 3.655 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|four_bit_Register_v4:inst23|inst1   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.834      ;
+; 3.655 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|four_bit_Register_v4:inst23|inst3   ; clk          ; clk         ; 0.000        ; 0.000      ; 3.834      ;
+; 3.897 ; rnd_reset_control:inst|fstate.state2 ; project2:inst41|four_bit_counter:inst12|inst8         ; clk          ; clk         ; 0.000        ; 0.000      ; 4.076      ;
+; 3.897 ; rnd_reset_control:inst|fstate.state2 ; project2:inst41|four_bit_counter:inst12|inst7         ; clk          ; clk         ; 0.000        ; 0.000      ; 4.076      ;
+; 4.045 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1119|inst            ; clk          ; clk         ; 0.000        ; 0.000      ; 4.224      ;
+; 4.045 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1119|inst2           ; clk          ; clk         ; 0.000        ; 0.000      ; 4.224      ;
+; 4.045 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1116|inst3           ; clk          ; clk         ; 0.000        ; 0.000      ; 4.224      ;
+; 4.112 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|trigger:inst1114|inst2              ; clk          ; clk         ; 0.000        ; 0.000      ; 4.291      ;
+; 4.112 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|trigger:inst1114|inst3              ; clk          ; clk         ; 0.000        ; 0.000      ; 4.291      ;
+; 4.112 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|four_bit_Register_v4:inst36|inst1   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.291      ;
+; 4.112 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|four_bit_Register_v4:inst36|inst3   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.291      ;
+; 4.123 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|four_bit_Register_v4:inst36|inst    ; clk          ; clk         ; 0.000        ; 0.000      ; 4.302      ;
+; 4.123 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst011|inst   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.302      ;
+; 4.123 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst011|inst1  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.302      ;
+; 4.123 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|trigger:inst1117|inst3              ; clk          ; clk         ; 0.000        ; 0.000      ; 4.302      ;
+; 4.139 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|trigger:inst1113|inst2                   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.318      ;
+; 4.139 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|trigger:inst1113|inst3                   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.318      ;
+; 4.148 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1117|inst3           ; clk          ; clk         ; 0.000        ; 0.000      ; 4.327      ;
+; 4.148 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1118|inst3           ; clk          ; clk         ; 0.000        ; 0.000      ; 4.327      ;
+; 4.148 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1119|inst3           ; clk          ; clk         ; 0.000        ; 0.000      ; 4.327      ;
+; 4.158 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|trigger:inst1119|inst3              ; clk          ; clk         ; 0.000        ; 0.000      ; 4.337      ;
+; 4.158 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst253|inst2  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.337      ;
+; 4.158 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst253|inst3  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.337      ;
+; 4.190 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst25|inst    ; clk          ; clk         ; 0.000        ; 0.000      ; 4.369      ;
+; 4.190 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst25|inst1   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.369      ;
+; 4.190 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst011|inst3  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.369      ;
+; 4.190 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|four_bit_Register_v4:inst36|inst2   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.369      ;
+; 4.190 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst011|inst2  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.369      ;
+; 4.192 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1116|inst2           ; clk          ; clk         ; 0.000        ; 0.000      ; 4.371      ;
+; 4.192 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1117|inst2           ; clk          ; clk         ; 0.000        ; 0.000      ; 4.371      ;
+; 4.192 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1118|inst2           ; clk          ; clk         ; 0.000        ; 0.000      ; 4.371      ;
+; 4.199 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst11|inst3   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.378      ;
+; 4.199 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst11|inst2   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.378      ;
+; 4.201 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|trigger:inst1119|inst2              ; clk          ; clk         ; 0.000        ; 0.000      ; 4.380      ;
+; 4.201 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|trigger:inst1118|inst2              ; clk          ; clk         ; 0.000        ; 0.000      ; 4.380      ;
+; 4.201 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|trigger:inst1118|inst3              ; clk          ; clk         ; 0.000        ; 0.000      ; 4.380      ;
+; 4.201 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst253|inst1  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.380      ;
+; 4.201 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst253|inst   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.380      ;
+; 4.209 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst25|inst3   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.388      ;
+; 4.209 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst25|inst2   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.388      ;
+; 4.214 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst11|inst    ; clk          ; clk         ; 0.000        ; 0.000      ; 4.393      ;
+; 4.214 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst11|inst1   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.393      ;
+; 4.214 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|four_bit_Register_v4:inst23|inst2   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.393      ;
+; 4.214 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst52|inst3   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.393      ;
+; 4.220 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1117|inst1           ; clk          ; clk         ; 0.000        ; 0.000      ; 4.399      ;
+; 4.220 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1118|inst1           ; clk          ; clk         ; 0.000        ; 0.000      ; 4.399      ;
+; 4.220 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1119|inst1           ; clk          ; clk         ; 0.000        ; 0.000      ; 4.399      ;
+; 4.223 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|trigger:inst1113|inst2              ; clk          ; clk         ; 0.000        ; 0.000      ; 4.402      ;
+; 4.223 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|trigger:inst1113|inst3              ; clk          ; clk         ; 0.000        ; 0.000      ; 4.402      ;
+; 4.223 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|inst10                              ; clk          ; clk         ; 0.000        ; 0.000      ; 4.402      ;
+; 4.223 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|trigger:inst1117|inst2              ; clk          ; clk         ; 0.000        ; 0.000      ; 4.402      ;
+; 4.223 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|trigger:inst1115|inst2              ; clk          ; clk         ; 0.000        ; 0.000      ; 4.402      ;
+; 4.225 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|two_bit_reg_ce:inst5|inst                ; clk          ; clk         ; 0.000        ; 0.000      ; 4.404      ;
+; 4.225 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|two_bit_reg_ce:inst7|inst                ; clk          ; clk         ; 0.000        ; 0.000      ; 4.404      ;
+; 4.225 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|two_bit_reg_ce:inst|inst                 ; clk          ; clk         ; 0.000        ; 0.000      ; 4.404      ;
+; 4.225 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|two_bit_reg_ce:inst6|inst                ; clk          ; clk         ; 0.000        ; 0.000      ; 4.404      ;
+; 4.225 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|two_bit_reg_ce:inst6|inst1               ; clk          ; clk         ; 0.000        ; 0.000      ; 4.404      ;
+; 4.225 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|two_bit_reg_ce:inst|inst1                ; clk          ; clk         ; 0.000        ; 0.000      ; 4.404      ;
+; 4.225 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|two_bit_reg_ce:inst5|inst1               ; clk          ; clk         ; 0.000        ; 0.000      ; 4.404      ;
+; 4.225 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|two_bit_reg_ce:inst7|inst1               ; clk          ; clk         ; 0.000        ; 0.000      ; 4.404      ;
+; 4.302 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_counter:inst20|inst7            ; clk          ; clk         ; 0.000        ; 0.000      ; 4.481      ;
+; 4.302 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_counter:inst20|inst8            ; clk          ; clk         ; 0.000        ; 0.000      ; 4.481      ;
+; 4.622 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|test4:inst11|random:inst|inst5           ; clk          ; clk         ; 0.000        ; 0.000      ; 4.801      ;
+; 4.654 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|test4:inst11|random:inst|inst6           ; clk          ; clk         ; 0.000        ; 0.000      ; 4.833      ;
+; 4.662 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|test4:inst11|random:inst|inst7           ; clk          ; clk         ; 0.000        ; 0.000      ; 4.841      ;
+; 4.662 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|test4:inst11|random:inst|inst            ; clk          ; clk         ; 0.000        ; 0.000      ; 4.841      ;
+; 4.673 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst2020|inst  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.852      ;
+; 4.673 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst2020|inst1 ; clk          ; clk         ; 0.000        ; 0.000      ; 4.852      ;
+; 4.673 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst2020|inst2 ; clk          ; clk         ; 0.000        ; 0.000      ; 4.852      ;
+; 4.673 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst2020|inst3 ; clk          ; clk         ; 0.000        ; 0.000      ; 4.852      ;
+; 4.673 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst52|inst2   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.852      ;
+; 4.673 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst52|inst1   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.852      ;
+; 4.673 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|Four_bit_Register_v3:inst52|inst    ; clk          ; clk         ; 0.000        ; 0.000      ; 4.852      ;
+; 4.722 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1116|inst1           ; clk          ; clk         ; 0.000        ; 0.000      ; 4.901      ;
+; 4.722 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1116|inst            ; clk          ; clk         ; 0.000        ; 0.000      ; 4.901      ;
+; 4.722 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1117|inst            ; clk          ; clk         ; 0.000        ; 0.000      ; 4.901      ;
+; 4.722 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|four_bit_reg_ce:inst1118|inst            ; clk          ; clk         ; 0.000        ; 0.000      ; 4.901      ;
+; 4.765 ; rnd_reset_control:inst|fstate.state4 ; test5:inst47|inst10                                   ; clk          ; clk         ; 0.000        ; 0.000      ; 4.944      ;
++-------+--------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removal: 'rnd2_player:inst1|trigger:inst1118|inst2'                                                                                                                                         ;
++-------+--------------------------------------+-------------------------------------------+--------------+------------------------------------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                                   ; Launch Clock ; Latch Clock                              ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+-------------------------------------------+--------------+------------------------------------------+--------------+------------+------------+
+; 3.219 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|five_counter:inst|inst1 ; clk          ; rnd2_player:inst1|trigger:inst1118|inst2 ; 0.000        ; 0.341      ; 3.739      ;
+; 3.219 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|five_counter:inst|inst2 ; clk          ; rnd2_player:inst1|trigger:inst1118|inst2 ; 0.000        ; 0.341      ; 3.739      ;
+; 3.219 ; rnd_reset_control:inst|fstate.state3 ; rnd2_player:inst1|five_counter:inst|inst  ; clk          ; rnd2_player:inst1|trigger:inst1118|inst2 ; 0.000        ; 0.341      ; 3.739      ;
++-------+--------------------------------------+-------------------------------------------+--------------+------------------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                                                       ;
++-----------------------------------------------------+-----------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                          ; To Clock                                            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------------------------------------+-----------------------------------------------------+----------+----------+----------+----------+
+; clk                                                 ; clk                                                 ; 12342    ; 0        ; 0        ; 0        ;
+; rnd2_player:inst1|trigger:inst1118|inst2            ; clk                                                 ; 7        ; 1        ; 0        ; 0        ;
+; rnd2_player:inst1|trigger:inst1119|inst2            ; clk                                                 ; 7        ; 1        ; 0        ; 0        ;
+; test5:inst47|test4:inst11|con1:inst1|fstate.state2  ; clk                                                 ; 5        ; 13       ; 0        ; 0        ;
+; test5:inst47|test4:inst11|con2:inst9|fstate.state2  ; clk                                                 ; 5        ; 17       ; 0        ; 0        ;
+; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; clk                                                 ; 5        ; 29       ; 0        ; 0        ;
+; rnd2_player:inst1|trigger:inst1118|inst2            ; rnd2_player:inst1|trigger:inst1118|inst2            ; 7        ; 0        ; 0        ; 0        ;
+; rnd2_player:inst1|trigger:inst1119|inst2            ; rnd2_player:inst1|trigger:inst1119|inst2            ; 7        ; 0        ; 0        ; 0        ;
+; clk                                                 ; test5:inst47|test4:inst11|con1:inst1|fstate.state2  ; 0        ; 0        ; 4        ; 0        ;
+; clk                                                 ; test5:inst47|test4:inst11|con2:inst9|fstate.state2  ; 0        ; 0        ; 4        ; 0        ;
+; clk                                                 ; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; 0        ; 0        ; 4        ; 0        ;
++-----------------------------------------------------+-----------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                                                        ;
++-----------------------------------------------------+-----------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                          ; To Clock                                            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------------------------------------+-----------------------------------------------------+----------+----------+----------+----------+
+; clk                                                 ; clk                                                 ; 12342    ; 0        ; 0        ; 0        ;
+; rnd2_player:inst1|trigger:inst1118|inst2            ; clk                                                 ; 7        ; 1        ; 0        ; 0        ;
+; rnd2_player:inst1|trigger:inst1119|inst2            ; clk                                                 ; 7        ; 1        ; 0        ; 0        ;
+; test5:inst47|test4:inst11|con1:inst1|fstate.state2  ; clk                                                 ; 5        ; 13       ; 0        ; 0        ;
+; test5:inst47|test4:inst11|con2:inst9|fstate.state2  ; clk                                                 ; 5        ; 17       ; 0        ; 0        ;
+; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; clk                                                 ; 5        ; 29       ; 0        ; 0        ;
+; rnd2_player:inst1|trigger:inst1118|inst2            ; rnd2_player:inst1|trigger:inst1118|inst2            ; 7        ; 0        ; 0        ; 0        ;
+; rnd2_player:inst1|trigger:inst1119|inst2            ; rnd2_player:inst1|trigger:inst1119|inst2            ; 7        ; 0        ; 0        ; 0        ;
+; clk                                                 ; test5:inst47|test4:inst11|con1:inst1|fstate.state2  ; 0        ; 0        ; 4        ; 0        ;
+; clk                                                 ; test5:inst47|test4:inst11|con2:inst9|fstate.state2  ; 0        ; 0        ; 4        ; 0        ;
+; clk                                                 ; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; 0        ; 0        ; 4        ; 0        ;
++-----------------------------------------------------+-----------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------------------------+
+; Recovery Transfers                                                                                ;
++------------+------------------------------------------+----------+----------+----------+----------+
+; From Clock ; To Clock                                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+------------------------------------------+----------+----------+----------+----------+
+; clk        ; clk                                      ; 91       ; 0        ; 0        ; 0        ;
+; clk        ; rnd2_player:inst1|trigger:inst1118|inst2 ; 3        ; 0        ; 0        ; 0        ;
+; clk        ; rnd2_player:inst1|trigger:inst1119|inst2 ; 3        ; 0        ; 0        ; 0        ;
++------------+------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------------------------+
+; Removal Transfers                                                                                 ;
++------------+------------------------------------------+----------+----------+----------+----------+
+; From Clock ; To Clock                                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+------------------------------------------+----------+----------+----------+----------+
+; clk        ; clk                                      ; 91       ; 0        ; 0        ; 0        ;
+; clk        ; rnd2_player:inst1|trigger:inst1118|inst2 ; 3        ; 0        ; 0        ; 0        ;
+; clk        ; rnd2_player:inst1|trigger:inst1119|inst2 ; 3        ; 0        ; 0        ; 0        ;
++------------+------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 17    ; 17   ;
+; Unconstrained Input Port Paths  ; 371   ; 371  ;
+; Unconstrained Output Ports      ; 54    ; 54   ;
+; Unconstrained Output Port Paths ; 587   ; 587  ;
++---------------------------------+-------+------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                                                           ;
++-----------------------------------------------------+-----------------------------------------------------+------+-------------+
+; Target                                              ; Clock                                               ; Type ; Status      ;
++-----------------------------------------------------+-----------------------------------------------------+------+-------------+
+; clk                                                 ; clk                                                 ; Base ; Constrained ;
+; rnd2_player:inst1|trigger:inst1118|inst2            ; rnd2_player:inst1|trigger:inst1118|inst2            ; Base ; Constrained ;
+; rnd2_player:inst1|trigger:inst1119|inst2            ; rnd2_player:inst1|trigger:inst1119|inst2            ; Base ; Constrained ;
+; test5:inst47|test4:inst11|con1:inst1|fstate.state2  ; test5:inst47|test4:inst11|con1:inst1|fstate.state2  ; Base ; Constrained ;
+; test5:inst47|test4:inst11|con2:inst9|fstate.state2  ; test5:inst47|test4:inst11|con2:inst9|fstate.state2  ; Base ; Constrained ;
+; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; test5:inst47|test4:inst11|con3:inst13|fstate.state2 ; Base ; Constrained ;
++-----------------------------------------------------+-----------------------------------------------------+------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                           ;
++--------------+--------------------------------------------------------------------------------------+
+; Input Port   ; Comment                                                                              ;
++--------------+--------------------------------------------------------------------------------------+
+; Keypad[0]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Keypad[1]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Keypad[2]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Keypad[3]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Keypad[4]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Keypad[5]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Keypad[6]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Keypad[7]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Keypad[8]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Keypad[9]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Keypad[11]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; clk          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; dipswitch[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; dipswitch[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; dipswitch[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw8          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++--------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; LCD_DATA[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LCD_DATA[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LCD_DATA[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LCD_DATA[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LCD_DATA[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LCD_DATA[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LCD_DATA[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LCD_DATA[7] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LCD_E       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LCD_R       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LCD_RW      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; a           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; b           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; blue1       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; blue2       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; blue3       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; blue4       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; c           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; com1        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; com5        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; com6        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; com7        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; com8        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; d           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; e           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; f           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; g           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; green1      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; green2      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; green3      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; green4      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led1        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led2        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led3        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led4        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led5        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led6        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led7        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led8        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; psega       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; psegc       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; psegd       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; psege       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; psegg       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red1        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red2        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red3        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red4        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rnd1_done   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rnd3_deon   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rnd3_pr     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rnd3_rst    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; round1_rst  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; round2_rst  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                           ;
++--------------+--------------------------------------------------------------------------------------+
+; Input Port   ; Comment                                                                              ;
++--------------+--------------------------------------------------------------------------------------+
+; Keypad[0]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Keypad[1]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Keypad[2]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Keypad[3]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Keypad[4]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Keypad[5]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Keypad[6]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Keypad[7]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Keypad[8]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Keypad[9]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Keypad[11]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; clk          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; dipswitch[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; dipswitch[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; dipswitch[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; sw8          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++--------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; LCD_DATA[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LCD_DATA[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LCD_DATA[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LCD_DATA[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LCD_DATA[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LCD_DATA[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LCD_DATA[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LCD_DATA[7] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LCD_E       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LCD_R       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LCD_RW      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; a           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; b           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; blue1       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; blue2       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; blue3       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; blue4       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; c           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; com1        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; com5        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; com6        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; com7        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; com8        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; d           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; e           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; f           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; g           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; green1      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; green2      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; green3      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; green4      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led1        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led2        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led3        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led4        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led5        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led6        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led7        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led8        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; psega       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; psegc       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; psegd       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; psege       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; psegg       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red1        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red2        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red3        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; red4        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rnd1_done   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rnd3_deon   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rnd3_pr     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rnd3_rst    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; round1_rst  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; round2_rst  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Thu Dec 23 13:37:53 2021
+Info: Command: quartus_sta project1 -c project1
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Warning (335093): The Timing Analyzer is analyzing 12 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'project1.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+    Info (332105): create_clock -period 1.000 -name rnd2_player:inst1|trigger:inst1119|inst2 rnd2_player:inst1|trigger:inst1119|inst2
+    Info (332105): create_clock -period 1.000 -name rnd2_player:inst1|trigger:inst1118|inst2 rnd2_player:inst1|trigger:inst1118|inst2
+    Info (332105): create_clock -period 1.000 -name test5:inst47|test4:inst11|con2:inst9|fstate.state2 test5:inst47|test4:inst11|con2:inst9|fstate.state2
+    Info (332105): create_clock -period 1.000 -name test5:inst47|test4:inst11|con3:inst13|fstate.state2 test5:inst47|test4:inst11|con3:inst13|fstate.state2
+    Info (332105): create_clock -period 1.000 -name test5:inst47|test4:inst11|con1:inst1|fstate.state2 test5:inst47|test4:inst11|con1:inst1|fstate.state2
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -12.559
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):   -12.559           -1133.224 clk 
+    Info (332119):    -1.955              -7.038 test5:inst47|test4:inst11|con2:inst9|fstate.state2 
+    Info (332119):    -1.849              -6.135 test5:inst47|test4:inst11|con3:inst13|fstate.state2 
+    Info (332119):    -1.728              -4.149 test5:inst47|test4:inst11|con1:inst1|fstate.state2 
+    Info (332119):    -1.310              -3.450 rnd2_player:inst1|trigger:inst1119|inst2 
+    Info (332119):    -1.209              -3.249 rnd2_player:inst1|trigger:inst1118|inst2 
+Info (332146): Worst-case hold slack is -1.959
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.959             -22.782 clk 
+    Info (332119):     0.174               0.000 test5:inst47|test4:inst11|con1:inst1|fstate.state2 
+    Info (332119):     0.831               0.000 test5:inst47|test4:inst11|con3:inst13|fstate.state2 
+    Info (332119):     0.926               0.000 test5:inst47|test4:inst11|con2:inst9|fstate.state2 
+    Info (332119):     1.384               0.000 rnd2_player:inst1|trigger:inst1118|inst2 
+    Info (332119):     1.384               0.000 rnd2_player:inst1|trigger:inst1119|inst2 
+Info (332146): Worst-case recovery slack is -4.215
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -4.215            -310.138 clk 
+    Info (332119):    -2.669              -8.007 rnd2_player:inst1|trigger:inst1118|inst2 
+    Info (332119):    -1.464              -4.392 rnd2_player:inst1|trigger:inst1119|inst2 
+Info (332146): Worst-case removal slack is 2.014
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     2.014               0.000 rnd2_player:inst1|trigger:inst1119|inst2 
+    Info (332119):     2.740               0.000 clk 
+    Info (332119):     3.219               0.000 rnd2_player:inst1|trigger:inst1118|inst2 
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 clk 
+    Info (332119):     0.284               0.000 rnd2_player:inst1|trigger:inst1118|inst2 
+    Info (332119):     0.284               0.000 rnd2_player:inst1|trigger:inst1119|inst2 
+    Info (332119):     0.500               0.000 test5:inst47|test4:inst11|con1:inst1|fstate.state2 
+    Info (332119):     0.500               0.000 test5:inst47|test4:inst11|con2:inst9|fstate.state2 
+    Info (332119):     0.500               0.000 test5:inst47|test4:inst11|con3:inst13|fstate.state2 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4707 megabytes
+    Info: Processing ended: Thu Dec 23 13:37:54 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
+
+

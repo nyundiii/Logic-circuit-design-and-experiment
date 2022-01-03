@@ -1,0 +1,159 @@
+
+State Machine - |rnd123|final_winner:inst4|STATE
+Name STATE.CLEAR_DISP STATE.DELAY_T STATE.LINE2 STATE.LINE1 STATE.DISP_ONOFF STATE.ENTRY_MODE STATE.FUNCTION_SET STATE.DELAY 
+STATE.DELAY 0 0 0 0 0 0 0 0 
+STATE.FUNCTION_SET 0 0 0 0 0 0 1 1 
+STATE.ENTRY_MODE 0 0 0 0 0 1 0 1 
+STATE.DISP_ONOFF 0 0 0 0 1 0 0 1 
+STATE.LINE1 0 0 0 1 0 0 0 1 
+STATE.LINE2 0 0 1 0 0 0 0 1 
+STATE.DELAY_T 0 1 0 0 0 0 0 1 
+STATE.CLEAR_DISP 1 0 0 0 0 0 0 1 
+
+State Machine - |rnd123|before_game:inst3333|STATE
+Name STATE.CLEAR_DISP STATE.DELAY_T STATE.LINE2 STATE.LINE1 STATE.DISP_ONOFF STATE.ENTRY_MODE STATE.FUNCTION_SET STATE.DELAY 
+STATE.DELAY 0 0 0 0 0 0 0 0 
+STATE.FUNCTION_SET 0 0 0 0 0 0 1 1 
+STATE.ENTRY_MODE 0 0 0 0 0 1 0 1 
+STATE.DISP_ONOFF 0 0 0 0 1 0 0 1 
+STATE.LINE1 0 0 0 1 0 0 0 1 
+STATE.LINE2 0 0 1 0 0 0 0 1 
+STATE.DELAY_T 0 1 0 0 0 0 0 1 
+STATE.CLEAR_DISP 1 0 0 0 0 0 0 1 
+
+State Machine - |rnd123|test5:inst13|SBO:inst4|fstate
+Name fstate.state4 fstate.state3 fstate.state2 fstate.state1 fstate.state5 
+fstate.state1 0 0 0 0 0 
+fstate.state2 0 0 1 1 0 
+fstate.state3 0 1 0 1 0 
+fstate.state4 1 0 0 1 0 
+fstate.state5 0 0 0 1 1 
+
+State Machine - |rnd123|test5:inst13|SBO:inst3|fstate
+Name fstate.state4 fstate.state3 fstate.state2 fstate.state1 fstate.state5 
+fstate.state1 0 0 0 0 0 
+fstate.state2 0 0 1 1 0 
+fstate.state3 0 1 0 1 0 
+fstate.state4 1 0 0 1 0 
+fstate.state5 0 0 0 1 1 
+
+State Machine - |rnd123|test5:inst13|SBO:inst2|fstate
+Name fstate.state4 fstate.state3 fstate.state2 fstate.state1 fstate.state5 
+fstate.state1 0 0 0 0 0 
+fstate.state2 0 0 1 1 0 
+fstate.state3 0 1 0 1 0 
+fstate.state4 1 0 0 1 0 
+fstate.state5 0 0 0 1 1 
+
+State Machine - |rnd123|test5:inst13|test4:inst11|con4:inst15|fstate
+Name fstate.state4 fstate.state3 fstate.state2 fstate.state1 
+fstate.state1 0 0 0 0 
+fstate.state2 0 0 1 1 
+fstate.state3 0 1 0 1 
+fstate.state4 1 0 0 1 
+
+State Machine - |rnd123|test5:inst13|test4:inst11|com:inst18|fstate
+Name fstate.state4 fstate.state3 fstate.state2 fstate.state1 
+fstate.state1 0 0 0 0 
+fstate.state2 0 0 1 1 
+fstate.state3 0 1 0 1 
+fstate.state4 1 0 0 1 
+
+State Machine - |rnd123|test5:inst13|test4:inst11|con3:inst13|fstate
+Name fstate.state4 fstate.state3 fstate.state2 fstate.state1 
+fstate.state1 0 0 0 0 
+fstate.state2 0 0 1 1 
+fstate.state3 0 1 0 1 
+fstate.state4 1 0 0 1 
+
+State Machine - |rnd123|test5:inst13|test4:inst11|com:inst17|fstate
+Name fstate.state4 fstate.state3 fstate.state2 fstate.state1 
+fstate.state1 0 0 0 0 
+fstate.state2 0 0 1 1 
+fstate.state3 0 1 0 1 
+fstate.state4 1 0 0 1 
+
+State Machine - |rnd123|test5:inst13|test4:inst11|con2:inst9|fstate
+Name fstate.state4 fstate.state2 fstate.state3 fstate.state1 
+fstate.state1 0 0 0 0 
+fstate.state3 0 0 1 1 
+fstate.state2 0 1 0 1 
+fstate.state4 1 0 0 1 
+
+State Machine - |rnd123|test5:inst13|test4:inst11|com:inst16|fstate
+Name fstate.state4 fstate.state3 fstate.state2 fstate.state1 
+fstate.state1 0 0 0 0 
+fstate.state2 0 0 1 1 
+fstate.state3 0 1 0 1 
+fstate.state4 1 0 0 1 
+
+State Machine - |rnd123|test5:inst13|test4:inst11|con1:inst1|fstate
+Name fstate.state4 fstate.state3 fstate.state2 fstate.state1 
+fstate.state1 0 0 0 0 
+fstate.state2 0 0 1 1 
+fstate.state3 0 1 0 1 
+fstate.state4 1 0 0 1 
+
+State Machine - |rnd123|test5:inst13|test4:inst11|com:inst14|fstate
+Name fstate.state4 fstate.state3 fstate.state2 fstate.state1 
+fstate.state1 0 0 0 0 
+fstate.state2 0 0 1 1 
+fstate.state3 0 1 0 1 
+fstate.state4 1 0 0 1 
+
+State Machine - |rnd123|test5:inst13|SBO:inst1|fstate
+Name fstate.state4 fstate.state3 fstate.state2 fstate.state1 fstate.state5 
+fstate.state1 0 0 0 0 0 
+fstate.state2 0 0 1 1 0 
+fstate.state3 0 1 0 1 0 
+fstate.state4 1 0 0 1 0 
+fstate.state5 0 0 0 1 1 
+
+State Machine - |rnd123|rnd2_player:inst1|rnd2_ledcontrol:inst45|fstate
+Name fstate.state4 fstate.state3 fstate.state2 fstate.state1 fstate.state5 
+fstate.state1 0 0 0 0 0 
+fstate.state2 0 0 1 1 0 
+fstate.state3 0 1 0 1 0 
+fstate.state4 1 0 0 1 0 
+fstate.state5 0 0 0 1 1 
+
+State Machine - |rnd123|rnd2_player:inst1|rnd2_ledcontrol:inst13|fstate
+Name fstate.state4 fstate.state3 fstate.state2 fstate.state1 fstate.state5 
+fstate.state1 0 0 0 0 0 
+fstate.state2 0 0 1 1 0 
+fstate.state3 0 1 0 1 0 
+fstate.state4 1 0 0 1 0 
+fstate.state5 0 0 0 1 1 
+
+State Machine - |rnd123|rnd2_player:inst1|BW:ins3334|fstate
+Name fstate.state2 
+fstate.state1 0 
+fstate.state2 1 
+
+State Machine - |rnd123|rnd2_player:inst1|BW:ins3333|fstate
+Name fstate.state2 
+fstate.state1 0 
+fstate.state2 1 
+
+State Machine - |rnd123|rnd2_player:inst1|rn2_fullcoler:inst51|fstate
+Name fstate.state1 fstate.state3 fstate.state2 
+fstate.state1 0 0 0 
+fstate.state2 1 0 1 
+fstate.state3 1 1 0 
+
+State Machine - |rnd123|project2:inst41|control_unit:inst30|fstate
+Name fstate.state7 fstate.state4 fstate.state6 fstate.state5 fstate.state2 fstate.state3 fstate.state1 
+fstate.state1 0 0 0 0 0 0 0 
+fstate.state3 0 0 0 0 0 1 1 
+fstate.state2 0 0 0 0 1 0 1 
+fstate.state5 0 0 0 1 0 0 1 
+fstate.state6 0 0 1 0 0 0 1 
+fstate.state4 0 1 0 0 0 0 1 
+fstate.state7 1 0 0 0 0 0 1 
+
+State Machine - |rnd123|rnd_reset_control:inst|fstate
+Name fstate.state4 fstate.state3 fstate.state2 fstate.state1 
+fstate.state1 0 0 0 0 
+fstate.state2 0 0 1 1 
+fstate.state3 0 1 0 1 
+fstate.state4 1 0 0 1 

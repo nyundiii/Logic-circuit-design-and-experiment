@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ise/xilinx_project/project_final/rnd123.ncd
+OUTFILE=/home/ise/xilinx_project/project_final/rnd123.bit
+FAMILY=Spartan6
+PART=xc6slx45-3fgg484
+WORKINGDIR=/home/ise/xilinx_project/project_final
+LICENSE=ISE
+USER_INFO=8416_11442_1478797146_620

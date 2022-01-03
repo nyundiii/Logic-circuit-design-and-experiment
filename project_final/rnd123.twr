@@ -1,0 +1,259 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 3 -n
+3 -fastpaths -xml rnd123.twx rnd123.ncd -o rnd123.twr rnd123.pcf -ucf
+rnd123.ucf
+
+Design file:              rnd123.ncd
+Physical constraint file: rnd123.pcf
+Device,package,speed:     xc6slx45,fgg484,C,-3 (PRODUCTION 1.23 2016-11-22)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+Keypad<0>   |   -2.137(R)|      FAST  |    7.176(R)|      SLOW  |clk_IBUF_BUFG     |   0.000|
+Keypad<1>   |   -2.830(R)|      FAST  |    6.289(R)|      SLOW  |clk_IBUF_BUFG     |   0.000|
+Keypad<2>   |   -2.515(R)|      FAST  |    5.592(R)|      SLOW  |clk_IBUF_BUFG     |   0.000|
+Keypad<3>   |   -2.894(R)|      FAST  |    6.286(R)|      SLOW  |clk_IBUF_BUFG     |   0.000|
+Keypad<4>   |   -2.528(R)|      FAST  |    5.610(R)|      SLOW  |clk_IBUF_BUFG     |   0.000|
+Keypad<5>   |   -2.646(R)|      FAST  |    5.961(R)|      SLOW  |clk_IBUF_BUFG     |   0.000|
+Keypad<6>   |   -2.936(R)|      FAST  |    6.927(R)|      SLOW  |clk_IBUF_BUFG     |   0.000|
+Keypad<7>   |   -2.973(R)|      FAST  |    6.911(R)|      SLOW  |clk_IBUF_BUFG     |   0.000|
+Keypad<8>   |   -2.623(R)|      FAST  |    6.326(R)|      SLOW  |clk_IBUF_BUFG     |   0.000|
+Keypad<9>   |   -2.933(R)|      FAST  |    6.854(R)|      SLOW  |clk_IBUF_BUFG     |   0.000|
+Keypad<11>  |   -1.405(R)|      FAST  |    7.461(R)|      SLOW  |clk_IBUF_BUFG     |   0.000|
+dipswitch<0>|   -2.701(R)|      FAST  |    5.750(R)|      SLOW  |clk_IBUF_BUFG     |   0.000|
+dipswitch<1>|   -1.960(R)|      FAST  |    4.736(R)|      SLOW  |clk_IBUF_BUFG     |   0.000|
+dipswitch<2>|   -1.951(R)|      FAST  |    4.622(R)|      SLOW  |clk_IBUF_BUFG     |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+LCD_DATA<0> |        14.289(R)|      SLOW  |         8.300(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+LCD_DATA<1> |        14.404(R)|      SLOW  |         8.410(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+LCD_DATA<2> |        17.792(R)|      SLOW  |        10.462(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+LCD_DATA<3> |        16.835(R)|      SLOW  |         9.836(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+LCD_DATA<4> |        14.490(R)|      SLOW  |         8.414(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+LCD_DATA<5> |        14.642(R)|      SLOW  |         8.592(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+LCD_DATA<6> |        14.406(R)|      SLOW  |         8.396(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+LCD_DATA<7> |        17.263(R)|      SLOW  |        10.137(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+LCD_R       |        15.147(R)|      SLOW  |         8.830(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+LCD_RW      |        15.000(R)|      SLOW  |         8.738(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+a           |        20.952(R)|      SLOW  |        10.387(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+b           |        21.050(R)|      SLOW  |        10.735(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+blue1       |        16.979(R)|      SLOW  |         8.875(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+blue2       |        17.365(R)|      SLOW  |         9.121(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+blue3       |        16.438(R)|      SLOW  |         8.543(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+blue4       |        19.018(R)|      SLOW  |        10.099(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+c           |        19.619(R)|      SLOW  |         9.802(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+com1        |        18.701(R)|      SLOW  |         9.985(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+com5        |        17.716(R)|      SLOW  |         9.952(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+com6        |        16.271(R)|      SLOW  |         9.080(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+com7        |        15.883(R)|      SLOW  |         9.092(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+com8        |        18.583(R)|      SLOW  |        10.008(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+d           |        23.215(R)|      SLOW  |        11.811(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+e           |        17.846(R)|      SLOW  |         9.164(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+f           |        19.688(R)|      SLOW  |         9.986(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+g           |        18.927(R)|      SLOW  |         9.307(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+green1      |        16.839(R)|      SLOW  |         8.859(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+green2      |        18.697(R)|      SLOW  |         9.961(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+green3      |        17.135(R)|      SLOW  |         9.024(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+green4      |        16.654(R)|      SLOW  |         8.735(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+led1        |        19.194(R)|      SLOW  |        10.156(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+led2        |        17.381(R)|      SLOW  |         9.133(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+led3        |        17.552(R)|      SLOW  |         9.176(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+led4        |        18.147(R)|      SLOW  |         9.347(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+led5        |        18.064(R)|      SLOW  |         9.407(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+led6        |        18.793(R)|      SLOW  |         9.187(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+led7        |        18.230(R)|      SLOW  |         9.383(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+led8        |        18.359(R)|      SLOW  |         9.405(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+psega       |        18.706(R)|      SLOW  |         9.866(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+psegc       |        18.143(R)|      SLOW  |         9.550(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+psegd       |        18.130(R)|      SLOW  |         9.525(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+psege       |        17.084(R)|      SLOW  |         8.904(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+psegg       |        18.913(R)|      SLOW  |         9.997(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+red1        |        16.649(R)|      SLOW  |         8.887(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+red2        |        17.004(R)|      SLOW  |         9.102(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+red3        |        17.250(R)|      SLOW  |         9.241(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+red4        |        16.212(R)|      SLOW  |         8.628(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+rnd1_done   |        19.142(R)|      SLOW  |        10.945(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+rnd3_deon   |        19.460(R)|      SLOW  |        11.412(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+rnd3_pr     |        19.335(R)|      SLOW  |        11.346(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+rnd3_rst    |        19.275(R)|      SLOW  |        11.306(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+round1_rst  |        19.076(R)|      SLOW  |        11.339(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+round2_rst  |        20.067(R)|      SLOW  |        11.858(R)|      FAST  |clk_IBUF_BUFG     |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock sw8 to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+blue1       |        16.783(R)|      SLOW  |         9.195(R)|      FAST  |sw8_IBUF_BUFG     |   0.000|
+blue2       |        17.169(R)|      SLOW  |         9.441(R)|      FAST  |sw8_IBUF_BUFG     |   0.000|
+blue3       |        16.242(R)|      SLOW  |         8.863(R)|      FAST  |sw8_IBUF_BUFG     |   0.000|
+blue4       |        18.822(R)|      SLOW  |        10.419(R)|      FAST  |sw8_IBUF_BUFG     |   0.000|
+green1      |        16.690(R)|      SLOW  |         9.319(R)|      FAST  |sw8_IBUF_BUFG     |   0.000|
+green2      |        18.548(R)|      SLOW  |        10.421(R)|      FAST  |sw8_IBUF_BUFG     |   0.000|
+green3      |        16.986(R)|      SLOW  |         9.484(R)|      FAST  |sw8_IBUF_BUFG     |   0.000|
+green4      |        16.505(R)|      SLOW  |         9.195(R)|      FAST  |sw8_IBUF_BUFG     |   0.000|
+red1        |        16.418(R)|      SLOW  |         8.961(R)|      FAST  |sw8_IBUF_BUFG     |   0.000|
+red2        |        16.773(R)|      SLOW  |         9.176(R)|      FAST  |sw8_IBUF_BUFG     |   0.000|
+red3        |        17.019(R)|      SLOW  |         9.315(R)|      FAST  |sw8_IBUF_BUFG     |   0.000|
+red4        |        15.981(R)|      SLOW  |         8.702(R)|      FAST  |sw8_IBUF_BUFG     |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.709|   -0.416|         |         |
+rst            |   -1.139|    0.468|         |         |
+sw8            |    3.752|    2.503|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock rst
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+sw8            |         |         |    2.321|    2.321|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock sw8
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.365|         |    3.673|         |
+rst            |   -1.853|   -1.853|         |    0.658|
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+clk            |LCD_E          |   15.261|
+dipswitch<0>   |blue1          |    8.092|
+dipswitch<0>   |blue2          |    8.478|
+dipswitch<0>   |blue3          |    7.551|
+dipswitch<0>   |blue4          |   10.131|
+dipswitch<0>   |green1         |    8.766|
+dipswitch<0>   |green2         |   10.624|
+dipswitch<0>   |green3         |    9.062|
+dipswitch<0>   |green4         |    8.581|
+dipswitch<0>   |red1           |    7.875|
+dipswitch<0>   |red2           |    8.230|
+dipswitch<0>   |red3           |    8.476|
+dipswitch<0>   |red4           |    7.438|
+dipswitch<1>   |blue1          |    9.662|
+dipswitch<1>   |blue2          |   10.048|
+dipswitch<1>   |blue3          |    9.121|
+dipswitch<1>   |blue4          |   11.701|
+dipswitch<1>   |green1         |    9.838|
+dipswitch<1>   |green2         |   11.696|
+dipswitch<1>   |green3         |   10.134|
+dipswitch<1>   |green4         |    9.653|
+dipswitch<1>   |red1           |    9.385|
+dipswitch<1>   |red2           |    9.740|
+dipswitch<1>   |red3           |    9.986|
+dipswitch<1>   |red4           |    8.948|
+dipswitch<2>   |blue1          |    9.145|
+dipswitch<2>   |blue2          |    9.531|
+dipswitch<2>   |blue3          |    8.604|
+dipswitch<2>   |blue4          |   11.184|
+dipswitch<2>   |green1         |    9.958|
+dipswitch<2>   |green2         |   11.816|
+dipswitch<2>   |green3         |   10.254|
+dipswitch<2>   |green4         |    9.773|
+dipswitch<2>   |red1           |    8.845|
+dipswitch<2>   |red2           |    9.200|
+dipswitch<2>   |red3           |    9.446|
+dipswitch<2>   |red4           |    8.408|
+rst            |a              |   12.881|
+rst            |b              |   13.111|
+rst            |blue1          |   10.018|
+rst            |blue2          |   10.404|
+rst            |blue3          |    9.477|
+rst            |blue4          |   12.057|
+rst            |c              |   11.289|
+rst            |com1           |    9.624|
+rst            |com5           |    8.110|
+rst            |com6           |    6.665|
+rst            |com7           |    6.833|
+rst            |com8           |   11.110|
+rst            |d              |   13.953|
+rst            |e              |    9.933|
+rst            |f              |   11.554|
+rst            |g              |   10.975|
+rst            |green1         |   10.089|
+rst            |green2         |   11.947|
+rst            |green3         |   10.385|
+rst            |green4         |    9.904|
+rst            |led1           |   11.794|
+rst            |led2           |   10.619|
+rst            |led3           |   10.935|
+rst            |led4           |   11.024|
+rst            |led5           |   11.241|
+rst            |led6           |   12.235|
+rst            |led7           |   11.452|
+rst            |led8           |   11.053|
+rst            |psega          |   11.611|
+rst            |psegc          |   11.048|
+rst            |psegd          |   11.035|
+rst            |psege          |    9.989|
+rst            |psegg          |   11.818|
+rst            |red1           |    9.640|
+rst            |red2           |    9.995|
+rst            |red3           |   10.241|
+rst            |red4           |    9.203|
+rst            |rnd1_done      |   12.589|
+rst            |rnd3_deon      |   12.848|
+rst            |rnd3_pr        |   12.723|
+rst            |rnd3_rst       |   12.663|
+rst            |round1_rst     |   12.872|
+rst            |round2_rst     |   12.364|
+---------------+---------------+---------+
+
+
+Analysis completed Thu Dec 23 04:46:10 2021 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 445 MB
+
+
+

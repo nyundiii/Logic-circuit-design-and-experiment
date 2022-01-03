@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at con3.v(54): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/20.1/project1/con3.v Line: 54

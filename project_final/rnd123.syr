@@ -1,0 +1,1954 @@
+Release 14.7 - xst P.20160913 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: rnd123.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "rnd123.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "rnd123"
+Output Format                      : NGC
+Target Device                      : xc6slx45-3-fgg484
+
+---- Source Options
+Top Module Name                    : rnd123
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/week3_1_3.v" into library work
+Parsing module <week3_1_3>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/mx_2x1.v" into library work
+Parsing module <mx_2x1>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/week3_1_4.v" into library work
+Parsing module <week3_1_4>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/week3_1_2.v" into library work
+Parsing module <week3_1_2>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/random.v" into library work
+Parsing module <random>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/four_bit_reg_ce.v" into library work
+Parsing module <four_bit_reg_ce>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/con4.v" into library work
+Parsing module <con4>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/con3.v" into library work
+Parsing module <con3>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/con2.v" into library work
+Parsing module <con2>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/con1.v" into library work
+Parsing module <con1>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/com.v" into library work
+Parsing module <com>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/win_lose.v" into library work
+Parsing module <win_lose>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/week3_3.v" into library work
+Parsing module <week3_3>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/two_bit_reg_ce.v" into library work
+Parsing module <two_bit_reg_ce>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/two_bit_compare.v" into library work
+Parsing module <two_bit_compare>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/Trigger.v" into library work
+Parsing module <trigger>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/test4.v" into library work
+Parsing module <test4>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/sb_calculate.v" into library work
+Parsing module <sb_calculate>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/SBO.v" into library work
+Parsing module <SBO>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/rnd2_ledcontrol.v" into library work
+Parsing module <rnd2_ledcontrol>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/rnd1.v" into library work
+Parsing module <rnd1>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/rn2_fullcoler.v" into library work
+Parsing module <rn2_fullcoler>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/mx_4bit_2x1.v" into library work
+Parsing module <mx_4bit_2x1>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/mapping.v" into library work
+Parsing module <mapping>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/four_bit_ripple_carry_adder_v4.v" into library work
+Parsing module <four_bit_ripple_carry_adder_v4>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/four_bit_ripple_carry_adder_v3.v" into library work
+Parsing module <four_bit_ripple_carry_adder_v3>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/four_bit_ripple_carry_adder_v2.v" into library work
+Parsing module <four_bit_ripple_carry_adder_v2>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/four_bit_Register_v4.v" into library work
+Parsing module <four_bit_Register_v4>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/Four_bit_Register_v3.v" into library work
+Parsing module <Four_bit_Register_v3>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/four_bit_counter.v" into library work
+Parsing module <four_bit_counter>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/five_counter.v" into library work
+Parsing module <five_counter>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/Decimal_to_binary.v" into library work
+Parsing module <Decimal_to_binary>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/control_unit.v" into library work
+Parsing module <control_unit>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/BW.v" into library work
+Parsing module <BW>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/b2seg_bus.v" into library work
+Parsing module <b2seg_bus>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/test5.v" into library work
+Parsing module <test5>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/rnd_reset_control.v" into library work
+Parsing module <rnd_reset_control>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/rnd2_player.v" into library work
+Parsing module <rnd2_player>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/project2.v" into library work
+Parsing module <project2>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/player_change.v" into library work
+Parsing module <player_change>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/before_game.v" into library work
+Parsing module <before_game>.
+Analyzing Verilog file "/home/ise/xilinx_project/project_final/rnd123.v" into library work
+Parsing module <rnd123>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "/home/ise/xilinx_project/project_final/rnd123.v" Line 346: Port RED2 is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/ise/xilinx_project/project_final/rnd123.v" Line 472: Port inputnum1 is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/ise/xilinx_project/project_final/rnd123.v" Line 596: Port blue2 is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/ise/xilinx_project/project_final/rnd123.v" Line 715: Port Eq is not connected to this instance
+
+Elaborating module <rnd123>.
+
+Elaborating module <rnd_reset_control(state1=0,state2=1,state3=2,state4=3)>.
+"/home/ise/xilinx_project/project_final/rnd_reset_control.v" Line 147. $display Reach undefined state
+WARNING:HDLCompiler:1016 - "/home/ise/xilinx_project/project_final/rnd2_player.v" Line 397: Port C_out is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/ise/xilinx_project/project_final/rnd2_player.v" Line 405: Port C_out is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/ise/xilinx_project/project_final/rnd2_player.v" Line 431: Port C_out is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/ise/xilinx_project/project_final/rnd2_player.v" Line 498: Port C_out is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/ise/xilinx_project/project_final/rnd2_player.v" Line 605: Port Ls is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/ise/xilinx_project/project_final/rnd2_player.v" Line 613: Port Ls is not connected to this instance
+
+Elaborating module <rnd2_player>.
+
+Elaborating module <BW(state1=0,state2=1)>.
+"/home/ise/xilinx_project/project_final/BW.v" Line 100. $display Reach undefined state
+
+Elaborating module <five_counter>.
+
+Elaborating module <Four_bit_Register_v3>.
+
+Elaborating module <mx_2x1>.
+
+Elaborating module <trigger>.
+
+Elaborating module <b2seg_bus>.
+
+Elaborating module <rnd2_ledcontrol(state1=0,state2=1,state3=2,state4=3,state5=4)>.
+"/home/ise/xilinx_project/project_final/rnd2_ledcontrol.v" Line 121. $display Reach undefined state
+
+Elaborating module <mx_4bit_2x1>.
+
+Elaborating module <four_bit_ripple_carry_adder_v3>.
+
+Elaborating module <week3_1_4>.
+
+Elaborating module <week3_1_3>.
+
+Elaborating module <four_bit_ripple_carry_adder_v2>.
+
+Elaborating module <four_bit_ripple_carry_adder_v4>.
+
+Elaborating module <four_bit_Register_v4>.
+
+Elaborating module <week3_3>.
+
+Elaborating module <week3_1_2>.
+
+Elaborating module <mapping>.
+WARNING:HDLCompiler:189 - "/home/ise/xilinx_project/project_final/rnd2_player.v" Line 563: Size mismatch in connection of port <one_out>. Formal port size is 5-bit while actual signal size is 4-bit.
+
+Elaborating module <rn2_fullcoler(state1=0,state2=1,state3=2)>.
+"/home/ise/xilinx_project/project_final/rn2_fullcoler.v" Line 89. $display Reach undefined state
+WARNING:HDLCompiler:189 - "/home/ise/xilinx_project/project_final/rnd2_player.v" Line 600: Size mismatch in connection of port <one_out>. Formal port size is 5-bit while actual signal size is 4-bit.
+WARNING:HDLCompiler:634 - "/home/ise/xilinx_project/project_final/rnd2_player.v" Line 102: Net <num2_ten[3]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/ise/xilinx_project/project_final/rnd2_player.v" Line 103: Net <num_ten[3]> does not have a driver.
+
+Elaborating module <four_bit_counter>.
+WARNING:HDLCompiler:1016 - "/home/ise/xilinx_project/project_final/test5.v" Line 211: Port star is not connected to this instance
+
+Elaborating module <test5>.
+
+Elaborating module <two_bit_reg_ce>.
+
+Elaborating module <SBO(state1=1,state2=0,state3=2,state4=3,state5=4)>.
+WARNING:HDLCompiler:91 - "/home/ise/xilinx_project/project_final/SBO.v" Line 75: Signal <key2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+"/home/ise/xilinx_project/project_final/SBO.v" Line 136. $display Reach undefined state
+
+Elaborating module <test4>.
+
+Elaborating module <random>.
+
+Elaborating module <con1(state1=0,state2=1,state3=2,state4=3)>.
+WARNING:HDLCompiler:91 - "/home/ise/xilinx_project/project_final/con1.v" Line 76: Signal <temprandom> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/xilinx_project/project_final/con1.v" Line 80: Signal <temprandom> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/xilinx_project/project_final/con1.v" Line 88: Signal <temprandom> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+"/home/ise/xilinx_project/project_final/con1.v" Line 115. $display Reach undefined state
+
+Elaborating module <four_bit_reg_ce>.
+
+Elaborating module <con3(state1=0,state2=1,state3=2,state4=3)>.
+WARNING:HDLCompiler:91 - "/home/ise/xilinx_project/project_final/con3.v" Line 80: Signal <temprandom> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/xilinx_project/project_final/con3.v" Line 84: Signal <temprandom> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/xilinx_project/project_final/con3.v" Line 92: Signal <temprandom> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+"/home/ise/xilinx_project/project_final/con3.v" Line 119. $display Reach undefined state
+
+Elaborating module <com(state1=0,state2=1,state3=2,state4=3)>.
+"/home/ise/xilinx_project/project_final/com.v" Line 96. $display Reach undefined state
+
+Elaborating module <con4(state1=0,state2=1,state3=2,state4=3)>.
+"/home/ise/xilinx_project/project_final/con4.v" Line 121. $display Reach undefined state
+
+Elaborating module <con2(state1=1,state2=2,state3=0,state4=3)>.
+WARNING:HDLCompiler:91 - "/home/ise/xilinx_project/project_final/con2.v" Line 89: Signal <temprandom> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/xilinx_project/project_final/con2.v" Line 91: Signal <temprandom> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/xilinx_project/project_final/con2.v" Line 99: Signal <temprandom> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+"/home/ise/xilinx_project/project_final/con2.v" Line 115. $display Reach undefined state
+
+Elaborating module <Decimal_to_binary>.
+
+Elaborating module <sb_calculate>.
+
+Elaborating module <before_game(CLEAR_DISP=3'b111,DELAY=3'b0,DELAY_T=3'b110,DISP_ONOFF=3'b011,ENTRY_MODE=3'b010,FUNCTION_SET=3'b01,LINE1=3'b100,LINE2=3'b101)>.
+
+Elaborating module <project2>.
+
+Elaborating module <rnd1>.
+
+Elaborating module <win_lose>.
+
+Elaborating module <two_bit_compare>.
+
+Elaborating module <control_unit(state1=0,state2=2,state3=1,state4=5,state5=3,state6=4,state7=6)>.
+"/home/ise/xilinx_project/project_final/control_unit.v" Line 181. $display Reach undefined state
+
+Elaborating module <player_change>.
+WARNING:HDLCompiler:634 - "/home/ise/xilinx_project/project_final/rnd123.v" Line 140: Net <player1_res[3]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/ise/xilinx_project/project_final/rnd123.v" Line 142: Net <player2_res[3]> does not have a driver.
+WARNING:Xst:2972 - "/home/ise/xilinx_project/project_final/rnd123.v" line 418. All outputs of instance <b2v_inst11> of block <four_bit_counter> are unconnected in block <rnd123>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/ise/xilinx_project/project_final/rnd123.v" line 445. All outputs of instance <b2v_inst12> of block <four_bit_counter> are unconnected in block <rnd123>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/ise/xilinx_project/project_final/rnd123.v" line 536. All outputs of instance <b2v_inst253> of block <Four_bit_Register_v3> are unconnected in block <rnd123>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/ise/xilinx_project/project_final/rnd123.v" line 544. All outputs of instance <b2v_inst254> of block <Four_bit_Register_v3> are unconnected in block <rnd123>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/ise/xilinx_project/project_final/rnd123.v" line 715. All outputs of instance <b2v_inst8> of block <week3_3> are unconnected in block <rnd123>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <rnd123>.
+    Related source file is "/home/ise/xilinx_project/project_final/rnd123.v".
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 346: Output port <RED2> of the instance <b2v_inst1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 346: Output port <RED3> of the instance <b2v_inst1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 346: Output port <RED4> of the instance <b2v_inst1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 346: Output port <GREEN2> of the instance <b2v_inst1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 346: Output port <GREEN3> of the instance <b2v_inst1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 346: Output port <GREEN4> of the instance <b2v_inst1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 346: Output port <BLUE2> of the instance <b2v_inst1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 346: Output port <BLUE3> of the instance <b2v_inst1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 346: Output port <BLUE4> of the instance <b2v_inst1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 472: Output port <inputnum1> of the instance <b2v_inst13> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 472: Output port <inputnum2> of the instance <b2v_inst13> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 472: Output port <inputnum3> of the instance <b2v_inst13> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 472: Output port <inputnum4> of the instance <b2v_inst13> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 472: Output port <rannum1> of the instance <b2v_inst13> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 472: Output port <rannum2> of the instance <b2v_inst13> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 472: Output port <rannum3> of the instance <b2v_inst13> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 472: Output port <rannum4> of the instance <b2v_inst13> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 596: Output port <blue2> of the instance <b2v_inst41> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 596: Output port <blue3> of the instance <b2v_inst41> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 596: Output port <blue4> of the instance <b2v_inst41> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 596: Output port <red4> of the instance <b2v_inst41> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 596: Output port <red3> of the instance <b2v_inst41> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 596: Output port <red2> of the instance <b2v_inst41> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 596: Output port <green2> of the instance <b2v_inst41> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 596: Output port <green4> of the instance <b2v_inst41> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 596: Output port <green3> of the instance <b2v_inst41> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 596: Output port <sci> of the instance <b2v_inst41> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 596: Output port <ro> of the instance <b2v_inst41> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 596: Output port <pa> of the instance <b2v_inst41> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 596: Output port <pr> of the instance <b2v_inst41> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 715: Output port <Eq> of the instance <b2v_inst8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 715: Output port <Gt> of the instance <b2v_inst8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd123.v" line 715: Output port <Ls> of the instance <b2v_inst8> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <player1_res<3:2>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <player2_res<3:2>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <rnd123> synthesized.
+
+Synthesizing Unit <rnd_reset_control>.
+    Related source file is "/home/ise/xilinx_project/project_final/rnd_reset_control.v".
+        state1 = 0
+        state2 = 1
+        state3 = 2
+        state4 = 3
+WARNING:Xst:37 - Detected unknown constraint/property "message_off". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "message_off". This constraint/property is not supported by the current software release and will be ignored.
+    Found 4-bit register for signal <fstate>.
+    Found 4x2-bit Read Only RAM for signal <fstate[3]_GND_2_o_select_34_OUT>
+    Found 4-bit 4-to-1 multiplexer for signal <_n0068> created at line 69.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   4 D-type flip-flop(s).
+	inferred   4 Latch(s).
+	inferred  11 Multiplexer(s).
+Unit <rnd_reset_control> synthesized.
+
+Synthesizing Unit <rnd2_player>.
+    Related source file is "/home/ise/xilinx_project/project_final/rnd2_player.v".
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd2_player.v" line 397: Output port <C_out> of the instance <b2v_inst1818> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd2_player.v" line 405: Output port <C_out> of the instance <b2v_inst1819> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd2_player.v" line 431: Output port <C_out> of the instance <b2v_inst21> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd2_player.v" line 498: Output port <C_out> of the instance <b2v_inst34> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd2_player.v" line 605: Output port <Ls> of the instance <b2v_inst571> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/rnd2_player.v" line 613: Output port <Ls> of the instance <b2v_inst572> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <num2_ten<3>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <num2_ten<1>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <num_ten<3>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <num_ten<1>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 1-bit register for signal <SYNTHESIZED_WIRE_110>.
+    Found 1-bit register for signal <SYNTHESIZED_WIRE_105>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <rnd2_player> synthesized.
+
+Synthesizing Unit <BW>.
+    Related source file is "/home/ise/xilinx_project/project_final/BW.v".
+        state1 = 0
+        state2 = 1
+WARNING:Xst:37 - Detected unknown constraint/property "message_off". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "message_off". This constraint/property is not supported by the current software release and will be ignored.
+    Found 2-bit register for signal <fstate>.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+	inferred   2 Latch(s).
+	inferred   5 Multiplexer(s).
+Unit <BW> synthesized.
+
+Synthesizing Unit <five_counter>.
+    Related source file is "/home/ise/xilinx_project/project_final/five_counter.v".
+    Found 1-bit register for signal <cnt_ALTERA_SYNTHESIZED5<1>>.
+    Found 1-bit register for signal <cnt_ALTERA_SYNTHESIZED5<0>>.
+    Found 1-bit register for signal <cnt_ALTERA_SYNTHESIZED5<2>>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <five_counter> synthesized.
+
+Synthesizing Unit <Four_bit_Register_v3>.
+    Related source file is "/home/ise/xilinx_project/project_final/Four_bit_Register_v3.v".
+    Found 1-bit register for signal <reg_out<1>>.
+    Found 1-bit register for signal <reg_out<2>>.
+    Found 1-bit register for signal <reg_out<3>>.
+    Found 1-bit register for signal <reg_out<0>>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <Four_bit_Register_v3> synthesized.
+
+Synthesizing Unit <mx_2x1>.
+    Related source file is "/home/ise/xilinx_project/project_final/mx_2x1.v".
+    Summary:
+	no macro.
+Unit <mx_2x1> synthesized.
+
+Synthesizing Unit <trigger>.
+    Related source file is "/home/ise/xilinx_project/project_final/Trigger.v".
+    Found 1-bit register for signal <DFF_inst3>.
+    Found 1-bit register for signal <SYNTHESIZED_WIRE_1>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <trigger> synthesized.
+
+Synthesizing Unit <b2seg_bus>.
+    Related source file is "/home/ise/xilinx_project/project_final/b2seg_bus.v".
+    Summary:
+	no macro.
+Unit <b2seg_bus> synthesized.
+
+Synthesizing Unit <rnd2_ledcontrol>.
+    Related source file is "/home/ise/xilinx_project/project_final/rnd2_ledcontrol.v".
+        state1 = 0
+        state2 = 1
+        state3 = 2
+        state4 = 3
+        state5 = 4
+WARNING:Xst:37 - Detected unknown constraint/property "message_off". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "message_off". This constraint/property is not supported by the current software release and will be ignored.
+    Found 5-bit register for signal <fstate>.
+    Found 8x4-bit Read Only RAM for signal <fstate[4]_PWR_16_o_select_47_OUT>
+    Found 5-bit 5-to-1 multiplexer for signal <_n0076> created at line 53.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4-bit comparator lessequal for signal <n0003> created at line 55
+    Found 4-bit comparator greater for signal <inputten[3]_GND_16_o_LessThan_5_o> created at line 55
+    Found 4-bit comparator greater for signal <inputten[3]_GND_16_o_LessThan_7_o> created at line 57
+    Found 4-bit comparator greater for signal <inputten[3]_PWR_16_o_LessThan_9_o> created at line 59
+    Summary:
+	inferred   1 RAM(s).
+	inferred   5 D-type flip-flop(s).
+	inferred   5 Latch(s).
+	inferred   4 Comparator(s).
+	inferred  11 Multiplexer(s).
+Unit <rnd2_ledcontrol> synthesized.
+
+Synthesizing Unit <mx_4bit_2x1>.
+    Related source file is "/home/ise/xilinx_project/project_final/mx_4bit_2x1.v".
+    Summary:
+	no macro.
+Unit <mx_4bit_2x1> synthesized.
+
+Synthesizing Unit <four_bit_ripple_carry_adder_v3>.
+    Related source file is "/home/ise/xilinx_project/project_final/four_bit_ripple_carry_adder_v3.v".
+    Summary:
+	no macro.
+Unit <four_bit_ripple_carry_adder_v3> synthesized.
+
+Synthesizing Unit <week3_1_4>.
+    Related source file is "/home/ise/xilinx_project/project_final/week3_1_4.v".
+    Summary:
+	no macro.
+Unit <week3_1_4> synthesized.
+
+Synthesizing Unit <week3_1_3>.
+    Related source file is "/home/ise/xilinx_project/project_final/week3_1_3.v".
+    Summary:
+Unit <week3_1_3> synthesized.
+
+Synthesizing Unit <four_bit_ripple_carry_adder_v2>.
+    Related source file is "/home/ise/xilinx_project/project_final/four_bit_ripple_carry_adder_v2.v".
+    Summary:
+	no macro.
+Unit <four_bit_ripple_carry_adder_v2> synthesized.
+
+Synthesizing Unit <four_bit_ripple_carry_adder_v4>.
+    Related source file is "/home/ise/xilinx_project/project_final/four_bit_ripple_carry_adder_v4.v".
+    Summary:
+	no macro.
+Unit <four_bit_ripple_carry_adder_v4> synthesized.
+
+Synthesizing Unit <four_bit_Register_v4>.
+    Related source file is "/home/ise/xilinx_project/project_final/four_bit_Register_v4.v".
+    Found 1-bit register for signal <reg_out<1>>.
+    Found 1-bit register for signal <reg_out<2>>.
+    Found 1-bit register for signal <reg_out<3>>.
+    Found 1-bit register for signal <reg_out<0>>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <four_bit_Register_v4> synthesized.
+
+Synthesizing Unit <week3_3>.
+    Related source file is "/home/ise/xilinx_project/project_final/week3_3.v".
+    Summary:
+	no macro.
+Unit <week3_3> synthesized.
+
+Synthesizing Unit <week3_1_2>.
+    Related source file is "/home/ise/xilinx_project/project_final/week3_1_2.v".
+    Summary:
+	no macro.
+Unit <week3_1_2> synthesized.
+
+Synthesizing Unit <mapping>.
+    Related source file is "/home/ise/xilinx_project/project_final/mapping.v".
+    Summary:
+	no macro.
+Unit <mapping> synthesized.
+
+Synthesizing Unit <rn2_fullcoler>.
+    Related source file is "/home/ise/xilinx_project/project_final/rn2_fullcoler.v".
+        state1 = 0
+        state2 = 1
+        state3 = 2
+WARNING:Xst:37 - Detected unknown constraint/property "message_off". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "message_off". This constraint/property is not supported by the current software release and will be ignored.
+    Found 5-bit register for signal <fstate>.
+    Found 4x3-bit Read Only RAM for signal <fstate[4]_GND_32_o_select_20_OUT>
+    Found 5-bit 3-to-1 multiplexer for signal <_n0044> created at line 56.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4-bit comparator greater for signal <GND_32_o_inputten[3]_LessThan_4_o> created at line 58
+    Summary:
+	inferred   1 RAM(s).
+	inferred   5 D-type flip-flop(s).
+	inferred   5 Latch(s).
+	inferred   1 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <rn2_fullcoler> synthesized.
+
+Synthesizing Unit <four_bit_counter>.
+    Related source file is "/home/ise/xilinx_project/project_final/four_bit_counter.v".
+    Found 1-bit register for signal <result<1>>.
+    Found 1-bit register for signal <result<0>>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <four_bit_counter> synthesized.
+
+Synthesizing Unit <test5>.
+    Related source file is "/home/ise/xilinx_project/project_final/test5.v".
+INFO:Xst:3210 - "/home/ise/xilinx_project/project_final/test5.v" line 211: Output port <star> of the instance <b2v_inst1115> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <SYNTHESIZED_WIRE_29>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <test5> synthesized.
+
+Synthesizing Unit <two_bit_reg_ce>.
+    Related source file is "/home/ise/xilinx_project/project_final/two_bit_reg_ce.v".
+    Found 1-bit register for signal <reg_out<1>>.
+    Found 1-bit register for signal <reg_out<0>>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <two_bit_reg_ce> synthesized.
+
+Synthesizing Unit <SBO>.
+    Related source file is "/home/ise/xilinx_project/project_final/SBO.v".
+        state2 = 0
+        state1 = 1
+        state3 = 2
+        state4 = 3
+        state5 = 4
+WARNING:Xst:37 - Detected unknown constraint/property "message_off". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "message_off". This constraint/property is not supported by the current software release and will be ignored.
+    Found 5-bit register for signal <fstate>.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4-bit comparator equal for signal <random[3]_key1[3]_equal_4_o> created at line 73
+    Found 4-bit comparator equal for signal <random[3]_key2[3]_equal_5_o> created at line 75
+    Found 4-bit comparator equal for signal <random[3]_key3[3]_equal_6_o> created at line 75
+    Found 4-bit comparator equal for signal <random[3]_key4[3]_equal_7_o> created at line 75
+    Summary:
+	inferred   5 D-type flip-flop(s).
+	inferred   5 Latch(s).
+	inferred   4 Comparator(s).
+	inferred   7 Multiplexer(s).
+Unit <SBO> synthesized.
+
+Synthesizing Unit <test4>.
+    Related source file is "/home/ise/xilinx_project/project_final/test4.v".
+    Summary:
+	no macro.
+Unit <test4> synthesized.
+
+Synthesizing Unit <random>.
+    Related source file is "/home/ise/xilinx_project/project_final/random.v".
+    Found 1-bit register for signal <DFF_inst>.
+    Found 1-bit register for signal <DFF_inst5>.
+    Found 1-bit register for signal <SYNTHESIZED_WIRE_1>.
+    Found 1-bit register for signal <DFF_inst7>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <random> synthesized.
+
+Synthesizing Unit <con1>.
+    Related source file is "/home/ise/xilinx_project/project_final/con1.v".
+        state1 = 0
+        state2 = 1
+        state3 = 2
+        state4 = 3
+WARNING:Xst:37 - Detected unknown constraint/property "message_off". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "message_off". This constraint/property is not supported by the current software release and will be ignored.
+    Found 4-bit register for signal <fstate>.
+    Found 4-bit 4-to-1 multiplexer for signal <_n0069> created at line 60.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <temprandom<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <temprandom<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <temprandom<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <temprandom<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4-bit comparator greater for signal <temprandom[3]_PWR_49_o_LessThan_8_o> created at line 76
+    Summary:
+	inferred   4 D-type flip-flop(s).
+	inferred   8 Latch(s).
+	inferred   1 Comparator(s).
+	inferred   5 Multiplexer(s).
+Unit <con1> synthesized.
+
+Synthesizing Unit <four_bit_reg_ce>.
+    Related source file is "/home/ise/xilinx_project/project_final/four_bit_reg_ce.v".
+    Found 1-bit register for signal <reg_out<1>>.
+    Found 1-bit register for signal <reg_out<2>>.
+    Found 1-bit register for signal <reg_out<3>>.
+    Found 1-bit register for signal <reg_out<0>>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <four_bit_reg_ce> synthesized.
+
+Synthesizing Unit <con3>.
+    Related source file is "/home/ise/xilinx_project/project_final/con3.v".
+        state1 = 0
+        state2 = 1
+        state3 = 2
+        state4 = 3
+WARNING:Xst:37 - Detected unknown constraint/property "message_off". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "message_off". This constraint/property is not supported by the current software release and will be ignored.
+    Found 5-bit register for signal <fstate>.
+    Found 5-bit 4-to-1 multiplexer for signal <_n0077> created at line 64.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <temprandom<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <temprandom<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <temprandom<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <temprandom<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4-bit comparator greater for signal <temprandom[3]_PWR_59_o_LessThan_9_o> created at line 80
+    Found 4-bit comparator not equal for signal <n0009> created at line 80
+    Found 4-bit comparator not equal for signal <n0012> created at line 80
+    Summary:
+	inferred   5 D-type flip-flop(s).
+	inferred   9 Latch(s).
+	inferred   3 Comparator(s).
+	inferred   4 Multiplexer(s).
+Unit <con3> synthesized.
+
+Synthesizing Unit <com>.
+    Related source file is "/home/ise/xilinx_project/project_final/com.v".
+        state1 = 0
+        state2 = 1
+        state3 = 2
+        state4 = 3
+WARNING:Xst:37 - Detected unknown constraint/property "message_off". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "message_off". This constraint/property is not supported by the current software release and will be ignored.
+    Found 4-bit register for signal <fstate>.
+    Found 4-bit 4-to-1 multiplexer for signal <_n0043> created at line 53.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+	inferred   4 Latch(s).
+	inferred   4 Multiplexer(s).
+Unit <com> synthesized.
+
+Synthesizing Unit <con4>.
+    Related source file is "/home/ise/xilinx_project/project_final/con4.v".
+        state1 = 0
+        state2 = 1
+        state3 = 2
+        state4 = 3
+WARNING:Xst:37 - Detected unknown constraint/property "message_off". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "message_off". This constraint/property is not supported by the current software release and will be ignored.
+    Found 5-bit register for signal <fstate>.
+    Found 5-bit 4-to-1 multiplexer for signal <_n0075> created at line 66.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4-bit comparator greater for signal <n0012> created at line 81
+    Found 4-bit comparator equal for signal <random[3]_final1[3]_equal_11_o> created at line 81
+    Found 4-bit comparator equal for signal <random[3]_final2[3]_equal_12_o> created at line 81
+    Found 4-bit comparator equal for signal <random[3]_final3[3]_equal_13_o> created at line 81
+    Summary:
+	inferred   5 D-type flip-flop(s).
+	inferred   5 Latch(s).
+	inferred   4 Comparator(s).
+	inferred   6 Multiplexer(s).
+Unit <con4> synthesized.
+
+Synthesizing Unit <con2>.
+    Related source file is "/home/ise/xilinx_project/project_final/con2.v".
+        state3 = 0
+        state1 = 1
+        state2 = 2
+        state4 = 3
+WARNING:Xst:37 - Detected unknown constraint/property "message_off". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "message_off". This constraint/property is not supported by the current software release and will be ignored.
+    Found 4-bit register for signal <fstate>.
+    Found 4-bit 4-to-1 multiplexer for signal <_n0077> created at line 62.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <temprandom<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <temprandom<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <temprandom<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <temprandom<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4-bit comparator greater for signal <temprandom[3]_PWR_80_o_LessThan_12_o> created at line 89
+    Found 4-bit comparator not equal for signal <n0014> created at line 89
+    Summary:
+	inferred   4 D-type flip-flop(s).
+	inferred   8 Latch(s).
+	inferred   2 Comparator(s).
+	inferred   5 Multiplexer(s).
+Unit <con2> synthesized.
+
+Synthesizing Unit <Decimal_to_binary>.
+    Related source file is "/home/ise/xilinx_project/project_final/Decimal_to_binary.v".
+    Summary:
+	no macro.
+Unit <Decimal_to_binary> synthesized.
+
+Synthesizing Unit <sb_calculate>.
+    Related source file is "/home/ise/xilinx_project/project_final/sb_calculate.v".
+    Summary:
+Unit <sb_calculate> synthesized.
+
+Synthesizing Unit <before_game>.
+    Related source file is "/home/ise/xilinx_project/project_final/before_game.v".
+        DELAY = 3'b000
+        FUNCTION_SET = 3'b001
+        ENTRY_MODE = 3'b010
+        DISP_ONOFF = 3'b011
+        LINE1 = 3'b100
+        LINE2 = 3'b101
+        DELAY_T = 3'b110
+        CLEAR_DISP = 3'b111
+    Found 1-bit register for signal <LCD_RW>.
+    Found 1-bit register for signal <LCD_RS>.
+    Found 32-bit register for signal <CNT>.
+    Found 8-bit register for signal <LCD_DATA>.
+    Found 3-bit register for signal <STATE>.
+    Found finite state machine <FSM_0> for signal <STATE>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 16                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 5                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | RESETN (positive)                              |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 32-bit adder for signal <CNT[31]_GND_93_o_add_40_OUT> created at line 59.
+    Found 32x16-bit Read Only RAM for signal <_n0210>
+    Found 32-bit 6-to-1 multiplexer for signal <STATE[2]_CNT[31]_wide_mux_42_OUT> created at line 43.
+    Found 32-bit comparator lessequal for signal <n0015> created at line 44
+    Found 32-bit comparator lessequal for signal <n0018> created at line 48
+    Found 32-bit comparator lessequal for signal <n0021> created at line 54
+    Found 32-bit comparator lessequal for signal <n0024> created at line 56
+    Found 32-bit comparator lessequal for signal <n0027> created at line 58
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  42 D-type flip-flop(s).
+	inferred   5 Comparator(s).
+	inferred  10 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <before_game> synthesized.
+
+Synthesizing Unit <project2>.
+    Related source file is "/home/ise/xilinx_project/project_final/project2.v".
+    Summary:
+	no macro.
+Unit <project2> synthesized.
+
+Synthesizing Unit <rnd1>.
+    Related source file is "/home/ise/xilinx_project/project_final/rnd1.v".
+    Summary:
+	no macro.
+Unit <rnd1> synthesized.
+
+Synthesizing Unit <win_lose>.
+    Related source file is "/home/ise/xilinx_project/project_final/win_lose.v".
+    Summary:
+	no macro.
+Unit <win_lose> synthesized.
+
+Synthesizing Unit <two_bit_compare>.
+    Related source file is "/home/ise/xilinx_project/project_final/two_bit_compare.v".
+    Summary:
+Unit <two_bit_compare> synthesized.
+
+Synthesizing Unit <control_unit>.
+    Related source file is "/home/ise/xilinx_project/project_final/control_unit.v".
+        state1 = 0
+        state3 = 1
+        state2 = 2
+        state5 = 3
+        state6 = 4
+        state4 = 5
+        state7 = 6
+WARNING:Xst:37 - Detected unknown constraint/property "message_off". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "message_off". This constraint/property is not supported by the current software release and will be ignored.
+    Found 7-bit register for signal <fstate>.
+    Found 7-bit 7-to-1 multiplexer for signal <_n0093> created at line 65.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg_fstate<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   7 D-type flip-flop(s).
+	inferred   7 Latch(s).
+	inferred  14 Multiplexer(s).
+Unit <control_unit> synthesized.
+
+Synthesizing Unit <player_change>.
+    Related source file is "/home/ise/xilinx_project/project_final/player_change.v".
+    Summary:
+	no macro.
+Unit <player_change> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 5
+ 32x16-bit single-port Read Only RAM                   : 1
+ 4x2-bit single-port Read Only RAM                     : 1
+ 4x3-bit single-port Read Only RAM                     : 1
+ 8x4-bit single-port Read Only RAM                     : 2
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Registers                                            : 144
+ 1-bit register                                        : 123
+ 2-bit register                                        : 2
+ 32-bit register                                       : 1
+ 4-bit register                                        : 7
+ 5-bit register                                        : 9
+ 7-bit register                                        : 1
+ 8-bit register                                        : 1
+# Latches                                              : 96
+ 1-bit latch                                           : 96
+# Comparators                                          : 40
+ 32-bit comparator lessequal                           : 5
+ 4-bit comparator equal                                : 19
+ 4-bit comparator greater                              : 11
+ 4-bit comparator lessequal                            : 2
+ 4-bit comparator not equal                            : 3
+# Multiplexers                                         : 134
+ 1-bit 2-to-1 multiplexer                              : 26
+ 2-bit 2-to-1 multiplexer                              : 5
+ 3-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 5
+ 32-bit 6-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 34
+ 4-bit 4-to-1 multiplexer                              : 7
+ 5-bit 2-to-1 multiplexer                              : 37
+ 5-bit 3-to-1 multiplexer                              : 1
+ 5-bit 4-to-1 multiplexer                              : 2
+ 5-bit 5-to-1 multiplexer                              : 2
+ 7-bit 2-to-1 multiplexer                              : 10
+ 7-bit 7-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 1
+# Xors                                                 : 58
+ 1-bit xor2                                            : 56
+ 1-bit xor4                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <before_game>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0210> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 16-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <CNT<4:0>>      |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <before_game> synthesized (advanced).
+
+Synthesizing (advanced) Unit <rn2_fullcoler>.
+INFO:Xst:3231 - The small RAM <Mram_fstate[4]_GND_32_o_select_20_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 3-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <fstate<1:0>>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <rn2_fullcoler> synthesized (advanced).
+
+Synthesizing (advanced) Unit <rnd2_ledcontrol>.
+INFO:Xst:3231 - The small RAM <Mram_fstate[4]_PWR_16_o_select_47_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <fstate<2:0>>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <rnd2_ledcontrol> synthesized (advanced).
+
+Synthesizing (advanced) Unit <rnd_reset_control>.
+INFO:Xst:3231 - The small RAM <Mram_fstate[3]_GND_2_o_select_34_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 2-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <fstate<1:0>>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <rnd_reset_control> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 5
+ 32x16-bit single-port distributed Read Only RAM       : 1
+ 4x2-bit single-port distributed Read Only RAM         : 1
+ 4x3-bit single-port distributed Read Only RAM         : 1
+ 8x4-bit single-port distributed Read Only RAM         : 2
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Registers                                            : 247
+ Flip-Flops                                            : 247
+# Comparators                                          : 40
+ 32-bit comparator lessequal                           : 5
+ 4-bit comparator equal                                : 19
+ 4-bit comparator greater                              : 11
+ 4-bit comparator lessequal                            : 2
+ 4-bit comparator not equal                            : 3
+# Multiplexers                                         : 134
+ 1-bit 2-to-1 multiplexer                              : 26
+ 2-bit 2-to-1 multiplexer                              : 5
+ 3-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 5
+ 32-bit 6-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 34
+ 4-bit 4-to-1 multiplexer                              : 7
+ 5-bit 2-to-1 multiplexer                              : 37
+ 5-bit 3-to-1 multiplexer                              : 1
+ 5-bit 4-to-1 multiplexer                              : 2
+ 5-bit 5-to-1 multiplexer                              : 2
+ 7-bit 2-to-1 multiplexer                              : 10
+ 7-bit 7-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 1
+# Xors                                                 : 58
+ 1-bit xor2                                            : 56
+ 1-bit xor4                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1989 - Unit <rnd2_player>: instances <b2v_inst1114>, <b2v_inst1116> of unit <trigger> are equivalent, second instance is removed
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <b2v_inst3333/FSM_0> on signal <STATE[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 011   | 011
+ 100   | 100
+ 010   | 010
+ 101   | 101
+ 110   | 110
+ 111   | 111
+-------------------
+WARNING:Xst:1710 - FF/Latch <reg_fstate_4> (without init value) has a constant value of 0 in block <control_unit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_fstate_5> (without init value) has a constant value of 0 in block <control_unit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_fstate_3> (without init value) has a constant value of 0 in block <control_unit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_fstate_6> (without init value) has a constant value of 0 in block <control_unit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_3> (without init value) has a constant value of 0 in block <control_unit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_4> (without init value) has a constant value of 0 in block <control_unit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_5> (without init value) has a constant value of 0 in block <control_unit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_6> (without init value) has a constant value of 0 in block <control_unit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_fstate_3> (without init value) has a constant value of 0 in block <SBO>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_fstate_4> (without init value) has a constant value of 0 in block <SBO>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_3> (without init value) has a constant value of 0 in block <SBO>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_4> (without init value) has a constant value of 0 in block <SBO>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_fstate_2> (without init value) has a constant value of 0 in block <con1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_fstate_3> (without init value) has a constant value of 0 in block <con1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_2> (without init value) has a constant value of 0 in block <con1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_3> (without init value) has a constant value of 0 in block <con1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_fstate_3> (without init value) has a constant value of 0 in block <con3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_fstate_2> (without init value) has a constant value of 0 in block <con3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_fstate_4> (without init value) has a constant value of 0 in block <con3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_2> (without init value) has a constant value of 0 in block <con3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_3> (without init value) has a constant value of 0 in block <con3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_4> (without init value) has a constant value of 0 in block <con3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_fstate_2> (without init value) has a constant value of 0 in block <com>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_fstate_3> (without init value) has a constant value of 0 in block <com>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_2> (without init value) has a constant value of 0 in block <com>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_3> (without init value) has a constant value of 0 in block <com>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_fstate_3> (without init value) has a constant value of 0 in block <con4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_fstate_2> (without init value) has a constant value of 0 in block <con4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_fstate_4> (without init value) has a constant value of 0 in block <con4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_2> (without init value) has a constant value of 0 in block <con4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_3> (without init value) has a constant value of 0 in block <con4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_4> (without init value) has a constant value of 0 in block <con4>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_fstate_2> (without init value) has a constant value of 0 in block <con2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_fstate_3> (without init value) has a constant value of 0 in block <con2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_2> (without init value) has a constant value of 0 in block <con2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_3> (without init value) has a constant value of 0 in block <con2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_fstate_2> (without init value) has a constant value of 0 in block <rnd_reset_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_fstate_3> (without init value) has a constant value of 0 in block <rnd_reset_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_2> (without init value) has a constant value of 0 in block <rnd_reset_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_3> (without init value) has a constant value of 0 in block <rnd_reset_control>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_fstate_1> (without init value) has a constant value of 0 in block <BW>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_1> (without init value) has a constant value of 0 in block <BW>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_fstate_3> (without init value) has a constant value of 0 in block <rnd2_ledcontrol>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_fstate_4> (without init value) has a constant value of 0 in block <rnd2_ledcontrol>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_3> (without init value) has a constant value of 0 in block <rnd2_ledcontrol>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_4> (without init value) has a constant value of 0 in block <rnd2_ledcontrol>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_fstate_3> (without init value) has a constant value of 0 in block <rn2_fullcoler>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_fstate_2> (without init value) has a constant value of 0 in block <rn2_fullcoler>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <reg_fstate_4> (without init value) has a constant value of 0 in block <rn2_fullcoler>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_2> (without init value) has a constant value of 0 in block <rn2_fullcoler>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_3> (without init value) has a constant value of 0 in block <rn2_fullcoler>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fstate_4> (without init value) has a constant value of 0 in block <rn2_fullcoler>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1989 - Unit <rnd2_player>: instances <b2v_inst011>, <b2v_inst35> of unit <Four_bit_Register_v3> are equivalent, second instance is removed
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    b2v_inst/DFF_inst5 in unit <test4>
+    b2v_inst/SYNTHESIZED_WIRE_1 in unit <test4>
+    b2v_inst/DFF_inst7 in unit <test4>
+    b2v_inst/DFF_inst in unit <test4>
+    b2v_inst/DFF_inst5 in unit <rnd1>
+    b2v_inst/SYNTHESIZED_WIRE_1 in unit <rnd1>
+    b2v_inst/DFF_inst7 in unit <rnd1>
+    b2v_inst/DFF_inst in unit <rnd1>
+
+
+Optimizing unit <rnd123> ...
+
+Optimizing unit <project2> ...
+
+Optimizing unit <rnd1> ...
+
+Optimizing unit <control_unit> ...
+
+Optimizing unit <test5> ...
+
+Optimizing unit <SBO> ...
+
+Optimizing unit <four_bit_reg_ce> ...
+
+Optimizing unit <test4> ...
+
+Optimizing unit <con1> ...
+
+Optimizing unit <con3> ...
+
+Optimizing unit <com> ...
+
+Optimizing unit <con4> ...
+
+Optimizing unit <con2> ...
+
+Optimizing unit <rnd_reset_control> ...
+
+Optimizing unit <rnd2_player> ...
+
+Optimizing unit <BW> ...
+
+Optimizing unit <Four_bit_Register_v3> ...
+
+Optimizing unit <rnd2_ledcontrol> ...
+
+Optimizing unit <four_bit_Register_v4> ...
+
+Optimizing unit <rn2_fullcoler> ...
+
+Optimizing unit <before_game> ...
+WARNING:Xst:1710 - FF/Latch <b2v_inst3333/CNT_9> (without init value) has a constant value of 0 in block <rnd123>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <b2v_inst3333/CNT_10> (without init value) has a constant value of 0 in block <rnd123>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <b2v_inst3333/CNT_11> (without init value) has a constant value of 0 in block <rnd123>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <b2v_inst3333/CNT_12> (without init value) has a constant value of 0 in block <rnd123>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <b2v_inst3333/CNT_13> (without init value) has a constant value of 0 in block <rnd123>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <b2v_inst3333/CNT_14> (without init value) has a constant value of 0 in block <rnd123>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <b2v_inst3333/CNT_15> (without init value) has a constant value of 0 in block <rnd123>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <b2v_inst3333/CNT_16> (without init value) has a constant value of 0 in block <rnd123>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <b2v_inst3333/CNT_17> (without init value) has a constant value of 0 in block <rnd123>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <b2v_inst3333/CNT_18> (without init value) has a constant value of 0 in block <rnd123>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <b2v_inst3333/CNT_19> (without init value) has a constant value of 0 in block <rnd123>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <b2v_inst3333/CNT_20> (without init value) has a constant value of 0 in block <rnd123>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <b2v_inst3333/CNT_21> (without init value) has a constant value of 0 in block <rnd123>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <b2v_inst3333/CNT_22> (without init value) has a constant value of 0 in block <rnd123>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <b2v_inst3333/CNT_23> (without init value) has a constant value of 0 in block <rnd123>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <b2v_inst3333/CNT_24> (without init value) has a constant value of 0 in block <rnd123>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <b2v_inst3333/CNT_25> (without init value) has a constant value of 0 in block <rnd123>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <b2v_inst3333/CNT_26> (without init value) has a constant value of 0 in block <rnd123>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <b2v_inst3333/CNT_27> (without init value) has a constant value of 0 in block <rnd123>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <b2v_inst3333/CNT_28> (without init value) has a constant value of 0 in block <rnd123>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <b2v_inst3333/CNT_29> (without init value) has a constant value of 0 in block <rnd123>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <b2v_inst3333/CNT_30> (without init value) has a constant value of 0 in block <rnd123>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <b2v_inst3333/CNT_31> (without init value) has a constant value of 0 in block <rnd123>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block rnd123, actual ratio is 2.
+FlipFlop b2v_inst/fstate_0 has been replicated 2 time(s)
+FlipFlop b2v_inst/fstate_1 has been replicated 2 time(s)
+FlipFlop b2v_inst1/b2v_ins3333/fstate_0 has been replicated 1 time(s)
+FlipFlop b2v_inst3333/CNT_3 has been replicated 1 time(s)
+FlipFlop b2v_inst3333/CNT_4 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 195
+ Flip-Flops                                            : 195
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : rnd123.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 517
+#      GND                         : 1
+#      INV                         : 9
+#      LUT1                        : 8
+#      LUT2                        : 35
+#      LUT3                        : 45
+#      LUT4                        : 77
+#      LUT5                        : 123
+#      LUT6                        : 162
+#      MUXCY                       : 40
+#      MUXF7                       : 7
+#      VCC                         : 1
+#      XORCY                       : 9
+# FlipFlops/Latches                : 252
+#      FDC                         : 130
+#      FDCE                        : 8
+#      FDE                         : 48
+#      FDP                         : 9
+#      LDC                         : 40
+#      LDE                         : 12
+#      LDP                         : 5
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 76
+#      IBUF                        : 17
+#      OBUF                        : 59
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45fgg484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             252  out of  54576     0%  
+ Number of Slice LUTs:                  459  out of  27288     1%  
+    Number used as Logic:               459  out of  27288     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    514
+   Number with an unused Flip Flop:     262  out of    514    50%  
+   Number with an unused LUT:            55  out of    514    10%  
+   Number of fully used LUT-FF pairs:   197  out of    514    38%  
+   Number of unique control sets:        27
+
+IO Utilization: 
+ Number of IOs:                          77
+ Number of bonded IOBs:                  76  out of    316    24%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------------+---------------------------------------------------------+-------+
+Clock Signal                                                   | Clock buffer(FF name)                                   | Load  |
+---------------------------------------------------------------+---------------------------------------------------------+-------+
+clk                                                            | IBUF+BUFG                                               | 189   |
+b2v_inst41/b2v_inst30/_n0096(b2v_inst41/b2v_inst30/out1:O)     | NONE(*)(b2v_inst41/b2v_inst30/reg_fstate_0)             | 3     |
+b2v_inst13/b2v_inst4/_n0058(b2v_inst13/b2v_inst4/out1:O)       | NONE(*)(b2v_inst13/b2v_inst4/reg_fstate_0)              | 3     |
+b2v_inst13/b2v_inst3/_n0058(b2v_inst13/b2v_inst3/out1:O)       | NONE(*)(b2v_inst13/b2v_inst3/reg_fstate_0)              | 3     |
+b2v_inst13/b2v_inst2/_n0058(b2v_inst13/b2v_inst2/out1:O)       | NONE(*)(b2v_inst13/b2v_inst2/reg_fstate_0)              | 3     |
+b2v_inst13/b2v_inst1/_n0058(b2v_inst13/b2v_inst1/out1:O)       | NONE(*)(b2v_inst13/b2v_inst1/reg_fstate_0)              | 3     |
+sw8                                                            | IBUF+BUFG                                               | 13    |
+b2v_inst3333/Mcompar_CNT[31]_GND_93_o_LessThan_19_o_lut<2>     | NONE(b2v_inst13/b2v_inst11/b2v_inst1/reg_fstate_0)      | 20    |
+b2v_inst1/SYNTHESIZED_WIRE_6(b2v_inst1/b2v_inst1118/Dout1:O)   | NONE(*)(b2v_inst1/b2v_inst/cnt_ALTERA_SYNTHESIZED5_2)   | 3     |
+b2v_inst1/SYNTHESIZED_WIRE_65(b2v_inst1/b2v_inst1119/Dout1:O)  | NONE(*)(b2v_inst1/b2v_inst356/cnt_ALTERA_SYNTHESIZED5_2)| 3     |
+b2v_inst1/b2v_inst45/_n0091(b2v_inst1/b2v_inst45/out1:O)       | NONE(*)(b2v_inst1/b2v_inst45/reg_fstate_1)              | 3     |
+b2v_inst1/b2v_inst13/_n0091(b2v_inst1/b2v_inst13/out1:O)       | NONE(*)(b2v_inst1/b2v_inst13/reg_fstate_1)              | 3     |
+b2v_inst1/b2v_inst51/_n0055(b2v_inst1/b2v_inst51/out1:O)       | NONE(*)(b2v_inst1/b2v_inst51/reg_fstate_1)              | 2     |
+b2v_inst13/b2v_inst/rst_n_inv(b2v_inst13/b2v_inst/rst_n_inv1:O)| NONE(*)(b2v_inst13/b2v_inst11/b2v_inst/DFF_inst5_LDC)   | 1     |
+---------------------------------------------------------------+---------------------------------------------------------+-------+
+(*) These 11 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.784ns (Maximum Frequency: 209.019MHz)
+   Minimum input arrival time before clock: 7.626ns
+   Maximum output required time after clock: 8.307ns
+   Maximum combinational path delay: 9.506ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.784ns (frequency: 209.019MHz)
+  Total number of paths / destination ports: 2569 / 235
+-------------------------------------------------------------------------
+Delay:               4.784ns (Levels of Logic = 4)
+  Source:            b2v_inst1/b2v_ins3334/fstate_0 (FF)
+  Destination:       b2v_inst1/b2v_inst25/reg_out_3 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: b2v_inst1/b2v_ins3334/fstate_0 to b2v_inst1/b2v_inst25/reg_out_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             19   0.447   1.072  b2v_inst1/b2v_ins3334/fstate_0 (b2v_inst1/b2v_ins3334/fstate_0)
+     LUT5:I4->O            2   0.205   0.845  b2v_inst1/b2v_ins3334/Mmux_one11 (b2v_inst1/SYNTHESIZED_WIRE_118<0>)
+     LUT6:I3->O            6   0.205   0.849  b2v_inst1/b2v_inst32/b2v_inst3/b2v_inst2/Mxor_S_xo<0>1 (b2v_inst1/b2v_inst572/SYNTHESIZED_WIRE_17)
+     LUT5:I3->O            3   0.203   0.651  b2v_inst1/SYNTHESIZED_WIRE_621 (b2v_inst1/SYNTHESIZED_WIRE_62)
+     LUT6:I5->O            1   0.205   0.000  b2v_inst1/b2v_inst25/b2v_inst7/m_out3 (b2v_inst1/b2v_inst25/SYNTHESIZED_WIRE_3)
+     FDC:D                     0.102          b2v_inst1/b2v_inst25/reg_out_3
+    ----------------------------------------
+    Total                      4.784ns (1.367ns logic, 3.417ns route)
+                                       (28.6% logic, 71.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'b2v_inst1/SYNTHESIZED_WIRE_6'
+  Clock period: 2.216ns (frequency: 451.233MHz)
+  Total number of paths / destination ports: 7 / 3
+-------------------------------------------------------------------------
+Delay:               2.216ns (Levels of Logic = 1)
+  Source:            b2v_inst1/b2v_inst/cnt_ALTERA_SYNTHESIZED5_0 (FF)
+  Destination:       b2v_inst1/b2v_inst/cnt_ALTERA_SYNTHESIZED5_0 (FF)
+  Source Clock:      b2v_inst1/SYNTHESIZED_WIRE_6 rising
+  Destination Clock: b2v_inst1/SYNTHESIZED_WIRE_6 rising
+
+  Data Path: b2v_inst1/b2v_inst/cnt_ALTERA_SYNTHESIZED5_0 to b2v_inst1/b2v_inst/cnt_ALTERA_SYNTHESIZED5_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             11   0.447   0.882  b2v_inst1/b2v_inst/cnt_ALTERA_SYNTHESIZED5_0 (b2v_inst1/b2v_inst/cnt_ALTERA_SYNTHESIZED5_0)
+     INV:I->O              1   0.206   0.579  b2v_inst1/b2v_inst/SYNTHESIZED_WIRE_101_INV_0 (b2v_inst1/b2v_inst/SYNTHESIZED_WIRE_10)
+     FDC:D                     0.102          b2v_inst1/b2v_inst/cnt_ALTERA_SYNTHESIZED5_0
+    ----------------------------------------
+    Total                      2.216ns (0.755ns logic, 1.461ns route)
+                                       (34.1% logic, 65.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'b2v_inst1/SYNTHESIZED_WIRE_65'
+  Clock period: 2.216ns (frequency: 451.233MHz)
+  Total number of paths / destination ports: 7 / 3
+-------------------------------------------------------------------------
+Delay:               2.216ns (Levels of Logic = 1)
+  Source:            b2v_inst1/b2v_inst356/cnt_ALTERA_SYNTHESIZED5_0 (FF)
+  Destination:       b2v_inst1/b2v_inst356/cnt_ALTERA_SYNTHESIZED5_0 (FF)
+  Source Clock:      b2v_inst1/SYNTHESIZED_WIRE_65 rising
+  Destination Clock: b2v_inst1/SYNTHESIZED_WIRE_65 rising
+
+  Data Path: b2v_inst1/b2v_inst356/cnt_ALTERA_SYNTHESIZED5_0 to b2v_inst1/b2v_inst356/cnt_ALTERA_SYNTHESIZED5_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             11   0.447   0.882  b2v_inst1/b2v_inst356/cnt_ALTERA_SYNTHESIZED5_0 (b2v_inst1/b2v_inst356/cnt_ALTERA_SYNTHESIZED5_0)
+     INV:I->O              1   0.206   0.579  b2v_inst1/b2v_inst356/SYNTHESIZED_WIRE_101_INV_0 (b2v_inst1/b2v_inst356/SYNTHESIZED_WIRE_10)
+     FDC:D                     0.102          b2v_inst1/b2v_inst356/cnt_ALTERA_SYNTHESIZED5_0
+    ----------------------------------------
+    Total                      2.216ns (0.755ns logic, 1.461ns route)
+                                       (34.1% logic, 65.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 501 / 264
+-------------------------------------------------------------------------
+Offset:              6.390ns (Levels of Logic = 5)
+  Source:            rst (PAD)
+  Destination:       b2v_inst1/b2v_inst25/reg_out_3 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to b2v_inst1/b2v_inst25/reg_out_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            52   1.222   1.905  rst_IBUF (b2v_inst/reset_inv)
+     LUT5:I0->O            2   0.203   0.845  b2v_inst1/b2v_ins3334/Mmux_one11 (b2v_inst1/SYNTHESIZED_WIRE_118<0>)
+     LUT6:I3->O            6   0.205   0.849  b2v_inst1/b2v_inst32/b2v_inst3/b2v_inst2/Mxor_S_xo<0>1 (b2v_inst1/b2v_inst572/SYNTHESIZED_WIRE_17)
+     LUT5:I3->O            3   0.203   0.651  b2v_inst1/SYNTHESIZED_WIRE_621 (b2v_inst1/SYNTHESIZED_WIRE_62)
+     LUT6:I5->O            1   0.205   0.000  b2v_inst1/b2v_inst25/b2v_inst7/m_out3 (b2v_inst1/b2v_inst25/SYNTHESIZED_WIRE_3)
+     FDC:D                     0.102          b2v_inst1/b2v_inst25/reg_out_3
+    ----------------------------------------
+    Total                      6.390ns (2.140ns logic, 4.250ns route)
+                                       (33.5% logic, 66.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b2v_inst41/b2v_inst30/_n0096'
+  Total number of paths / destination ports: 15 / 6
+-------------------------------------------------------------------------
+Offset:              4.376ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       b2v_inst41/b2v_inst30/reg_fstate_0 (LATCH)
+  Destination Clock: b2v_inst41/b2v_inst30/_n0096 falling
+
+  Data Path: rst to b2v_inst41/b2v_inst30/reg_fstate_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            52   1.222   1.665  rst_IBUF (b2v_inst/reset_inv)
+     LUT2:I0->O           10   0.203   0.856  b2v_inst41/b2v_inst12/rst_n_inv1 (b2v_inst41/b2v_inst100/b2v_inst/rst_inv)
+     LDC:CLR                   0.430          b2v_inst41/b2v_inst30/reg_fstate_1
+    ----------------------------------------
+    Total                      4.376ns (1.855ns logic, 2.521ns route)
+                                       (42.4% logic, 57.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b2v_inst13/b2v_inst4/_n0058'
+  Total number of paths / destination ports: 49 / 6
+-------------------------------------------------------------------------
+Offset:              7.626ns (Levels of Logic = 6)
+  Source:            sw8 (PAD)
+  Destination:       b2v_inst13/b2v_inst4/reg_fstate_2 (LATCH)
+  Destination Clock: b2v_inst13/b2v_inst4/_n0058 falling
+
+  Data Path: sw8 to b2v_inst13/b2v_inst4/reg_fstate_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            66   1.222   1.901  sw8_IBUF (sw8_IBUF)
+     LUT4:I0->O            4   0.203   1.028  b2v_inst13/b2v_inst11/b2v_inst18/Mmux_out_n31 (b2v_inst13/n4<2>)
+     LUT6:I1->O            1   0.203   0.944  b2v_inst13/b2v_inst4/random[3]_random[3]_OR_112_o2 (b2v_inst13/b2v_inst4/random[3]_random[3]_OR_112_o2)
+     LUT6:I0->O            1   0.203   0.580  b2v_inst13/b2v_inst4/random[3]_random[3]_OR_112_o3 (b2v_inst13/b2v_inst4/random[3]_random[3]_OR_112_o3)
+     LUT6:I5->O            3   0.205   0.898  b2v_inst13/b2v_inst4/random[3]_random[3]_OR_112_o5 (b2v_inst13/b2v_inst4/random[3]_random[3]_OR_112_o)
+     LUT5:I1->O            1   0.203   0.000  b2v_inst13/b2v_inst4/Mmux__n005511 (b2v_inst13/b2v_inst4/_n0055<3>)
+     LDC:D                     0.037          b2v_inst13/b2v_inst4/reg_fstate_2
+    ----------------------------------------
+    Total                      7.626ns (2.276ns logic, 5.350ns route)
+                                       (29.8% logic, 70.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b2v_inst13/b2v_inst3/_n0058'
+  Total number of paths / destination ports: 49 / 6
+-------------------------------------------------------------------------
+Offset:              7.626ns (Levels of Logic = 6)
+  Source:            sw8 (PAD)
+  Destination:       b2v_inst13/b2v_inst3/reg_fstate_2 (LATCH)
+  Destination Clock: b2v_inst13/b2v_inst3/_n0058 falling
+
+  Data Path: sw8 to b2v_inst13/b2v_inst3/reg_fstate_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            66   1.222   1.901  sw8_IBUF (sw8_IBUF)
+     LUT4:I0->O            4   0.203   1.028  b2v_inst13/b2v_inst11/b2v_inst17/Mmux_out_n31 (b2v_inst13/n3<2>)
+     LUT6:I1->O            1   0.203   0.944  b2v_inst13/b2v_inst3/random[3]_random[3]_OR_112_o2 (b2v_inst13/b2v_inst3/random[3]_random[3]_OR_112_o2)
+     LUT6:I0->O            1   0.203   0.580  b2v_inst13/b2v_inst3/random[3]_random[3]_OR_112_o3 (b2v_inst13/b2v_inst3/random[3]_random[3]_OR_112_o3)
+     LUT6:I5->O            3   0.205   0.898  b2v_inst13/b2v_inst3/random[3]_random[3]_OR_112_o5 (b2v_inst13/b2v_inst3/random[3]_random[3]_OR_112_o)
+     LUT5:I1->O            1   0.203   0.000  b2v_inst13/b2v_inst3/Mmux__n005511 (b2v_inst13/b2v_inst3/_n0055<3>)
+     LDC:D                     0.037          b2v_inst13/b2v_inst3/reg_fstate_2
+    ----------------------------------------
+    Total                      7.626ns (2.276ns logic, 5.350ns route)
+                                       (29.8% logic, 70.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b2v_inst13/b2v_inst2/_n0058'
+  Total number of paths / destination ports: 49 / 6
+-------------------------------------------------------------------------
+Offset:              7.626ns (Levels of Logic = 6)
+  Source:            sw8 (PAD)
+  Destination:       b2v_inst13/b2v_inst2/reg_fstate_2 (LATCH)
+  Destination Clock: b2v_inst13/b2v_inst2/_n0058 falling
+
+  Data Path: sw8 to b2v_inst13/b2v_inst2/reg_fstate_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            66   1.222   1.901  sw8_IBUF (sw8_IBUF)
+     LUT4:I0->O            4   0.203   1.028  b2v_inst13/b2v_inst11/b2v_inst16/Mmux_out_n31 (b2v_inst13/n2<2>)
+     LUT6:I1->O            1   0.203   0.944  b2v_inst13/b2v_inst2/random[3]_random[3]_OR_112_o2 (b2v_inst13/b2v_inst2/random[3]_random[3]_OR_112_o2)
+     LUT6:I0->O            1   0.203   0.580  b2v_inst13/b2v_inst2/random[3]_random[3]_OR_112_o3 (b2v_inst13/b2v_inst2/random[3]_random[3]_OR_112_o3)
+     LUT6:I5->O            3   0.205   0.898  b2v_inst13/b2v_inst2/random[3]_random[3]_OR_112_o5 (b2v_inst13/b2v_inst2/random[3]_random[3]_OR_112_o)
+     LUT5:I1->O            1   0.203   0.000  b2v_inst13/b2v_inst2/Mmux__n005511 (b2v_inst13/b2v_inst2/_n0055<3>)
+     LDC:D                     0.037          b2v_inst13/b2v_inst2/reg_fstate_2
+    ----------------------------------------
+    Total                      7.626ns (2.276ns logic, 5.350ns route)
+                                       (29.8% logic, 70.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b2v_inst13/b2v_inst1/_n0058'
+  Total number of paths / destination ports: 49 / 6
+-------------------------------------------------------------------------
+Offset:              7.626ns (Levels of Logic = 6)
+  Source:            sw8 (PAD)
+  Destination:       b2v_inst13/b2v_inst1/reg_fstate_2 (LATCH)
+  Destination Clock: b2v_inst13/b2v_inst1/_n0058 falling
+
+  Data Path: sw8 to b2v_inst13/b2v_inst1/reg_fstate_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            66   1.222   1.901  sw8_IBUF (sw8_IBUF)
+     LUT4:I0->O            4   0.203   1.028  b2v_inst13/b2v_inst11/b2v_inst14/Mmux_out_n31 (b2v_inst13/n1<2>)
+     LUT6:I1->O            1   0.203   0.944  b2v_inst13/b2v_inst1/random[3]_random[3]_OR_112_o2 (b2v_inst13/b2v_inst1/random[3]_random[3]_OR_112_o2)
+     LUT6:I0->O            1   0.203   0.580  b2v_inst13/b2v_inst1/random[3]_random[3]_OR_112_o3 (b2v_inst13/b2v_inst1/random[3]_random[3]_OR_112_o3)
+     LUT6:I5->O            3   0.205   0.898  b2v_inst13/b2v_inst1/random[3]_random[3]_OR_112_o5 (b2v_inst13/b2v_inst1/random[3]_random[3]_OR_112_o)
+     LUT5:I1->O            1   0.203   0.000  b2v_inst13/b2v_inst1/Mmux__n005511 (b2v_inst13/b2v_inst1/_n0055<3>)
+     LDC:D                     0.037          b2v_inst13/b2v_inst1/reg_fstate_2
+    ----------------------------------------
+    Total                      7.626ns (2.276ns logic, 5.350ns route)
+                                       (29.8% logic, 70.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b2v_inst1/SYNTHESIZED_WIRE_6'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              5.299ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       b2v_inst1/b2v_inst/cnt_ALTERA_SYNTHESIZED5_2 (FF)
+  Destination Clock: b2v_inst1/SYNTHESIZED_WIRE_6 rising
+
+  Data Path: rst to b2v_inst1/b2v_inst/cnt_ALTERA_SYNTHESIZED5_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            52   1.222   1.789  rst_IBUF (b2v_inst/reset_inv)
+     LUT3:I0->O           66   0.205   1.653  b2v_inst1/b2v_inst/rst_inv1 (b2v_inst1/b2v_ins3333/reset_inv)
+     FDC:CLR                   0.430          b2v_inst1/b2v_inst/cnt_ALTERA_SYNTHESIZED5_2
+    ----------------------------------------
+    Total                      5.299ns (1.857ns logic, 3.442ns route)
+                                       (35.0% logic, 65.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b2v_inst1/SYNTHESIZED_WIRE_65'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              5.299ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       b2v_inst1/b2v_inst356/cnt_ALTERA_SYNTHESIZED5_2 (FF)
+  Destination Clock: b2v_inst1/SYNTHESIZED_WIRE_65 rising
+
+  Data Path: rst to b2v_inst1/b2v_inst356/cnt_ALTERA_SYNTHESIZED5_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            52   1.222   1.789  rst_IBUF (b2v_inst/reset_inv)
+     LUT3:I0->O           66   0.205   1.653  b2v_inst1/b2v_inst/rst_inv1 (b2v_inst1/b2v_ins3333/reset_inv)
+     FDC:CLR                   0.430          b2v_inst1/b2v_inst356/cnt_ALTERA_SYNTHESIZED5_2
+    ----------------------------------------
+    Total                      5.299ns (1.857ns logic, 3.442ns route)
+                                       (35.0% logic, 65.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b2v_inst1/b2v_inst45/_n0091'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              5.299ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       b2v_inst1/b2v_inst45/reg_fstate_1 (LATCH)
+  Destination Clock: b2v_inst1/b2v_inst45/_n0091 falling
+
+  Data Path: rst to b2v_inst1/b2v_inst45/reg_fstate_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            52   1.222   1.789  rst_IBUF (b2v_inst/reset_inv)
+     LUT3:I0->O           66   0.205   1.653  b2v_inst1/b2v_inst/rst_inv1 (b2v_inst1/b2v_ins3333/reset_inv)
+     LDC:CLR                   0.430          b2v_inst1/b2v_inst45/reg_fstate_0
+    ----------------------------------------
+    Total                      5.299ns (1.857ns logic, 3.442ns route)
+                                       (35.0% logic, 65.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b2v_inst1/b2v_inst13/_n0091'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              5.299ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       b2v_inst1/b2v_inst13/reg_fstate_1 (LATCH)
+  Destination Clock: b2v_inst1/b2v_inst13/_n0091 falling
+
+  Data Path: rst to b2v_inst1/b2v_inst13/reg_fstate_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            52   1.222   1.789  rst_IBUF (b2v_inst/reset_inv)
+     LUT3:I0->O           66   0.205   1.653  b2v_inst1/b2v_inst/rst_inv1 (b2v_inst1/b2v_ins3333/reset_inv)
+     LDC:CLR                   0.430          b2v_inst1/b2v_inst13/reg_fstate_0
+    ----------------------------------------
+    Total                      5.299ns (1.857ns logic, 3.442ns route)
+                                       (35.0% logic, 65.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b2v_inst1/b2v_inst51/_n0055'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              5.299ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       b2v_inst1/b2v_inst51/reg_fstate_1 (LATCH)
+  Destination Clock: b2v_inst1/b2v_inst51/_n0055 falling
+
+  Data Path: rst to b2v_inst1/b2v_inst51/reg_fstate_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            52   1.222   1.789  rst_IBUF (b2v_inst/reset_inv)
+     LUT3:I0->O           66   0.205   1.653  b2v_inst1/b2v_inst/rst_inv1 (b2v_inst1/b2v_ins3333/reset_inv)
+     LDC:CLR                   0.430          b2v_inst1/b2v_inst51/reg_fstate_0
+    ----------------------------------------
+    Total                      5.299ns (1.857ns logic, 3.442ns route)
+                                       (35.0% logic, 65.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'sw8'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.376ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       b2v_inst41/b2v_inst100/b2v_inst/DFF_inst5_LDC (LATCH)
+  Destination Clock: sw8 rising
+
+  Data Path: rst to b2v_inst41/b2v_inst100/b2v_inst/DFF_inst5_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            52   1.222   1.665  rst_IBUF (b2v_inst/reset_inv)
+     LUT2:I0->O           10   0.203   0.856  b2v_inst41/b2v_inst12/rst_n_inv1 (b2v_inst41/b2v_inst100/b2v_inst/rst_inv)
+     LDC:CLR                   0.430          b2v_inst41/b2v_inst100/b2v_inst/DFF_inst5_LDC
+    ----------------------------------------
+    Total                      4.376ns (1.855ns logic, 2.521ns route)
+                                       (42.4% logic, 57.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'b2v_inst13/b2v_inst/rst_n_inv'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.986ns (Levels of Logic = 2)
+  Source:            sw8 (PAD)
+  Destination:       b2v_inst13/b2v_inst11/b2v_inst/DFF_inst5_LDC (LATCH)
+  Destination Clock: b2v_inst13/b2v_inst/rst_n_inv falling
+
+  Data Path: sw8 to b2v_inst13/b2v_inst11/b2v_inst/DFF_inst5_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            66   1.222   1.653  sw8_IBUF (sw8_IBUF)
+     INV:I->O             45   0.206   1.476  sw8_IBUF_BUFG_LUT1_INV_0 (sw8_IBUF_BUFG_LUT1)
+     LDC:CLR                   0.430          b2v_inst13/b2v_inst11/b2v_inst/DFF_inst5_LDC
+    ----------------------------------------
+    Total                      4.986ns (1.858ns logic, 3.128ns route)
+                                       (37.3% logic, 62.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 885 / 53
+-------------------------------------------------------------------------
+Offset:              8.307ns (Levels of Logic = 4)
+  Source:            b2v_inst/fstate_1 (FF)
+  Destination:       led3 (PAD)
+  Source Clock:      clk rising
+
+  Data Path: b2v_inst/fstate_1 to led3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             44   0.447   1.463  b2v_inst/fstate_1 (b2v_inst/fstate_1)
+     LUT3:I2->O           36   0.205   1.713  b2v_inst/round<1>1 (rnd3_pr_OBUF)
+     LUT6:I0->O            1   0.203   0.924  led31 (led31)
+     LUT6:I1->O            1   0.203   0.579  led33 (led3_OBUF)
+     OBUF:I->O                 2.571          led3_OBUF (led3)
+    ----------------------------------------
+    Total                      8.307ns (3.629ns logic, 4.678ns route)
+                                       (43.7% logic, 56.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'sw8'
+  Total number of paths / destination ports: 128 / 12
+-------------------------------------------------------------------------
+Offset:              8.270ns (Levels of Logic = 5)
+  Source:            b2v_inst41/b2v_inst100/b2v_inst/DFF_inst5_LDC (LATCH)
+  Destination:       red1 (PAD)
+  Source Clock:      sw8 rising
+
+  Data Path: b2v_inst41/b2v_inst100/b2v_inst/DFF_inst5_LDC to red1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              8   0.498   1.031  b2v_inst41/b2v_inst100/b2v_inst/DFF_inst5_LDC (b2v_inst41/b2v_inst100/b2v_inst/DFF_inst5_LDC)
+     LUT3:I0->O            6   0.205   0.973  b2v_inst41/b2v_inst100/b2v_inst/DFF_inst51 (b2v_inst41/b2v_inst100/b2v_inst/DFF_inst5)
+     LUT6:I3->O            3   0.205   1.015  b2v_inst41/b2v_inst100/paper1 (b2v_inst41/SYNTHESIZED_WIRE_8)
+     LUT6:I0->O            1   0.203   0.684  blue1_SW0 (N4)
+     LUT6:I4->O            4   0.203   0.683  blue1 (blue4_OBUF)
+     OBUF:I->O                 2.571          blue1_OBUF (blue1)
+    ----------------------------------------
+    Total                      8.270ns (3.885ns logic, 4.385ns route)
+                                       (47.0% logic, 53.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b2v_inst1/SYNTHESIZED_WIRE_65'
+  Total number of paths / destination ports: 24 / 7
+-------------------------------------------------------------------------
+Offset:              6.654ns (Levels of Logic = 4)
+  Source:            b2v_inst1/b2v_inst356/cnt_ALTERA_SYNTHESIZED5_0 (FF)
+  Destination:       d (PAD)
+  Source Clock:      b2v_inst1/SYNTHESIZED_WIRE_65 rising
+
+  Data Path: b2v_inst1/b2v_inst356/cnt_ALTERA_SYNTHESIZED5_0 to d
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             11   0.447   1.247  b2v_inst1/b2v_inst356/cnt_ALTERA_SYNTHESIZED5_0 (b2v_inst1/b2v_inst356/cnt_ALTERA_SYNTHESIZED5_0)
+     LUT6:I0->O            2   0.203   0.617  b2v_inst1/b2v_inst1121/e (SYNTHESIZED_WIRE_10)
+     LUT6:I5->O            1   0.205   0.580  d2 (d2)
+     LUT5:I4->O            1   0.205   0.579  d4 (d_OBUF)
+     OBUF:I->O                 2.571          d_OBUF (d)
+    ----------------------------------------
+    Total                      6.654ns (3.631ns logic, 3.023ns route)
+                                       (54.6% logic, 45.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'b2v_inst1/SYNTHESIZED_WIRE_6'
+  Total number of paths / destination ports: 24 / 7
+-------------------------------------------------------------------------
+Offset:              7.153ns (Levels of Logic = 5)
+  Source:            b2v_inst1/b2v_inst/cnt_ALTERA_SYNTHESIZED5_1 (FF)
+  Destination:       d (PAD)
+  Source Clock:      b2v_inst1/SYNTHESIZED_WIRE_6 rising
+
+  Data Path: b2v_inst1/b2v_inst/cnt_ALTERA_SYNTHESIZED5_1 to d
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             10   0.447   0.961  b2v_inst1/b2v_inst/cnt_ALTERA_SYNTHESIZED5_1 (b2v_inst1/b2v_inst/cnt_ALTERA_SYNTHESIZED5_1)
+     LUT2:I0->O            1   0.203   0.580  b2v_inst1/b2v_inst1121/e_SW0 (N42)
+     LUT6:I5->O            2   0.205   0.617  b2v_inst1/b2v_inst1121/e (SYNTHESIZED_WIRE_10)
+     LUT6:I5->O            1   0.205   0.580  d2 (d2)
+     LUT5:I4->O            1   0.205   0.579  d4 (d_OBUF)
+     OBUF:I->O                 2.571          d_OBUF (d)
+    ----------------------------------------
+    Total                      7.153ns (3.836ns logic, 3.317ns route)
+                                       (53.6% logic, 46.4% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 163 / 44
+-------------------------------------------------------------------------
+Delay:               9.506ns (Levels of Logic = 6)
+  Source:            rst (PAD)
+  Destination:       led6 (PAD)
+
+  Data Path: rst to led6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            52   1.222   1.905  rst_IBUF (b2v_inst/reset_inv)
+     LUT5:I0->O           12   0.203   1.253  b2v_inst41/b2v_inst30/Mmux_terminate11 (rnd1_done_OBUF)
+     LUT5:I0->O            1   0.203   0.580  led61 (led61)
+     LUT5:I4->O            1   0.205   0.580  led62 (led62)
+     LUT6:I5->O            1   0.205   0.579  led63 (led6_OBUF)
+     OBUF:I->O                 2.571          led6_OBUF (led6)
+    ----------------------------------------
+    Total                      9.506ns (4.609ns logic, 4.897ns route)
+                                       (48.5% logic, 51.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock b2v_inst1/SYNTHESIZED_WIRE_6
+----------------------------+---------+---------+---------+---------+
+                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------+---------+---------+---------+---------+
+b2v_inst1/SYNTHESIZED_WIRE_6|    2.216|         |         |         |
+clk                         |    4.197|         |         |         |
+----------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock b2v_inst1/SYNTHESIZED_WIRE_65
+-----------------------------+---------+---------+---------+---------+
+                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------+---------+---------+---------+---------+
+b2v_inst1/SYNTHESIZED_WIRE_65|    2.216|         |         |         |
+clk                          |    4.197|         |         |         |
+-----------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock b2v_inst1/b2v_inst13/_n0091
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.197|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock b2v_inst1/b2v_inst45/_n0091
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.197|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock b2v_inst1/b2v_inst51/_n0055
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.197|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock b2v_inst13/b2v_inst1/_n0058
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    6.013|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock b2v_inst13/b2v_inst2/_n0058
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.954|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock b2v_inst13/b2v_inst3/_n0058
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.954|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock b2v_inst13/b2v_inst4/_n0058
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.954|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock b2v_inst41/b2v_inst30/_n0096
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    3.401|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+-----------------------------+---------+---------+---------+---------+
+                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------+---------+---------+---------+---------+
+b2v_inst1/b2v_inst13/_n0091  |         |    1.179|         |         |
+b2v_inst1/b2v_inst45/_n0091  |         |    1.179|         |         |
+b2v_inst1/b2v_inst51/_n0055  |         |    1.179|         |         |
+b2v_inst13/b2v_inst/rst_n_inv|         |    2.977|         |         |
+b2v_inst13/b2v_inst1/_n0058  |         |    1.179|         |         |
+b2v_inst13/b2v_inst2/_n0058  |         |    1.179|         |         |
+b2v_inst13/b2v_inst3/_n0058  |         |    1.179|         |         |
+b2v_inst13/b2v_inst4/_n0058  |         |    1.179|         |         |
+b2v_inst41/b2v_inst30/_n0096 |         |    1.179|         |         |
+clk                          |    4.784|         |         |         |
+sw8                          |    4.834|    1.579|         |         |
+-----------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock sw8
+-----------------------------+---------+---------+---------+---------+
+                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------+---------+---------+---------+---------+
+b2v_inst13/b2v_inst/rst_n_inv|         |         |    1.798|         |
+clk                          |    3.401|         |    2.532|         |
+-----------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 19.00 secs
+Total CPU time to Xst completion: 17.55 secs
+ 
+--> 
+
+
+Total memory usage is 488592 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  200 (   0 filtered)
+Number of infos    :   45 (   0 filtered)
+

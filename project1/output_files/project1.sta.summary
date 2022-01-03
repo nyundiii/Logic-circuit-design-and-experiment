@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'clk'
+Slack : -12.559
+TNS   : -1133.224
+
+Type  : Setup 'test5:inst47|test4:inst11|con2:inst9|fstate.state2'
+Slack : -1.955
+TNS   : -7.038
+
+Type  : Setup 'test5:inst47|test4:inst11|con3:inst13|fstate.state2'
+Slack : -1.849
+TNS   : -6.135
+
+Type  : Setup 'test5:inst47|test4:inst11|con1:inst1|fstate.state2'
+Slack : -1.728
+TNS   : -4.149
+
+Type  : Setup 'rnd2_player:inst1|trigger:inst1119|inst2'
+Slack : -1.310
+TNS   : -3.450
+
+Type  : Setup 'rnd2_player:inst1|trigger:inst1118|inst2'
+Slack : -1.209
+TNS   : -3.249
+
+Type  : Hold 'clk'
+Slack : -1.959
+TNS   : -22.782
+
+Type  : Hold 'test5:inst47|test4:inst11|con1:inst1|fstate.state2'
+Slack : 0.174
+TNS   : 0.000
+
+Type  : Hold 'test5:inst47|test4:inst11|con3:inst13|fstate.state2'
+Slack : 0.831
+TNS   : 0.000
+
+Type  : Hold 'test5:inst47|test4:inst11|con2:inst9|fstate.state2'
+Slack : 0.926
+TNS   : 0.000
+
+Type  : Hold 'rnd2_player:inst1|trigger:inst1118|inst2'
+Slack : 1.384
+TNS   : 0.000
+
+Type  : Hold 'rnd2_player:inst1|trigger:inst1119|inst2'
+Slack : 1.384
+TNS   : 0.000
+
+Type  : Recovery 'clk'
+Slack : -4.215
+TNS   : -310.138
+
+Type  : Recovery 'rnd2_player:inst1|trigger:inst1118|inst2'
+Slack : -2.669
+TNS   : -8.007
+
+Type  : Recovery 'rnd2_player:inst1|trigger:inst1119|inst2'
+Slack : -1.464
+TNS   : -4.392
+
+Type  : Removal 'rnd2_player:inst1|trigger:inst1119|inst2'
+Slack : 2.014
+TNS   : 0.000
+
+Type  : Removal 'clk'
+Slack : 2.740
+TNS   : 0.000
+
+Type  : Removal 'rnd2_player:inst1|trigger:inst1118|inst2'
+Slack : 3.219
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clk'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'rnd2_player:inst1|trigger:inst1118|inst2'
+Slack : 0.284
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'rnd2_player:inst1|trigger:inst1119|inst2'
+Slack : 0.284
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'test5:inst47|test4:inst11|con1:inst1|fstate.state2'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'test5:inst47|test4:inst11|con2:inst9|fstate.state2'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'test5:inst47|test4:inst11|con3:inst13|fstate.state2'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

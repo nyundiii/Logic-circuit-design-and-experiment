@@ -1,0 +1,127 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+# Date created = 19:49:56  November 30, 2021
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		project1_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "MAX V"
+set_global_assignment -name DEVICE auto
+set_global_assignment -name TOP_LEVEL_ENTITY rnd123
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:49:56  NOVEMBER 30, 2021"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name BDF_FILE week3_3.bdf
+set_global_assignment -name BDF_FILE player_change.bdf
+set_global_assignment -name BDF_FILE ../sym/Decimal_to_Binary_nine.bdf
+set_global_assignment -name VERILOG_FILE rnd2_ledcontrol.v
+set_global_assignment -name BDF_FILE ../term/eq.bdf
+set_global_assignment -name VERILOG_FILE before_game.v
+set_global_assignment -name VERILOG_FILE SB.v
+set_global_assignment -name BSF_FILE adderpractice.bsf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform4.vwf
+set_global_assignment -name BDF_FILE Four_bit_Register_v3.bdf
+set_global_assignment -name BDF_FILE week3_1_4.bdf
+set_global_assignment -name BDF_FILE week3_1_3.bdf
+set_global_assignment -name BDF_FILE rnd2.bdf
+set_global_assignment -name VERILOG_FILE BW.v
+set_global_assignment -name SMF_FILE BW.smf
+set_global_assignment -name VERILOG_FILE add_b_or_zero.v
+set_global_assignment -name SMF_FILE add_b_or_zero.smf
+set_global_assignment -name BDF_FILE four_bit_Register_v4.bdf
+set_global_assignment -name BDF_FILE four_bit_ripple_carry_adder_v4.bdf
+set_global_assignment -name BDF_FILE four_bit_ripple_carry_adder_v3.bdf
+set_global_assignment -name VERILOG_FILE adderpractice.v
+set_global_assignment -name BDF_FILE Decimal_to_binary.bdf
+set_global_assignment -name VERILOG_FILE HB_CLCD.v
+set_global_assignment -name VERILOG_FILE com.v
+set_global_assignment -name SMF_FILE com.smf
+set_global_assignment -name VERILOG_FILE SBO.v
+set_global_assignment -name VERILOG_FILE con4.v
+set_global_assignment -name SMF_FILE con4.smf
+set_global_assignment -name VERILOG_FILE con3.v
+set_global_assignment -name SMF_FILE con3.smf
+set_global_assignment -name VERILOG_FILE con2.v
+set_global_assignment -name SMF_FILE con2.smf
+set_global_assignment -name VERILOG_FILE con1.v
+set_global_assignment -name SMF_FILE con1.smf
+set_global_assignment -name BDF_FILE test5.bdf
+set_global_assignment -name BDF_FILE test4.bdf
+set_global_assignment -name BDF_FILE test.bdf
+set_global_assignment -name BDF_FILE four_bit_reg_ce.bdf
+set_global_assignment -name BDF_FILE ten_week_2.bdf
+set_global_assignment -name BDF_FILE mx_2x1.bdf
+set_global_assignment -name BDF_FILE count_4.bdf
+set_global_assignment -name BDF_FILE b2seg_bus.bdf
+set_global_assignment -name BDF_FILE win_lose.bdf
+set_global_assignment -name BDF_FILE trigger.bdf
+set_global_assignment -name BDF_FILE rnd1.bdf
+set_global_assignment -name BDF_FILE random.bdf
+set_global_assignment -name BDF_FILE project.bdf
+set_global_assignment -name BDF_FILE four_r.bdf
+set_global_assignment -name BDF_FILE four_bit_counter.bdf
+set_global_assignment -name VERILOG_FILE control_unit.v
+set_global_assignment -name SMF_FILE control_unit.smf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name BDF_FILE project2.bdf
+set_global_assignment -name BDF_FILE two_bit_compare.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE test4waveform.vwf
+set_global_assignment -name SMF_FILE SBO.smf
+set_global_assignment -name BDF_FILE two_bit_reg_ce.bdf
+set_global_assignment -name BDF_FILE sb_calculate.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE sbcalwaveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE test5Waveform.vwf
+set_global_assignment -name BDF_FILE b2cpractice.bdf
+set_global_assignment -name SMF_FILE addcontrolunit.smf
+set_global_assignment -name VERILOG_FILE You_Win.v
+set_global_assignment -name VERILOG_FILE You_Lose.v
+set_global_assignment -name VERILOG_FILE Draw.v
+set_global_assignment -name BDF_FILE rnd2_player.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform5.vwf
+set_global_assignment -name BDF_FILE five_counter.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform6.vwf
+set_global_assignment -name VERILOG_FILE rnd2_point.v
+set_global_assignment -name BDF_FILE rnd123.bdf
+set_global_assignment -name VERILOG_FILE final_winner.v
+set_global_assignment -name SMF_FILE rnd_reset_control.smf
+set_global_assignment -name BDF_FILE reset_control_test.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform7.vwf
+set_global_assignment -name BDF_FILE mapping.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform8.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform9.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE rnd123Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE rnd1_Waveform.vwf
+set_global_assignment -name BDF_FILE Trigger.bdf

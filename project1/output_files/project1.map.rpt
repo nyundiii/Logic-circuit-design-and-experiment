@@ -1,0 +1,1508 @@
+Analysis & Synthesis report for project1
+Thu Dec 23 15:15:30 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |rnd123|final_winner:inst4|STATE
+  9. State Machine - |rnd123|before_game:inst3333|STATE
+ 10. State Machine - |rnd123|test5:inst13|SBO:inst4|fstate
+ 11. State Machine - |rnd123|test5:inst13|SBO:inst3|fstate
+ 12. State Machine - |rnd123|test5:inst13|SBO:inst2|fstate
+ 13. State Machine - |rnd123|test5:inst13|test4:inst11|con4:inst15|fstate
+ 14. State Machine - |rnd123|test5:inst13|test4:inst11|com:inst18|fstate
+ 15. State Machine - |rnd123|test5:inst13|test4:inst11|con3:inst13|fstate
+ 16. State Machine - |rnd123|test5:inst13|test4:inst11|com:inst17|fstate
+ 17. State Machine - |rnd123|test5:inst13|test4:inst11|con2:inst9|fstate
+ 18. State Machine - |rnd123|test5:inst13|test4:inst11|com:inst16|fstate
+ 19. State Machine - |rnd123|test5:inst13|test4:inst11|con1:inst1|fstate
+ 20. State Machine - |rnd123|test5:inst13|test4:inst11|com:inst14|fstate
+ 21. State Machine - |rnd123|test5:inst13|SBO:inst1|fstate
+ 22. State Machine - |rnd123|rnd2_player:inst1|rnd2_ledcontrol:inst45|fstate
+ 23. State Machine - |rnd123|rnd2_player:inst1|rnd2_ledcontrol:inst13|fstate
+ 24. State Machine - |rnd123|rnd2_player:inst1|BW:ins3334|fstate
+ 25. State Machine - |rnd123|rnd2_player:inst1|BW:ins3333|fstate
+ 26. State Machine - |rnd123|rnd2_player:inst1|rn2_fullcoler:inst51|fstate
+ 27. State Machine - |rnd123|project2:inst41|control_unit:inst30|fstate
+ 28. State Machine - |rnd123|rnd_reset_control:inst|fstate
+ 29. User-Specified and Inferred Latches
+ 30. Registers Removed During Synthesis
+ 31. Removed Registers Triggering Further Register Optimizations
+ 32. General Register Statistics
+ 33. Inverted Register Statistics
+ 34. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 35. Parameter Settings for User Entity Instance: rnd_reset_control:inst
+ 36. Parameter Settings for User Entity Instance: project2:inst41|control_unit:inst30
+ 37. Parameter Settings for User Entity Instance: rnd2_player:inst1|rn2_fullcoler:inst51
+ 38. Parameter Settings for User Entity Instance: rnd2_player:inst1|BW:ins3333
+ 39. Parameter Settings for User Entity Instance: rnd2_player:inst1|BW:ins3334
+ 40. Parameter Settings for User Entity Instance: rnd2_player:inst1|rnd2_ledcontrol:inst13
+ 41. Parameter Settings for User Entity Instance: rnd2_player:inst1|rnd2_ledcontrol:inst45
+ 42. Parameter Settings for User Entity Instance: test5:inst13|SBO:inst1
+ 43. Parameter Settings for User Entity Instance: test5:inst13|test4:inst11|com:inst14
+ 44. Parameter Settings for User Entity Instance: test5:inst13|test4:inst11|con1:inst1
+ 45. Parameter Settings for User Entity Instance: test5:inst13|test4:inst11|com:inst16
+ 46. Parameter Settings for User Entity Instance: test5:inst13|test4:inst11|con2:inst9
+ 47. Parameter Settings for User Entity Instance: test5:inst13|test4:inst11|com:inst17
+ 48. Parameter Settings for User Entity Instance: test5:inst13|test4:inst11|con3:inst13
+ 49. Parameter Settings for User Entity Instance: test5:inst13|test4:inst11|com:inst18
+ 50. Parameter Settings for User Entity Instance: test5:inst13|test4:inst11|con4:inst15
+ 51. Parameter Settings for User Entity Instance: test5:inst13|SBO:inst2
+ 52. Parameter Settings for User Entity Instance: test5:inst13|SBO:inst3
+ 53. Parameter Settings for User Entity Instance: test5:inst13|SBO:inst4
+ 54. Parameter Settings for User Entity Instance: before_game:inst3333
+ 55. Parameter Settings for User Entity Instance: final_winner:inst4
+ 56. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Thu Dec 23 15:15:30 2021       ;
+; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name               ; project1                                    ;
+; Top-level Entity Name       ; rnd123                                      ;
+; Family                      ; MAX V                                       ;
+; Total logic elements        ; 622                                         ;
+; Total pins                  ; 77                                          ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                            ; rnd123             ; project1           ;
+; Family name                                                      ; MAX V              ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
+; File Name with User-Entered Path   ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                       ; Library ;
++------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
+; week3_3.bdf                        ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/week3_3.bdf                        ;         ;
+; player_change.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/player_change.bdf                  ;         ;
+; rnd2_ledcontrol.v                  ; yes             ; User Verilog HDL File              ; C:/intelFPGA_lite/20.1/project1/rnd2_ledcontrol.v                  ;         ;
+; before_game.v                      ; yes             ; User Verilog HDL File              ; C:/intelFPGA_lite/20.1/project1/before_game.v                      ;         ;
+; Four_bit_Register_v3.bdf           ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/Four_bit_Register_v3.bdf           ;         ;
+; week3_1_4.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/week3_1_4.bdf                      ;         ;
+; week3_1_3.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/week3_1_3.bdf                      ;         ;
+; BW.v                               ; yes             ; User Verilog HDL File              ; C:/intelFPGA_lite/20.1/project1/BW.v                               ;         ;
+; four_bit_Register_v4.bdf           ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/four_bit_Register_v4.bdf           ;         ;
+; four_bit_ripple_carry_adder_v4.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/four_bit_ripple_carry_adder_v4.bdf ;         ;
+; four_bit_ripple_carry_adder_v3.bdf ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/four_bit_ripple_carry_adder_v3.bdf ;         ;
+; Decimal_to_binary.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/Decimal_to_binary.bdf              ;         ;
+; com.v                              ; yes             ; User Verilog HDL File              ; C:/intelFPGA_lite/20.1/project1/com.v                              ;         ;
+; SBO.v                              ; yes             ; User Verilog HDL File              ; C:/intelFPGA_lite/20.1/project1/SBO.v                              ;         ;
+; con4.v                             ; yes             ; User Verilog HDL File              ; C:/intelFPGA_lite/20.1/project1/con4.v                             ;         ;
+; con3.v                             ; yes             ; User Verilog HDL File              ; C:/intelFPGA_lite/20.1/project1/con3.v                             ;         ;
+; con2.v                             ; yes             ; User Verilog HDL File              ; C:/intelFPGA_lite/20.1/project1/con2.v                             ;         ;
+; con1.v                             ; yes             ; User Verilog HDL File              ; C:/intelFPGA_lite/20.1/project1/con1.v                             ;         ;
+; test5.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/test5.bdf                          ;         ;
+; test4.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/test4.bdf                          ;         ;
+; four_bit_reg_ce.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/four_bit_reg_ce.bdf                ;         ;
+; mx_2x1.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/mx_2x1.bdf                         ;         ;
+; b2seg_bus.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/b2seg_bus.bdf                      ;         ;
+; win_lose.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/win_lose.bdf                       ;         ;
+; trigger.bdf                        ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/trigger.bdf                        ;         ;
+; rnd1.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/rnd1.bdf                           ;         ;
+; random.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/random.bdf                         ;         ;
+; four_bit_counter.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/four_bit_counter.bdf               ;         ;
+; control_unit.v                     ; yes             ; User Verilog HDL File              ; C:/intelFPGA_lite/20.1/project1/control_unit.v                     ;         ;
+; project2.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/project2.bdf                       ;         ;
+; two_bit_compare.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/two_bit_compare.bdf                ;         ;
+; two_bit_reg_ce.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/two_bit_reg_ce.bdf                 ;         ;
+; sb_calculate.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/sb_calculate.bdf                   ;         ;
+; rnd2_player.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/rnd2_player.bdf                    ;         ;
+; five_counter.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/five_counter.bdf                   ;         ;
+; rnd123.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/rnd123.bdf                         ;         ;
+; final_winner.v                     ; yes             ; User Verilog HDL File              ; C:/intelFPGA_lite/20.1/project1/final_winner.v                     ;         ;
+; mapping.bdf                        ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/project1/mapping.bdf                        ;         ;
+; rnd_reset_control.v                ; yes             ; Auto-Found Verilog HDL File        ; C:/intelFPGA_lite/20.1/project1/rnd_reset_control.v                ;         ;
+; rn2_fullcoler.v                    ; yes             ; Auto-Found Verilog HDL File        ; C:/intelFPGA_lite/20.1/project1/rn2_fullcoler.v                    ;         ;
+; mx_4bit_2x1.v                      ; yes             ; Auto-Found Verilog HDL File        ; C:/intelFPGA_lite/20.1/project1/mx_4bit_2x1.v                      ;         ;
+; week3_1_2.v                        ; yes             ; Auto-Found Verilog HDL File        ; C:/intelFPGA_lite/20.1/project1/week3_1_2.v                        ;         ;
+; four_bit_ripple_carry_adder_v2.v   ; yes             ; Auto-Found Verilog HDL File        ; C:/intelFPGA_lite/20.1/project1/four_bit_ripple_carry_adder_v2.v   ;         ;
++------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 622   ;
+;     -- Combinational with no register       ; 406   ;
+;     -- Register only                        ; 75    ;
+;     -- Combinational with a register        ; 141   ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 346   ;
+;     -- 3 input functions                    ; 110   ;
+;     -- 2 input functions                    ; 82    ;
+;     -- 1 input functions                    ; 9     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 591   ;
+;     -- arithmetic mode                      ; 31    ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 42    ;
+;     -- asynchronous clear/load mode         ; 161   ;
+;                                             ;       ;
+; Total registers                             ; 216   ;
+; Total logic cells in carry chains           ; 32    ;
+; I/O pins                                    ; 77    ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 211   ;
+; Total fan-out                               ; 2521  ;
+; Average fan-out                             ; 3.61  ;
++---------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                          ;
++-------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------------------------------+--------------------------------+--------------+
+; Compilation Hierarchy Node                      ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                   ; Entity Name                    ; Library Name ;
++-------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------------------------------+--------------------------------+--------------+
+; |rnd123                                         ; 622 (60)    ; 216          ; 0          ; 77   ; 0            ; 406 (60)     ; 75 (0)            ; 141 (0)          ; 32 (0)          ; 0 (0)      ; |rnd123                                                                                               ; rnd123                         ; work         ;
+;    |before_game:inst3333|                       ; 140 (140)   ; 50           ; 0          ; 0    ; 0            ; 90 (90)      ; 3 (3)             ; 47 (47)          ; 32 (32)         ; 0 (0)      ; |rnd123|before_game:inst3333                                                                          ; before_game                    ; work         ;
+;    |project2:inst41|                            ; 43 (7)      ; 17           ; 0          ; 0    ; 0            ; 26 (7)       ; 3 (0)             ; 14 (0)           ; 0 (0)           ; 0 (0)      ; |rnd123|project2:inst41                                                                               ; project2                       ; work         ;
+;       |control_unit:inst30|                     ; 15 (15)     ; 7            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 7 (7)            ; 0 (0)           ; 0 (0)      ; |rnd123|project2:inst41|control_unit:inst30                                                           ; control_unit                   ; work         ;
+;       |four_bit_counter:inst11|                 ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |rnd123|project2:inst41|four_bit_counter:inst11                                                       ; four_bit_counter               ; work         ;
+;       |four_bit_counter:inst12|                 ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |rnd123|project2:inst41|four_bit_counter:inst12                                                       ; four_bit_counter               ; work         ;
+;       |four_bit_counter:inst20|                 ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |rnd123|project2:inst41|four_bit_counter:inst20                                                       ; four_bit_counter               ; work         ;
+;       |rnd1:inst100|                            ; 7 (3)       ; 4            ; 0          ; 0    ; 0            ; 3 (3)        ; 3 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|project2:inst41|rnd1:inst100                                                                  ; rnd1                           ; work         ;
+;          |random:inst|                          ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |rnd123|project2:inst41|rnd1:inst100|random:inst                                                      ; random                         ; work         ;
+;       |two_bit_compare:inst2|                   ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|project2:inst41|two_bit_compare:inst2                                                         ; two_bit_compare                ; work         ;
+;       |win_lose:inst16|                         ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|project2:inst41|win_lose:inst16                                                               ; win_lose                       ; work         ;
+;    |rnd2_player:inst1|                          ; 160 (18)    ; 66           ; 0          ; 0    ; 0            ; 94 (16)      ; 23 (0)            ; 43 (2)           ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1                                                                             ; rnd2_player                    ; work         ;
+;       |BW:ins3333|                              ; 13 (13)     ; 1            ; 0          ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|BW:ins3333                                                                  ; BW                             ; work         ;
+;       |BW:ins3334|                              ; 11 (11)     ; 1            ; 0          ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|BW:ins3334                                                                  ; BW                             ; work         ;
+;       |Four_bit_Register_v3:inst011|            ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|Four_bit_Register_v3:inst011                                                ; Four_bit_Register_v3           ; work         ;
+;       |Four_bit_Register_v3:inst11|             ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|Four_bit_Register_v3:inst11                                                 ; Four_bit_Register_v3           ; work         ;
+;       |Four_bit_Register_v3:inst2020|           ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|Four_bit_Register_v3:inst2020                                               ; Four_bit_Register_v3           ; work         ;
+;       |Four_bit_Register_v3:inst253|            ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|Four_bit_Register_v3:inst253                                                ; Four_bit_Register_v3           ; work         ;
+;       |Four_bit_Register_v3:inst25|             ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|Four_bit_Register_v3:inst25                                                 ; Four_bit_Register_v3           ; work         ;
+;       |Four_bit_Register_v3:inst52|             ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|Four_bit_Register_v3:inst52                                                 ; Four_bit_Register_v3           ; work         ;
+;       |five_counter:inst356|                    ; 3 (3)       ; 3            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|five_counter:inst356                                                        ; five_counter                   ; work         ;
+;       |five_counter:inst|                       ; 3 (3)       ; 3            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|five_counter:inst                                                           ; five_counter                   ; work         ;
+;       |four_bit_Register_v4:inst23|             ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_Register_v4:inst23                                                 ; four_bit_Register_v4           ; work         ;
+;       |four_bit_Register_v4:inst36|             ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_Register_v4:inst36                                                 ; four_bit_Register_v4           ; work         ;
+;       |four_bit_ripple_carry_adder_v2:inst1818| ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v2:inst1818                                     ; four_bit_ripple_carry_adder_v2 ; work         ;
+;          |week3_1_4:b2v_inst2|                  ; 2 (1)       ; 0            ; 0          ; 0    ; 0            ; 2 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v2:inst1818|week3_1_4:b2v_inst2                 ; week3_1_4                      ; work         ;
+;             |week3_1_3:inst2|                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v2:inst1818|week3_1_4:b2v_inst2|week3_1_3:inst2 ; week3_1_3                      ; work         ;
+;          |week3_1_4:b2v_inst3|                  ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v2:inst1818|week3_1_4:b2v_inst3                 ; week3_1_4                      ; work         ;
+;       |four_bit_ripple_carry_adder_v2:inst1819| ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v2:inst1819                                     ; four_bit_ripple_carry_adder_v2 ; work         ;
+;          |week3_1_4:b2v_inst2|                  ; 2 (1)       ; 0            ; 0          ; 0    ; 0            ; 2 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v2:inst1819|week3_1_4:b2v_inst2                 ; week3_1_4                      ; work         ;
+;             |week3_1_3:inst2|                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v2:inst1819|week3_1_4:b2v_inst2|week3_1_3:inst2 ; week3_1_3                      ; work         ;
+;          |week3_1_4:b2v_inst3|                  ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v2:inst1819|week3_1_4:b2v_inst3                 ; week3_1_4                      ; work         ;
+;       |four_bit_ripple_carry_adder_v3:inst18|   ; 6 (0)       ; 0            ; 0          ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v3:inst18                                       ; four_bit_ripple_carry_adder_v3 ; work         ;
+;          |week3_1_4:inst2|                      ; 2 (1)       ; 0            ; 0          ; 0    ; 0            ; 2 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v3:inst18|week3_1_4:inst2                       ; week3_1_4                      ; work         ;
+;             |week3_1_3:inst2|                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v3:inst18|week3_1_4:inst2|week3_1_3:inst2       ; week3_1_3                      ; work         ;
+;          |week3_1_4:inst3|                      ; 2 (1)       ; 0            ; 0          ; 0    ; 0            ; 2 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v3:inst18|week3_1_4:inst3                       ; week3_1_4                      ; work         ;
+;             |week3_1_3:inst2|                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v3:inst18|week3_1_4:inst3|week3_1_3:inst2       ; week3_1_3                      ; work         ;
+;          |week3_1_4:inst4|                      ; 2 (1)       ; 0            ; 0          ; 0    ; 0            ; 2 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v3:inst18|week3_1_4:inst4                       ; week3_1_4                      ; work         ;
+;             |week3_1_3:inst2|                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v3:inst18|week3_1_4:inst4|week3_1_3:inst2       ; week3_1_3                      ; work         ;
+;       |four_bit_ripple_carry_adder_v3:inst32|   ; 6 (0)       ; 0            ; 0          ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v3:inst32                                       ; four_bit_ripple_carry_adder_v3 ; work         ;
+;          |week3_1_4:inst2|                      ; 2 (1)       ; 0            ; 0          ; 0    ; 0            ; 2 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v3:inst32|week3_1_4:inst2                       ; week3_1_4                      ; work         ;
+;             |week3_1_3:inst2|                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v3:inst32|week3_1_4:inst2|week3_1_3:inst2       ; week3_1_3                      ; work         ;
+;          |week3_1_4:inst3|                      ; 2 (1)       ; 0            ; 0          ; 0    ; 0            ; 2 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v3:inst32|week3_1_4:inst3                       ; week3_1_4                      ; work         ;
+;             |week3_1_3:inst2|                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v3:inst32|week3_1_4:inst3|week3_1_3:inst2       ; week3_1_3                      ; work         ;
+;          |week3_1_4:inst4|                      ; 2 (1)       ; 0            ; 0          ; 0    ; 0            ; 2 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v3:inst32|week3_1_4:inst4                       ; week3_1_4                      ; work         ;
+;             |week3_1_3:inst2|                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v3:inst32|week3_1_4:inst4|week3_1_3:inst2       ; week3_1_3                      ; work         ;
+;       |four_bit_ripple_carry_adder_v4:inst21|   ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v4:inst21                                       ; four_bit_ripple_carry_adder_v4 ; work         ;
+;          |week3_1_4:inst2|                      ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v4:inst21|week3_1_4:inst2                       ; week3_1_4                      ; work         ;
+;             |week3_1_3:inst2|                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v4:inst21|week3_1_4:inst2|week3_1_3:inst2       ; week3_1_3                      ; work         ;
+;          |week3_1_4:inst3|                      ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v4:inst21|week3_1_4:inst3                       ; week3_1_4                      ; work         ;
+;             |week3_1_3:inst2|                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v4:inst21|week3_1_4:inst3|week3_1_3:inst2       ; week3_1_3                      ; work         ;
+;       |four_bit_ripple_carry_adder_v4:inst34|   ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v4:inst34                                       ; four_bit_ripple_carry_adder_v4 ; work         ;
+;          |week3_1_4:inst2|                      ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v4:inst34|week3_1_4:inst2                       ; week3_1_4                      ; work         ;
+;             |week3_1_3:inst2|                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v4:inst34|week3_1_4:inst2|week3_1_3:inst2       ; week3_1_3                      ; work         ;
+;          |week3_1_4:inst3|                      ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v4:inst34|week3_1_4:inst3                       ; week3_1_4                      ; work         ;
+;             |week3_1_3:inst2|                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|four_bit_ripple_carry_adder_v4:inst34|week3_1_4:inst3|week3_1_3:inst2       ; week3_1_3                      ; work         ;
+;       |mx_4bit_2x1:inst15|                      ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|mx_4bit_2x1:inst15                                                          ; mx_4bit_2x1                    ; work         ;
+;       |rn2_fullcoler:inst51|                    ; 4 (4)       ; 2            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|rn2_fullcoler:inst51                                                        ; rn2_fullcoler                  ; work         ;
+;       |rnd2_ledcontrol:inst13|                  ; 14 (14)     ; 5            ; 0          ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 5 (5)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|rnd2_ledcontrol:inst13                                                      ; rnd2_ledcontrol                ; work         ;
+;       |rnd2_ledcontrol:inst45|                  ; 13 (13)     ; 5            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 5 (5)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|rnd2_ledcontrol:inst45                                                      ; rnd2_ledcontrol                ; work         ;
+;       |trigger:inst1113|                        ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|trigger:inst1113                                                            ; trigger                        ; work         ;
+;       |trigger:inst1114|                        ; 3 (3)       ; 2            ; 0          ; 0    ; 0            ; 1 (1)        ; 2 (2)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|trigger:inst1114                                                            ; trigger                        ; work         ;
+;       |trigger:inst1115|                        ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|trigger:inst1115                                                            ; trigger                        ; work         ;
+;       |trigger:inst1117|                        ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|trigger:inst1117                                                            ; trigger                        ; work         ;
+;       |trigger:inst1118|                        ; 3 (3)       ; 2            ; 0          ; 0    ; 0            ; 1 (1)        ; 1 (1)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|trigger:inst1118                                                            ; trigger                        ; work         ;
+;       |trigger:inst1119|                        ; 3 (3)       ; 2            ; 0          ; 0    ; 0            ; 1 (1)        ; 1 (1)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|trigger:inst1119                                                            ; trigger                        ; work         ;
+;       |week3_3:inst371|                         ; 5 (1)       ; 0            ; 0          ; 0    ; 0            ; 5 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|week3_3:inst371                                                             ; week3_3                        ; work         ;
+;          |week3_1_2:inst1|                      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|week3_3:inst371|week3_1_2:inst1                                             ; week3_1_2                      ; work         ;
+;          |week3_1_2:inst|                       ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|week3_3:inst371|week3_1_2:inst                                              ; week3_1_2                      ; work         ;
+;       |week3_3:inst70|                          ; 4 (0)       ; 0            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|week3_3:inst70                                                              ; week3_3                        ; work         ;
+;          |week3_1_2:inst1|                      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|week3_3:inst70|week3_1_2:inst1                                              ; week3_1_2                      ; work         ;
+;          |week3_1_2:inst|                       ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd2_player:inst1|week3_3:inst70|week3_1_2:inst                                               ; week3_1_2                      ; work         ;
+;    |rnd_reset_control:inst|                     ; 9 (9)       ; 4            ; 0          ; 0    ; 0            ; 5 (5)        ; 1 (1)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |rnd123|rnd_reset_control:inst                                                                        ; rnd_reset_control              ; work         ;
+;    |test5:inst13|                               ; 210 (5)     ; 79           ; 0          ; 0    ; 0            ; 131 (4)      ; 45 (0)            ; 34 (1)           ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13                                                                                  ; test5                          ; work         ;
+;       |Decimal_to_binary:inst1115|              ; 9 (9)       ; 0            ; 0          ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|Decimal_to_binary:inst1115                                                       ; Decimal_to_binary              ; work         ;
+;       |SBO:inst1|                               ; 16 (16)     ; 4            ; 0          ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|SBO:inst1                                                                        ; SBO                            ; work         ;
+;       |SBO:inst2|                               ; 12 (12)     ; 2            ; 0          ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|SBO:inst2                                                                        ; SBO                            ; work         ;
+;       |SBO:inst3|                               ; 12 (12)     ; 2            ; 0          ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|SBO:inst3                                                                        ; SBO                            ; work         ;
+;       |SBO:inst4|                               ; 12 (12)     ; 2            ; 0          ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|SBO:inst4                                                                        ; SBO                            ; work         ;
+;       |four_bit_counter:inst20|                 ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|four_bit_counter:inst20                                                          ; four_bit_counter               ; work         ;
+;       |four_bit_reg_ce:inst1116|                ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|four_bit_reg_ce:inst1116                                                         ; four_bit_reg_ce                ; work         ;
+;       |four_bit_reg_ce:inst1117|                ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|four_bit_reg_ce:inst1117                                                         ; four_bit_reg_ce                ; work         ;
+;       |four_bit_reg_ce:inst1118|                ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|four_bit_reg_ce:inst1118                                                         ; four_bit_reg_ce                ; work         ;
+;       |four_bit_reg_ce:inst1119|                ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|four_bit_reg_ce:inst1119                                                         ; four_bit_reg_ce                ; work         ;
+;       |mx_4bit_2x1:inst23|                      ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|mx_4bit_2x1:inst23                                                               ; mx_4bit_2x1                    ; work         ;
+;       |sb_calculate:inst8|                      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|sb_calculate:inst8                                                               ; sb_calculate                   ; work         ;
+;       |sb_calculate:inst9|                      ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|sb_calculate:inst9                                                               ; sb_calculate                   ; work         ;
+;       |test4:inst11|                            ; 104 (0)     ; 40           ; 0          ; 0    ; 0            ; 64 (0)       ; 19 (0)            ; 21 (0)           ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|test4:inst11                                                                     ; test4                          ; work         ;
+;          |com:inst14|                           ; 8 (8)       ; 3            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|test4:inst11|com:inst14                                                          ; com                            ; work         ;
+;          |com:inst16|                           ; 8 (8)       ; 3            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|test4:inst11|com:inst16                                                          ; com                            ; work         ;
+;          |com:inst17|                           ; 8 (8)       ; 3            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|test4:inst11|com:inst17                                                          ; com                            ; work         ;
+;          |com:inst18|                           ; 9 (9)       ; 3            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|test4:inst11|com:inst18                                                          ; com                            ; work         ;
+;          |con1:inst1|                           ; 9 (9)       ; 2            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|test4:inst11|con1:inst1                                                          ; con1                           ; work         ;
+;          |con2:inst9|                           ; 12 (12)     ; 2            ; 0          ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|test4:inst11|con2:inst9                                                          ; con2                           ; work         ;
+;          |con3:inst13|                          ; 15 (15)     ; 2            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|test4:inst11|con3:inst13                                                         ; con3                           ; work         ;
+;          |con4:inst15|                          ; 15 (15)     ; 2            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|test4:inst11|con4:inst15                                                         ; con4                           ; work         ;
+;          |four_bit_reg_ce:inst12|               ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|test4:inst11|four_bit_reg_ce:inst12                                              ; four_bit_reg_ce                ; work         ;
+;          |four_bit_reg_ce:inst2|                ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|test4:inst11|four_bit_reg_ce:inst2                                               ; four_bit_reg_ce                ; work         ;
+;          |four_bit_reg_ce:inst3|                ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|test4:inst11|four_bit_reg_ce:inst3                                               ; four_bit_reg_ce                ; work         ;
+;          |four_bit_reg_ce:inst4|                ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|test4:inst11|four_bit_reg_ce:inst4                                               ; four_bit_reg_ce                ; work         ;
+;          |random:inst|                          ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|test4:inst11|random:inst                                                         ; random                         ; work         ;
+;       |trigger:inst1113|                        ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|trigger:inst1113                                                                 ; trigger                        ; work         ;
+;       |two_bit_reg_ce:inst5|                    ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|two_bit_reg_ce:inst5                                                             ; two_bit_reg_ce                 ; work         ;
+;       |two_bit_reg_ce:inst6|                    ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|two_bit_reg_ce:inst6                                                             ; two_bit_reg_ce                 ; work         ;
+;       |two_bit_reg_ce:inst7|                    ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|two_bit_reg_ce:inst7                                                             ; two_bit_reg_ce                 ; work         ;
+;       |two_bit_reg_ce:inst|                     ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |rnd123|test5:inst13|two_bit_reg_ce:inst                                                              ; two_bit_reg_ce                 ; work         ;
++-------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------------------------------+--------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |rnd123|final_winner:inst4|STATE                                                                                                           ;
++--------------------+------------------+---------------+-------------+-------------+------------------+------------------+--------------------+-------------+
+; Name               ; STATE.CLEAR_DISP ; STATE.DELAY_T ; STATE.LINE2 ; STATE.LINE1 ; STATE.DISP_ONOFF ; STATE.ENTRY_MODE ; STATE.FUNCTION_SET ; STATE.DELAY ;
++--------------------+------------------+---------------+-------------+-------------+------------------+------------------+--------------------+-------------+
+; STATE.DELAY        ; 0                ; 0             ; 0           ; 0           ; 0                ; 0                ; 0                  ; 0           ;
+; STATE.FUNCTION_SET ; 0                ; 0             ; 0           ; 0           ; 0                ; 0                ; 1                  ; 1           ;
+; STATE.ENTRY_MODE   ; 0                ; 0             ; 0           ; 0           ; 0                ; 1                ; 0                  ; 1           ;
+; STATE.DISP_ONOFF   ; 0                ; 0             ; 0           ; 0           ; 1                ; 0                ; 0                  ; 1           ;
+; STATE.LINE1        ; 0                ; 0             ; 0           ; 1           ; 0                ; 0                ; 0                  ; 1           ;
+; STATE.LINE2        ; 0                ; 0             ; 1           ; 0           ; 0                ; 0                ; 0                  ; 1           ;
+; STATE.DELAY_T      ; 0                ; 1             ; 0           ; 0           ; 0                ; 0                ; 0                  ; 1           ;
+; STATE.CLEAR_DISP   ; 1                ; 0             ; 0           ; 0           ; 0                ; 0                ; 0                  ; 1           ;
++--------------------+------------------+---------------+-------------+-------------+------------------+------------------+--------------------+-------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |rnd123|before_game:inst3333|STATE                                                                                                         ;
++--------------------+------------------+---------------+-------------+-------------+------------------+------------------+--------------------+-------------+
+; Name               ; STATE.CLEAR_DISP ; STATE.DELAY_T ; STATE.LINE2 ; STATE.LINE1 ; STATE.DISP_ONOFF ; STATE.ENTRY_MODE ; STATE.FUNCTION_SET ; STATE.DELAY ;
++--------------------+------------------+---------------+-------------+-------------+------------------+------------------+--------------------+-------------+
+; STATE.DELAY        ; 0                ; 0             ; 0           ; 0           ; 0                ; 0                ; 0                  ; 0           ;
+; STATE.FUNCTION_SET ; 0                ; 0             ; 0           ; 0           ; 0                ; 0                ; 1                  ; 1           ;
+; STATE.ENTRY_MODE   ; 0                ; 0             ; 0           ; 0           ; 0                ; 1                ; 0                  ; 1           ;
+; STATE.DISP_ONOFF   ; 0                ; 0             ; 0           ; 0           ; 1                ; 0                ; 0                  ; 1           ;
+; STATE.LINE1        ; 0                ; 0             ; 0           ; 1           ; 0                ; 0                ; 0                  ; 1           ;
+; STATE.LINE2        ; 0                ; 0             ; 1           ; 0           ; 0                ; 0                ; 0                  ; 1           ;
+; STATE.DELAY_T      ; 0                ; 1             ; 0           ; 0           ; 0                ; 0                ; 0                  ; 1           ;
+; STATE.CLEAR_DISP   ; 1                ; 0             ; 0           ; 0           ; 0                ; 0                ; 0                  ; 1           ;
++--------------------+------------------+---------------+-------------+-------------+------------------+------------------+--------------------+-------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------+
+; State Machine - |rnd123|test5:inst13|SBO:inst4|fstate                                         ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+; Name          ; fstate.state4 ; fstate.state3 ; fstate.state2 ; fstate.state1 ; fstate.state5 ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+; fstate.state1 ; 0             ; 0             ; 0             ; 0             ; 0             ;
+; fstate.state2 ; 0             ; 0             ; 1             ; 1             ; 0             ;
+; fstate.state3 ; 0             ; 1             ; 0             ; 1             ; 0             ;
+; fstate.state4 ; 1             ; 0             ; 0             ; 1             ; 0             ;
+; fstate.state5 ; 0             ; 0             ; 0             ; 1             ; 1             ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------+
+; State Machine - |rnd123|test5:inst13|SBO:inst3|fstate                                         ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+; Name          ; fstate.state4 ; fstate.state3 ; fstate.state2 ; fstate.state1 ; fstate.state5 ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+; fstate.state1 ; 0             ; 0             ; 0             ; 0             ; 0             ;
+; fstate.state2 ; 0             ; 0             ; 1             ; 1             ; 0             ;
+; fstate.state3 ; 0             ; 1             ; 0             ; 1             ; 0             ;
+; fstate.state4 ; 1             ; 0             ; 0             ; 1             ; 0             ;
+; fstate.state5 ; 0             ; 0             ; 0             ; 1             ; 1             ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------+
+; State Machine - |rnd123|test5:inst13|SBO:inst2|fstate                                         ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+; Name          ; fstate.state4 ; fstate.state3 ; fstate.state2 ; fstate.state1 ; fstate.state5 ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+; fstate.state1 ; 0             ; 0             ; 0             ; 0             ; 0             ;
+; fstate.state2 ; 0             ; 0             ; 1             ; 1             ; 0             ;
+; fstate.state3 ; 0             ; 1             ; 0             ; 1             ; 0             ;
+; fstate.state4 ; 1             ; 0             ; 0             ; 1             ; 0             ;
+; fstate.state5 ; 0             ; 0             ; 0             ; 1             ; 1             ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------+
+; State Machine - |rnd123|test5:inst13|test4:inst11|con4:inst15|fstate          ;
++---------------+---------------+---------------+---------------+---------------+
+; Name          ; fstate.state4 ; fstate.state3 ; fstate.state2 ; fstate.state1 ;
++---------------+---------------+---------------+---------------+---------------+
+; fstate.state1 ; 0             ; 0             ; 0             ; 0             ;
+; fstate.state2 ; 0             ; 0             ; 1             ; 1             ;
+; fstate.state3 ; 0             ; 1             ; 0             ; 1             ;
+; fstate.state4 ; 1             ; 0             ; 0             ; 1             ;
++---------------+---------------+---------------+---------------+---------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------+
+; State Machine - |rnd123|test5:inst13|test4:inst11|com:inst18|fstate           ;
++---------------+---------------+---------------+---------------+---------------+
+; Name          ; fstate.state4 ; fstate.state3 ; fstate.state2 ; fstate.state1 ;
++---------------+---------------+---------------+---------------+---------------+
+; fstate.state1 ; 0             ; 0             ; 0             ; 0             ;
+; fstate.state2 ; 0             ; 0             ; 1             ; 1             ;
+; fstate.state3 ; 0             ; 1             ; 0             ; 1             ;
+; fstate.state4 ; 1             ; 0             ; 0             ; 1             ;
++---------------+---------------+---------------+---------------+---------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------+
+; State Machine - |rnd123|test5:inst13|test4:inst11|con3:inst13|fstate          ;
++---------------+---------------+---------------+---------------+---------------+
+; Name          ; fstate.state4 ; fstate.state3 ; fstate.state2 ; fstate.state1 ;
++---------------+---------------+---------------+---------------+---------------+
+; fstate.state1 ; 0             ; 0             ; 0             ; 0             ;
+; fstate.state2 ; 0             ; 0             ; 1             ; 1             ;
+; fstate.state3 ; 0             ; 1             ; 0             ; 1             ;
+; fstate.state4 ; 1             ; 0             ; 0             ; 1             ;
++---------------+---------------+---------------+---------------+---------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------+
+; State Machine - |rnd123|test5:inst13|test4:inst11|com:inst17|fstate           ;
++---------------+---------------+---------------+---------------+---------------+
+; Name          ; fstate.state4 ; fstate.state3 ; fstate.state2 ; fstate.state1 ;
++---------------+---------------+---------------+---------------+---------------+
+; fstate.state1 ; 0             ; 0             ; 0             ; 0             ;
+; fstate.state2 ; 0             ; 0             ; 1             ; 1             ;
+; fstate.state3 ; 0             ; 1             ; 0             ; 1             ;
+; fstate.state4 ; 1             ; 0             ; 0             ; 1             ;
++---------------+---------------+---------------+---------------+---------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------+
+; State Machine - |rnd123|test5:inst13|test4:inst11|con2:inst9|fstate           ;
++---------------+---------------+---------------+---------------+---------------+
+; Name          ; fstate.state4 ; fstate.state2 ; fstate.state3 ; fstate.state1 ;
++---------------+---------------+---------------+---------------+---------------+
+; fstate.state1 ; 0             ; 0             ; 0             ; 0             ;
+; fstate.state3 ; 0             ; 0             ; 1             ; 1             ;
+; fstate.state2 ; 0             ; 1             ; 0             ; 1             ;
+; fstate.state4 ; 1             ; 0             ; 0             ; 1             ;
++---------------+---------------+---------------+---------------+---------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------+
+; State Machine - |rnd123|test5:inst13|test4:inst11|com:inst16|fstate           ;
++---------------+---------------+---------------+---------------+---------------+
+; Name          ; fstate.state4 ; fstate.state3 ; fstate.state2 ; fstate.state1 ;
++---------------+---------------+---------------+---------------+---------------+
+; fstate.state1 ; 0             ; 0             ; 0             ; 0             ;
+; fstate.state2 ; 0             ; 0             ; 1             ; 1             ;
+; fstate.state3 ; 0             ; 1             ; 0             ; 1             ;
+; fstate.state4 ; 1             ; 0             ; 0             ; 1             ;
++---------------+---------------+---------------+---------------+---------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------+
+; State Machine - |rnd123|test5:inst13|test4:inst11|con1:inst1|fstate           ;
++---------------+---------------+---------------+---------------+---------------+
+; Name          ; fstate.state4 ; fstate.state3 ; fstate.state2 ; fstate.state1 ;
++---------------+---------------+---------------+---------------+---------------+
+; fstate.state1 ; 0             ; 0             ; 0             ; 0             ;
+; fstate.state2 ; 0             ; 0             ; 1             ; 1             ;
+; fstate.state3 ; 0             ; 1             ; 0             ; 1             ;
+; fstate.state4 ; 1             ; 0             ; 0             ; 1             ;
++---------------+---------------+---------------+---------------+---------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------+
+; State Machine - |rnd123|test5:inst13|test4:inst11|com:inst14|fstate           ;
++---------------+---------------+---------------+---------------+---------------+
+; Name          ; fstate.state4 ; fstate.state3 ; fstate.state2 ; fstate.state1 ;
++---------------+---------------+---------------+---------------+---------------+
+; fstate.state1 ; 0             ; 0             ; 0             ; 0             ;
+; fstate.state2 ; 0             ; 0             ; 1             ; 1             ;
+; fstate.state3 ; 0             ; 1             ; 0             ; 1             ;
+; fstate.state4 ; 1             ; 0             ; 0             ; 1             ;
++---------------+---------------+---------------+---------------+---------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------+
+; State Machine - |rnd123|test5:inst13|SBO:inst1|fstate                                         ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+; Name          ; fstate.state4 ; fstate.state3 ; fstate.state2 ; fstate.state1 ; fstate.state5 ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+; fstate.state1 ; 0             ; 0             ; 0             ; 0             ; 0             ;
+; fstate.state2 ; 0             ; 0             ; 1             ; 1             ; 0             ;
+; fstate.state3 ; 0             ; 1             ; 0             ; 1             ; 0             ;
+; fstate.state4 ; 1             ; 0             ; 0             ; 1             ; 0             ;
+; fstate.state5 ; 0             ; 0             ; 0             ; 1             ; 1             ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------+
+; State Machine - |rnd123|rnd2_player:inst1|rnd2_ledcontrol:inst45|fstate                       ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+; Name          ; fstate.state4 ; fstate.state3 ; fstate.state2 ; fstate.state1 ; fstate.state5 ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+; fstate.state1 ; 0             ; 0             ; 0             ; 0             ; 0             ;
+; fstate.state2 ; 0             ; 0             ; 1             ; 1             ; 0             ;
+; fstate.state3 ; 0             ; 1             ; 0             ; 1             ; 0             ;
+; fstate.state4 ; 1             ; 0             ; 0             ; 1             ; 0             ;
+; fstate.state5 ; 0             ; 0             ; 0             ; 1             ; 1             ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------+
+; State Machine - |rnd123|rnd2_player:inst1|rnd2_ledcontrol:inst13|fstate                       ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+; Name          ; fstate.state4 ; fstate.state3 ; fstate.state2 ; fstate.state1 ; fstate.state5 ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+; fstate.state1 ; 0             ; 0             ; 0             ; 0             ; 0             ;
+; fstate.state2 ; 0             ; 0             ; 1             ; 1             ; 0             ;
+; fstate.state3 ; 0             ; 1             ; 0             ; 1             ; 0             ;
+; fstate.state4 ; 1             ; 0             ; 0             ; 1             ; 0             ;
+; fstate.state5 ; 0             ; 0             ; 0             ; 1             ; 1             ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------+
+; State Machine - |rnd123|rnd2_player:inst1|BW:ins3334|fstate ;
++---------------+---------------------------------------------+
+; Name          ; fstate.state2                               ;
++---------------+---------------------------------------------+
+; fstate.state1 ; 0                                           ;
+; fstate.state2 ; 1                                           ;
++---------------+---------------------------------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------+
+; State Machine - |rnd123|rnd2_player:inst1|BW:ins3333|fstate ;
++---------------+---------------------------------------------+
+; Name          ; fstate.state2                               ;
++---------------+---------------------------------------------+
+; fstate.state1 ; 0                                           ;
+; fstate.state2 ; 1                                           ;
++---------------+---------------------------------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------+
+; State Machine - |rnd123|rnd2_player:inst1|rn2_fullcoler:inst51|fstate ;
++---------------+---------------+---------------+-----------------------+
+; Name          ; fstate.state1 ; fstate.state3 ; fstate.state2         ;
++---------------+---------------+---------------+-----------------------+
+; fstate.state1 ; 0             ; 0             ; 0                     ;
+; fstate.state2 ; 1             ; 0             ; 1                     ;
+; fstate.state3 ; 1             ; 1             ; 0                     ;
++---------------+---------------+---------------+-----------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |rnd123|project2:inst41|control_unit:inst30|fstate                                                            ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
+; Name          ; fstate.state7 ; fstate.state4 ; fstate.state6 ; fstate.state5 ; fstate.state2 ; fstate.state3 ; fstate.state1 ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
+; fstate.state1 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ;
+; fstate.state3 ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 1             ;
+; fstate.state2 ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 1             ;
+; fstate.state5 ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 1             ;
+; fstate.state6 ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state4 ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state7 ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------+
+; State Machine - |rnd123|rnd_reset_control:inst|fstate                         ;
++---------------+---------------+---------------+---------------+---------------+
+; Name          ; fstate.state4 ; fstate.state3 ; fstate.state2 ; fstate.state1 ;
++---------------+---------------+---------------+---------------+---------------+
+; fstate.state1 ; 0             ; 0             ; 0             ; 0             ;
+; fstate.state2 ; 0             ; 0             ; 1             ; 1             ;
+; fstate.state3 ; 0             ; 1             ; 0             ; 1             ;
+; fstate.state4 ; 1             ; 0             ; 0             ; 1             ;
++---------------+---------------+---------------+---------------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                     ;
++-----------------------------------------------------+------------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                      ; Free of Timing Hazards ;
++-----------------------------------------------------+------------------------------------------+------------------------+
+; test5:inst13|test4:inst11|con1:inst1|temprandom[0]  ; test5:inst13|test4:inst11|con1:inst1|En  ; yes                    ;
+; test5:inst13|test4:inst11|con1:inst1|temprandom[1]  ; test5:inst13|test4:inst11|con1:inst1|En  ; yes                    ;
+; test5:inst13|test4:inst11|con1:inst1|temprandom[2]  ; test5:inst13|test4:inst11|con1:inst1|En  ; yes                    ;
+; test5:inst13|test4:inst11|con1:inst1|temprandom[3]  ; test5:inst13|test4:inst11|con1:inst1|En  ; yes                    ;
+; test5:inst13|test4:inst11|con2:inst9|temprandom[0]  ; test5:inst13|test4:inst11|con2:inst9|En  ; yes                    ;
+; test5:inst13|test4:inst11|con2:inst9|temprandom[1]  ; test5:inst13|test4:inst11|con2:inst9|En  ; yes                    ;
+; test5:inst13|test4:inst11|con2:inst9|temprandom[2]  ; test5:inst13|test4:inst11|con2:inst9|En  ; yes                    ;
+; test5:inst13|test4:inst11|con2:inst9|temprandom[3]  ; test5:inst13|test4:inst11|con2:inst9|En  ; yes                    ;
+; test5:inst13|test4:inst11|con3:inst13|temprandom[0] ; test5:inst13|test4:inst11|con3:inst13|En ; yes                    ;
+; test5:inst13|test4:inst11|con3:inst13|temprandom[1] ; test5:inst13|test4:inst11|con3:inst13|En ; yes                    ;
+; test5:inst13|test4:inst11|con3:inst13|temprandom[2] ; test5:inst13|test4:inst11|con3:inst13|En ; yes                    ;
+; test5:inst13|test4:inst11|con3:inst13|temprandom[3] ; test5:inst13|test4:inst11|con3:inst13|En ; yes                    ;
+; Number of user-specified and inferred latches = 12  ;                                          ;                        ;
++-----------------------------------------------------+------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                        ;
++-------------------------------------------------------+-------------------------------------------------------------------+
+; Register name                                         ; Reason for Removal                                                ;
++-------------------------------------------------------+-------------------------------------------------------------------+
+; final_winner:inst4|CNT[0..31]                         ; Stuck at GND due to stuck port clock                              ;
+; rnd2_player:inst1|trigger:inst1116|inst2              ; Merged with rnd2_player:inst1|trigger:inst1114|inst2              ;
+; rnd2_player:inst1|trigger:inst1116|inst3              ; Merged with rnd2_player:inst1|trigger:inst1114|inst3              ;
+; rnd2_player:inst1|Four_bit_Register_v3:inst2021|inst3 ; Merged with rnd2_player:inst1|Four_bit_Register_v3:inst2020|inst3 ;
+; rnd2_player:inst1|Four_bit_Register_v3:inst2021|inst2 ; Merged with rnd2_player:inst1|Four_bit_Register_v3:inst2020|inst2 ;
+; rnd2_player:inst1|Four_bit_Register_v3:inst2021|inst1 ; Merged with rnd2_player:inst1|Four_bit_Register_v3:inst2020|inst1 ;
+; rnd2_player:inst1|Four_bit_Register_v3:inst2021|inst  ; Merged with rnd2_player:inst1|Four_bit_Register_v3:inst2020|inst  ;
+; rnd2_player:inst1|Four_bit_Register_v3:inst35|inst    ; Merged with rnd2_player:inst1|Four_bit_Register_v3:inst011|inst   ;
+; rnd2_player:inst1|Four_bit_Register_v3:inst35|inst1   ; Merged with rnd2_player:inst1|Four_bit_Register_v3:inst011|inst1  ;
+; rnd2_player:inst1|Four_bit_Register_v3:inst35|inst2   ; Merged with rnd2_player:inst1|Four_bit_Register_v3:inst011|inst2  ;
+; rnd2_player:inst1|Four_bit_Register_v3:inst35|inst3   ; Merged with rnd2_player:inst1|Four_bit_Register_v3:inst011|inst3  ;
+; test5:inst13|SBO:inst4|fstate.state5                  ; Lost fanout                                                       ;
+; test5:inst13|SBO:inst3|fstate.state5                  ; Lost fanout                                                       ;
+; test5:inst13|SBO:inst2|fstate.state5                  ; Lost fanout                                                       ;
+; test5:inst13|SBO:inst1|fstate.state5                  ; Lost fanout                                                       ;
+; final_winner:inst4|STATE~12                           ; Lost fanout                                                       ;
+; final_winner:inst4|STATE~13                           ; Lost fanout                                                       ;
+; final_winner:inst4|STATE~14                           ; Lost fanout                                                       ;
+; final_winner:inst4|STATE.DELAY                        ; Stuck at GND due to stuck port clock                              ;
+; final_winner:inst4|STATE.FUNCTION_SET                 ; Stuck at GND due to stuck port clock                              ;
+; final_winner:inst4|STATE.ENTRY_MODE                   ; Stuck at GND due to stuck port clock                              ;
+; final_winner:inst4|STATE.DISP_ONOFF                   ; Stuck at GND due to stuck port clock                              ;
+; final_winner:inst4|STATE.LINE1                        ; Stuck at GND due to stuck port clock                              ;
+; final_winner:inst4|STATE.LINE2                        ; Stuck at GND due to stuck port clock                              ;
+; final_winner:inst4|STATE.DELAY_T                      ; Stuck at GND due to stuck port clock                              ;
+; final_winner:inst4|STATE.CLEAR_DISP                   ; Stuck at GND due to stuck port clock                              ;
+; before_game:inst3333|STATE~12                         ; Lost fanout                                                       ;
+; before_game:inst3333|STATE~13                         ; Lost fanout                                                       ;
+; before_game:inst3333|STATE~14                         ; Lost fanout                                                       ;
+; test5:inst13|SBO:inst4|fstate~2                       ; Lost fanout                                                       ;
+; test5:inst13|SBO:inst4|fstate~3                       ; Lost fanout                                                       ;
+; test5:inst13|SBO:inst4|fstate~5                       ; Lost fanout                                                       ;
+; test5:inst13|SBO:inst4|fstate~6                       ; Lost fanout                                                       ;
+; test5:inst13|SBO:inst3|fstate~2                       ; Lost fanout                                                       ;
+; test5:inst13|SBO:inst3|fstate~3                       ; Lost fanout                                                       ;
+; test5:inst13|SBO:inst3|fstate~5                       ; Lost fanout                                                       ;
+; test5:inst13|SBO:inst3|fstate~6                       ; Lost fanout                                                       ;
+; test5:inst13|SBO:inst2|fstate~2                       ; Lost fanout                                                       ;
+; test5:inst13|SBO:inst2|fstate~3                       ; Lost fanout                                                       ;
+; test5:inst13|SBO:inst2|fstate~5                       ; Lost fanout                                                       ;
+; test5:inst13|SBO:inst2|fstate~6                       ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con4:inst15|fstate~2        ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con4:inst15|fstate~3        ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con4:inst15|fstate~4        ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con4:inst15|fstate~5        ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con4:inst15|fstate~6        ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|com:inst18|fstate~2         ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|com:inst18|fstate~3         ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|com:inst18|fstate~4         ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|com:inst18|fstate~5         ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con3:inst13|fstate~2        ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con3:inst13|fstate~3        ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con3:inst13|fstate~4        ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con3:inst13|fstate~5        ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con3:inst13|fstate~6        ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|com:inst17|fstate~2         ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|com:inst17|fstate~3         ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|com:inst17|fstate~4         ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|com:inst17|fstate~5         ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con2:inst9|fstate~2         ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con2:inst9|fstate~3         ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con2:inst9|fstate~4         ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con2:inst9|fstate~5         ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|com:inst16|fstate~2         ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|com:inst16|fstate~3         ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|com:inst16|fstate~4         ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|com:inst16|fstate~5         ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con1:inst1|fstate~2         ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con1:inst1|fstate~3         ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con1:inst1|fstate~4         ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con1:inst1|fstate~5         ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|com:inst14|fstate~2         ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|com:inst14|fstate~3         ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|com:inst14|fstate~4         ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|com:inst14|fstate~5         ; Lost fanout                                                       ;
+; test5:inst13|SBO:inst1|fstate~2                       ; Lost fanout                                                       ;
+; test5:inst13|SBO:inst1|fstate~3                       ; Lost fanout                                                       ;
+; test5:inst13|SBO:inst1|fstate~5                       ; Lost fanout                                                       ;
+; test5:inst13|SBO:inst1|fstate~6                       ; Lost fanout                                                       ;
+; rnd2_player:inst1|rnd2_ledcontrol:inst45|fstate~2     ; Lost fanout                                                       ;
+; rnd2_player:inst1|rnd2_ledcontrol:inst45|fstate~3     ; Lost fanout                                                       ;
+; rnd2_player:inst1|rnd2_ledcontrol:inst45|fstate~5     ; Lost fanout                                                       ;
+; rnd2_player:inst1|rnd2_ledcontrol:inst45|fstate~6     ; Lost fanout                                                       ;
+; rnd2_player:inst1|rnd2_ledcontrol:inst13|fstate~2     ; Lost fanout                                                       ;
+; rnd2_player:inst1|rnd2_ledcontrol:inst13|fstate~3     ; Lost fanout                                                       ;
+; rnd2_player:inst1|rnd2_ledcontrol:inst13|fstate~5     ; Lost fanout                                                       ;
+; rnd2_player:inst1|rnd2_ledcontrol:inst13|fstate~6     ; Lost fanout                                                       ;
+; rnd2_player:inst1|BW:ins3334|fstate~3                 ; Lost fanout                                                       ;
+; rnd2_player:inst1|BW:ins3333|fstate~3                 ; Lost fanout                                                       ;
+; rnd2_player:inst1|rn2_fullcoler:inst51|fstate~4       ; Lost fanout                                                       ;
+; rnd2_player:inst1|rn2_fullcoler:inst51|fstate~5       ; Lost fanout                                                       ;
+; rnd2_player:inst1|rn2_fullcoler:inst51|fstate~6       ; Lost fanout                                                       ;
+; project2:inst41|control_unit:inst30|fstate~2          ; Lost fanout                                                       ;
+; project2:inst41|control_unit:inst30|fstate~3          ; Lost fanout                                                       ;
+; project2:inst41|control_unit:inst30|fstate~4          ; Lost fanout                                                       ;
+; project2:inst41|control_unit:inst30|fstate~5          ; Lost fanout                                                       ;
+; project2:inst41|control_unit:inst30|fstate~6          ; Lost fanout                                                       ;
+; project2:inst41|control_unit:inst30|fstate~7          ; Lost fanout                                                       ;
+; project2:inst41|control_unit:inst30|fstate~8          ; Lost fanout                                                       ;
+; rnd_reset_control:inst|fstate~2                       ; Lost fanout                                                       ;
+; rnd_reset_control:inst|fstate~3                       ; Lost fanout                                                       ;
+; rnd_reset_control:inst|fstate~4                       ; Lost fanout                                                       ;
+; rnd_reset_control:inst|fstate~5                       ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con4:inst15|fstate.state3   ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con4:inst15|fstate.state4   ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|com:inst18|fstate.state4    ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con3:inst13|fstate.state3   ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con3:inst13|fstate.state4   ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|com:inst17|fstate.state4    ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con2:inst9|fstate.state3    ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con2:inst9|fstate.state4    ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|com:inst16|fstate.state4    ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con1:inst1|fstate.state3    ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|con1:inst1|fstate.state4    ; Lost fanout                                                       ;
+; test5:inst13|test4:inst11|com:inst14|fstate.state4    ; Lost fanout                                                       ;
+; rnd2_player:inst1|rn2_fullcoler:inst51|fstate.state3  ; Lost fanout                                                       ;
+; test5:inst13|SBO:inst2|fstate.state1                  ; Merged with test5:inst13|SBO:inst1|fstate.state1                  ;
+; test5:inst13|SBO:inst3|fstate.state1                  ; Merged with test5:inst13|SBO:inst1|fstate.state1                  ;
+; test5:inst13|SBO:inst4|fstate.state1                  ; Merged with test5:inst13|SBO:inst1|fstate.state1                  ;
+; test5:inst13|SBO:inst2|fstate.state2                  ; Merged with test5:inst13|SBO:inst1|fstate.state2                  ;
+; test5:inst13|SBO:inst3|fstate.state2                  ; Merged with test5:inst13|SBO:inst1|fstate.state2                  ;
+; test5:inst13|SBO:inst4|fstate.state2                  ; Merged with test5:inst13|SBO:inst1|fstate.state2                  ;
+; Total Number of Removed Registers = 153               ;                                                                   ;
++-------------------------------------------------------+-------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                    ;
++------------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+; Register name                                  ; Reason for Removal      ; Registers Removed due to This Register                                              ;
++------------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+; final_winner:inst4|CNT[31]                     ; Stuck at GND            ; final_winner:inst4|CNT[30], final_winner:inst4|CNT[29], final_winner:inst4|CNT[28], ;
+;                                                ; due to stuck port clock ; final_winner:inst4|CNT[27], final_winner:inst4|CNT[26], final_winner:inst4|CNT[25], ;
+;                                                ;                         ; final_winner:inst4|CNT[24], final_winner:inst4|CNT[23], final_winner:inst4|CNT[22], ;
+;                                                ;                         ; final_winner:inst4|CNT[21], final_winner:inst4|CNT[20], final_winner:inst4|CNT[19], ;
+;                                                ;                         ; final_winner:inst4|CNT[18], final_winner:inst4|CNT[17], final_winner:inst4|CNT[16], ;
+;                                                ;                         ; final_winner:inst4|CNT[15], final_winner:inst4|CNT[14], final_winner:inst4|CNT[13], ;
+;                                                ;                         ; final_winner:inst4|CNT[12], final_winner:inst4|CNT[11], final_winner:inst4|CNT[10], ;
+;                                                ;                         ; final_winner:inst4|CNT[9], final_winner:inst4|CNT[8], final_winner:inst4|CNT[7],    ;
+;                                                ;                         ; final_winner:inst4|CNT[6], final_winner:inst4|CNT[5], final_winner:inst4|CNT[4],    ;
+;                                                ;                         ; final_winner:inst4|CNT[3], final_winner:inst4|CNT[2], final_winner:inst4|CNT[1],    ;
+;                                                ;                         ; final_winner:inst4|CNT[0]                                                           ;
+; test5:inst13|test4:inst11|con4:inst15|fstate~2 ; Lost Fanouts            ; test5:inst13|test4:inst11|con4:inst15|fstate.state3,                                ;
+;                                                ;                         ; test5:inst13|test4:inst11|con4:inst15|fstate.state4                                 ;
+; test5:inst13|test4:inst11|con3:inst13|fstate~2 ; Lost Fanouts            ; test5:inst13|test4:inst11|con3:inst13|fstate.state3,                                ;
+;                                                ;                         ; test5:inst13|test4:inst11|con3:inst13|fstate.state4                                 ;
+; test5:inst13|test4:inst11|con1:inst1|fstate~2  ; Lost Fanouts            ; test5:inst13|test4:inst11|con1:inst1|fstate.state3,                                 ;
+;                                                ;                         ; test5:inst13|test4:inst11|con1:inst1|fstate.state4                                  ;
+; test5:inst13|test4:inst11|com:inst18|fstate~2  ; Lost Fanouts            ; test5:inst13|test4:inst11|com:inst18|fstate.state4                                  ;
+; test5:inst13|test4:inst11|com:inst17|fstate~2  ; Lost Fanouts            ; test5:inst13|test4:inst11|com:inst17|fstate.state4                                  ;
+; test5:inst13|test4:inst11|con2:inst9|fstate~2  ; Lost Fanouts            ; test5:inst13|test4:inst11|con2:inst9|fstate.state3                                  ;
+; test5:inst13|test4:inst11|con2:inst9|fstate~3  ; Lost Fanouts            ; test5:inst13|test4:inst11|con2:inst9|fstate.state4                                  ;
+; test5:inst13|test4:inst11|com:inst16|fstate~2  ; Lost Fanouts            ; test5:inst13|test4:inst11|com:inst16|fstate.state4                                  ;
+; test5:inst13|test4:inst11|com:inst14|fstate~2  ; Lost Fanouts            ; test5:inst13|test4:inst11|com:inst14|fstate.state4                                  ;
++------------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 216   ;
+; Number of registers using Synchronous Clear  ; 42    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 161   ;
+; Number of registers using Asynchronous Load  ; 8     ;
+; Number of registers using Clock Enable       ; 78    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; before_game:inst3333|LCD_RW            ; 1       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |rnd123|test5:inst13|two_bit_reg_ce:inst|inst                 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |rnd123|test5:inst13|two_bit_reg_ce:inst5|inst                ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |rnd123|test5:inst13|two_bit_reg_ce:inst6|inst                ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |rnd123|test5:inst13|two_bit_reg_ce:inst7|inst1               ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |rnd123|test5:inst13|test4:inst11|four_bit_reg_ce:inst3|inst  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |rnd123|test5:inst13|test4:inst11|four_bit_reg_ce:inst4|inst1 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |rnd123|test5:inst13|test4:inst11|four_bit_reg_ce:inst2|inst  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |rnd123|test5:inst13|test4:inst11|four_bit_reg_ce:inst12|inst ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |rnd123|before_game:inst3333|LCD_DATA[5]                      ;
+; 10:1               ; 32 bits   ; 192 LEs       ; 32 LEs               ; 160 LEs                ; Yes        ; |rnd123|before_game:inst3333|CNT[17]                          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |rnd123|test5:inst13|test4:inst11|com:inst18|out_n[2]         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |rnd123|test5:inst13|test4:inst11|com:inst17|out_n[3]         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |rnd123|test5:inst13|test4:inst11|com:inst16|out_n[2]         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |rnd123|test5:inst13|test4:inst11|com:inst14|out_n[2]         ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; No         ; |rnd123|rnd2_player:inst1|BW:ins3334|ten[3]                   ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; No         ; |rnd123|rnd2_player:inst1|BW:ins3333|ten[3]                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |rnd123|test5:inst13|mx_4bit_2x1:inst23|m_out[1]              ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |rnd123|test5:inst13|SBO:inst4|reg_fstate.state4              ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |rnd123|test5:inst13|SBO:inst3|reg_fstate.state5              ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |rnd123|test5:inst13|SBO:inst2|reg_fstate.state5              ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |rnd123|test5:inst13|SBO:inst1|reg_fstate.state4              ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |rnd123|before_game:inst3333|Selector7                        ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; No         ; |rnd123|before_game:inst3333|Selector6                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rnd_reset_control:inst ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; state1         ; 0     ; Signed Integer                             ;
+; state2         ; 1     ; Signed Integer                             ;
+; state3         ; 2     ; Signed Integer                             ;
+; state4         ; 3     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: project2:inst41|control_unit:inst30 ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; state1         ; 0     ; Signed Integer                                          ;
+; state3         ; 1     ; Signed Integer                                          ;
+; state2         ; 2     ; Signed Integer                                          ;
+; state5         ; 3     ; Signed Integer                                          ;
+; state6         ; 4     ; Signed Integer                                          ;
+; state4         ; 5     ; Signed Integer                                          ;
+; state7         ; 6     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rnd2_player:inst1|rn2_fullcoler:inst51 ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; state1         ; 0     ; Signed Integer                                             ;
+; state2         ; 1     ; Signed Integer                                             ;
+; state3         ; 2     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rnd2_player:inst1|BW:ins3333 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; state1         ; 0     ; Signed Integer                                   ;
+; state2         ; 1     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rnd2_player:inst1|BW:ins3334 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; state1         ; 0     ; Signed Integer                                   ;
+; state2         ; 1     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rnd2_player:inst1|rnd2_ledcontrol:inst13 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; state1         ; 0     ; Signed Integer                                               ;
+; state2         ; 1     ; Signed Integer                                               ;
+; state3         ; 2     ; Signed Integer                                               ;
+; state4         ; 3     ; Signed Integer                                               ;
+; state5         ; 4     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rnd2_player:inst1|rnd2_ledcontrol:inst45 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; state1         ; 0     ; Signed Integer                                               ;
+; state2         ; 1     ; Signed Integer                                               ;
+; state3         ; 2     ; Signed Integer                                               ;
+; state4         ; 3     ; Signed Integer                                               ;
+; state5         ; 4     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: test5:inst13|SBO:inst1 ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; state2         ; 0     ; Signed Integer                             ;
+; state1         ; 1     ; Signed Integer                             ;
+; state3         ; 2     ; Signed Integer                             ;
+; state4         ; 3     ; Signed Integer                             ;
+; state5         ; 4     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: test5:inst13|test4:inst11|com:inst14 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; state1         ; 0     ; Signed Integer                                           ;
+; state2         ; 1     ; Signed Integer                                           ;
+; state3         ; 2     ; Signed Integer                                           ;
+; state4         ; 3     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: test5:inst13|test4:inst11|con1:inst1 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; state1         ; 0     ; Signed Integer                                           ;
+; state2         ; 1     ; Signed Integer                                           ;
+; state3         ; 2     ; Signed Integer                                           ;
+; state4         ; 3     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: test5:inst13|test4:inst11|com:inst16 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; state1         ; 0     ; Signed Integer                                           ;
+; state2         ; 1     ; Signed Integer                                           ;
+; state3         ; 2     ; Signed Integer                                           ;
+; state4         ; 3     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: test5:inst13|test4:inst11|con2:inst9 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; state3         ; 0     ; Signed Integer                                           ;
+; state1         ; 1     ; Signed Integer                                           ;
+; state2         ; 2     ; Signed Integer                                           ;
+; state4         ; 3     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: test5:inst13|test4:inst11|com:inst17 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; state1         ; 0     ; Signed Integer                                           ;
+; state2         ; 1     ; Signed Integer                                           ;
+; state3         ; 2     ; Signed Integer                                           ;
+; state4         ; 3     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: test5:inst13|test4:inst11|con3:inst13 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; state1         ; 0     ; Signed Integer                                            ;
+; state2         ; 1     ; Signed Integer                                            ;
+; state3         ; 2     ; Signed Integer                                            ;
+; state4         ; 3     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: test5:inst13|test4:inst11|com:inst18 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; state1         ; 0     ; Signed Integer                                           ;
+; state2         ; 1     ; Signed Integer                                           ;
+; state3         ; 2     ; Signed Integer                                           ;
+; state4         ; 3     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: test5:inst13|test4:inst11|con4:inst15 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; state1         ; 0     ; Signed Integer                                            ;
+; state2         ; 1     ; Signed Integer                                            ;
+; state3         ; 2     ; Signed Integer                                            ;
+; state4         ; 3     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: test5:inst13|SBO:inst2 ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; state2         ; 0     ; Signed Integer                             ;
+; state1         ; 1     ; Signed Integer                             ;
+; state3         ; 2     ; Signed Integer                             ;
+; state4         ; 3     ; Signed Integer                             ;
+; state5         ; 4     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: test5:inst13|SBO:inst3 ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; state2         ; 0     ; Signed Integer                             ;
+; state1         ; 1     ; Signed Integer                             ;
+; state3         ; 2     ; Signed Integer                             ;
+; state4         ; 3     ; Signed Integer                             ;
+; state5         ; 4     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: test5:inst13|SBO:inst4 ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; state2         ; 0     ; Signed Integer                             ;
+; state1         ; 1     ; Signed Integer                             ;
+; state3         ; 2     ; Signed Integer                             ;
+; state4         ; 3     ; Signed Integer                             ;
+; state5         ; 4     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: before_game:inst3333 ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; DELAY          ; 000   ; Unsigned Binary                          ;
+; FUNCTION_SET   ; 001   ; Unsigned Binary                          ;
+; ENTRY_MODE     ; 010   ; Unsigned Binary                          ;
+; DISP_ONOFF     ; 011   ; Unsigned Binary                          ;
+; LINE1          ; 100   ; Unsigned Binary                          ;
+; LINE2          ; 101   ; Unsigned Binary                          ;
+; DELAY_T        ; 110   ; Unsigned Binary                          ;
+; CLEAR_DISP     ; 111   ; Unsigned Binary                          ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: final_winner:inst4 ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; DELAY          ; 000   ; Unsigned Binary                        ;
+; FUNCTION_SET   ; 001   ; Unsigned Binary                        ;
+; ENTRY_MODE     ; 010   ; Unsigned Binary                        ;
+; DISP_ONOFF     ; 011   ; Unsigned Binary                        ;
+; LINE1          ; 100   ; Unsigned Binary                        ;
+; LINE2          ; 101   ; Unsigned Binary                        ;
+; DELAY_T        ; 110   ; Unsigned Binary                        ;
+; CLEAR_DISP     ; 111   ; Unsigned Binary                        ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Thu Dec 23 15:15:19 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off project1 -c project1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file week3_3.bdf
+    Info (12023): Found entity 1: week3_3
+Info (12021): Found 1 design units, including 1 entities, in source file player_change.bdf
+    Info (12023): Found entity 1: player_change
+Warning (12019): Can't analyze file -- file ../sym/Decimal_to_Binary_nine.bdf is missing
+Info (12021): Found 1 design units, including 1 entities, in source file rnd2_ledcontrol.v
+    Info (12023): Found entity 1: rnd2_ledcontrol File: C:/intelFPGA_lite/20.1/project1/rnd2_ledcontrol.v Line: 23
+Warning (12019): Can't analyze file -- file ../term/eq.bdf is missing
+Info (12021): Found 1 design units, including 1 entities, in source file before_game.v
+    Info (12023): Found entity 1: before_game File: C:/intelFPGA_lite/20.1/project1/before_game.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sb.v
+    Info (12023): Found entity 1: SB File: C:/intelFPGA_lite/20.1/project1/SB.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file four_bit_register_v3.bdf
+    Info (12023): Found entity 1: Four_bit_Register_v3
+Info (12021): Found 1 design units, including 1 entities, in source file week3_1_4.bdf
+    Info (12023): Found entity 1: week3_1_4
+Info (12021): Found 1 design units, including 1 entities, in source file week3_1_3.bdf
+    Info (12023): Found entity 1: week3_1_3
+Info (12021): Found 1 design units, including 1 entities, in source file rnd2.bdf
+    Info (12023): Found entity 1: rnd2
+Info (12021): Found 1 design units, including 1 entities, in source file bw.v
+    Info (12023): Found entity 1: BW File: C:/intelFPGA_lite/20.1/project1/BW.v Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file add_b_or_zero.v
+    Info (12023): Found entity 1: add_b_or_zero File: C:/intelFPGA_lite/20.1/project1/add_b_or_zero.v Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file four_bit_register_v4.bdf
+    Info (12023): Found entity 1: four_bit_Register_v4
+Info (12021): Found 1 design units, including 1 entities, in source file four_bit_ripple_carry_adder_v4.bdf
+    Info (12023): Found entity 1: four_bit_ripple_carry_adder_v4
+Info (12021): Found 1 design units, including 1 entities, in source file four_bit_ripple_carry_adder_v3.bdf
+    Info (12023): Found entity 1: four_bit_ripple_carry_adder_v3
+Info (12021): Found 1 design units, including 1 entities, in source file adderpractice.v
+    Info (12023): Found entity 1: adderpractice File: C:/intelFPGA_lite/20.1/project1/adderpractice.v Line: 45
+Info (12021): Found 1 design units, including 1 entities, in source file decimal_to_binary.bdf
+    Info (12023): Found entity 1: Decimal_to_binary
+Info (12021): Found 1 design units, including 1 entities, in source file hb_clcd.v
+    Info (12023): Found entity 1: HB_CLCD File: C:/intelFPGA_lite/20.1/project1/HB_CLCD.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file com.v
+    Info (12023): Found entity 1: com File: C:/intelFPGA_lite/20.1/project1/com.v Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file sbo.v
+    Info (12023): Found entity 1: SBO File: C:/intelFPGA_lite/20.1/project1/SBO.v Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file con4.v
+    Info (12023): Found entity 1: con4 File: C:/intelFPGA_lite/20.1/project1/con4.v Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file con3.v
+    Info (12023): Found entity 1: con3 File: C:/intelFPGA_lite/20.1/project1/con3.v Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file con2.v
+    Info (12023): Found entity 1: con2 File: C:/intelFPGA_lite/20.1/project1/con2.v Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file con1.v
+    Info (12023): Found entity 1: con1 File: C:/intelFPGA_lite/20.1/project1/con1.v Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file test5.bdf
+    Info (12023): Found entity 1: test5
+Info (12021): Found 1 design units, including 1 entities, in source file test4.bdf
+    Info (12023): Found entity 1: test4
+Info (12021): Found 1 design units, including 1 entities, in source file test.bdf
+    Info (12023): Found entity 1: test
+Info (12021): Found 1 design units, including 1 entities, in source file four_bit_reg_ce.bdf
+    Info (12023): Found entity 1: four_bit_reg_ce
+Info (12021): Found 1 design units, including 1 entities, in source file ten_week_2.bdf
+    Info (12023): Found entity 1: ten_week_2
+Info (12021): Found 1 design units, including 1 entities, in source file mx_2x1.bdf
+    Info (12023): Found entity 1: mx_2x1
+Info (12021): Found 1 design units, including 1 entities, in source file count_4.bdf
+    Info (12023): Found entity 1: count_4
+Info (12021): Found 1 design units, including 1 entities, in source file b2seg_bus.bdf
+    Info (12023): Found entity 1: b2seg_bus
+Info (12021): Found 1 design units, including 1 entities, in source file win_lose.bdf
+    Info (12023): Found entity 1: win_lose
+Info (12021): Found 1 design units, including 1 entities, in source file trigger.bdf
+    Info (12023): Found entity 1: trigger
+Info (12021): Found 1 design units, including 1 entities, in source file rnd1.bdf
+    Info (12023): Found entity 1: rnd1
+Info (12021): Found 1 design units, including 1 entities, in source file random.bdf
+    Info (12023): Found entity 1: random
+Info (12021): Found 1 design units, including 1 entities, in source file project.bdf
+    Info (12023): Found entity 1: project
+Info (12021): Found 1 design units, including 1 entities, in source file four_r.bdf
+    Info (12023): Found entity 1: four_r
+Info (12021): Found 1 design units, including 1 entities, in source file four_bit_counter.bdf
+    Info (12023): Found entity 1: four_bit_counter
+Info (12021): Found 1 design units, including 1 entities, in source file control_unit.v
+    Info (12023): Found entity 1: control_unit File: C:/intelFPGA_lite/20.1/project1/control_unit.v Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file project2.bdf
+    Info (12023): Found entity 1: project2
+Info (12021): Found 1 design units, including 1 entities, in source file two_bit_compare.bdf
+    Info (12023): Found entity 1: two_bit_compare
+Info (12021): Found 1 design units, including 1 entities, in source file two_bit_reg_ce.bdf
+    Info (12023): Found entity 1: two_bit_reg_ce
+Info (12021): Found 1 design units, including 1 entities, in source file sb_calculate.bdf
+    Info (12023): Found entity 1: sb_calculate
+Info (12021): Found 1 design units, including 1 entities, in source file b2cpractice.bdf
+    Info (12023): Found entity 1: b2cpractice
+Info (12021): Found 1 design units, including 1 entities, in source file you_win.v
+    Info (12023): Found entity 1: You_Win File: C:/intelFPGA_lite/20.1/project1/You_Win.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file you_lose.v
+    Info (12023): Found entity 1: You_Lose File: C:/intelFPGA_lite/20.1/project1/You_Lose.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file draw.v
+    Info (12023): Found entity 1: Draw File: C:/intelFPGA_lite/20.1/project1/Draw.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file rnd2_player.bdf
+    Info (12023): Found entity 1: rnd2_player
+Info (12021): Found 1 design units, including 1 entities, in source file five_counter.bdf
+    Info (12023): Found entity 1: five_counter
+Info (12021): Found 1 design units, including 1 entities, in source file rnd2_point.v
+    Info (12023): Found entity 1: rnd2_point File: C:/intelFPGA_lite/20.1/project1/rnd2_point.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file rnd123.bdf
+    Info (12023): Found entity 1: rnd123
+Info (12021): Found 1 design units, including 1 entities, in source file final_winner.v
+    Info (12023): Found entity 1: final_winner File: C:/intelFPGA_lite/20.1/project1/final_winner.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file reset_control_test.bdf
+    Info (12023): Found entity 1: reset_control_test
+Info (12021): Found 1 design units, including 1 entities, in source file mapping.bdf
+    Info (12023): Found entity 1: mapping
+Info (12127): Elaborating entity "rnd123" for the top level hierarchy
+Warning (275011): Block or symbol "NOT" of instance "inst21" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst65" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst67" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst70" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst76" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst79" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst6886" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst85" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst92" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst93" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst95" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst98" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst1005" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst1008" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst100" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst105" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst110" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst115" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst120" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst125" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst130" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst135" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst2" overlaps another block or symbol
+Warning (275013): Port "CLK" of type final_winner and instance "inst4" is missing source signal
+Warning (275008): Primitive "OR3" of instance "inst14" not used
+Warning (12125): Using design file rnd_reset_control.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: rnd_reset_control File: C:/intelFPGA_lite/20.1/project1/rnd_reset_control.v Line: 23
+Info (12128): Elaborating entity "rnd_reset_control" for hierarchy "rnd_reset_control:inst"
+Info (12128): Elaborating entity "project2" for hierarchy "project2:inst41"
+Warning (275012): Pin "pa" overlaps another pin, block, or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst1111" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst1113" overlaps another block or symbol
+Warning (275011): Block or symbol "OR2" of instance "inst15" overlaps another block or symbol
+Warning (275011): Block or symbol "OR2" of instance "inst22" overlaps another block or symbol
+Warning (275011): Block or symbol "OR2" of instance "inst24" overlaps another block or symbol
+Warning (275011): Block or symbol "OR3" of instance "inst26" overlaps another block or symbol
+Info (12128): Elaborating entity "two_bit_compare" for hierarchy "project2:inst41|two_bit_compare:inst2"
+Warning (275011): Block or symbol "NOT" of instance "inst15" overlaps another block or symbol
+Info (12128): Elaborating entity "four_bit_counter" for hierarchy "project2:inst41|four_bit_counter:inst20"
+Info (12128): Elaborating entity "win_lose" for hierarchy "project2:inst41|win_lose:inst16"
+Info (12128): Elaborating entity "rnd1" for hierarchy "project2:inst41|rnd1:inst100"
+Warning (275011): Block or symbol "NOT" of instance "inst16" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst30" overlaps another block or symbol
+Info (12128): Elaborating entity "random" for hierarchy "project2:inst41|rnd1:inst100|random:inst"
+Info (12128): Elaborating entity "control_unit" for hierarchy "project2:inst41|control_unit:inst30"
+Info (12128): Elaborating entity "rnd2_player" for hierarchy "rnd2_player:inst1"
+Warning (275083): Bus "outoutsum2[0]" found using same base name as "outoutsum", which might lead to a name conflict.
+Warning (275083): Bus "outoutsum2[1]" found using same base name as "outoutsum", which might lead to a name conflict.
+Warning (275083): Bus "outoutsum2[2]" found using same base name as "outoutsum", which might lead to a name conflict.
+Warning (275083): Bus "outoutsum2[3]" found using same base name as "outoutsum", which might lead to a name conflict.
+Warning (275083): Bus "outoutsum2[4]" found using same base name as "outoutsum", which might lead to a name conflict.
+Warning (275083): Bus "outoutsum2[4..0]" found using same base name as "outoutsum", which might lead to a name conflict.
+Warning (275080): Converted elements in bus name "outoutsum" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "outoutsum[4]" to "outoutsum4"
+    Warning (275081): Converted element name(s) from "outoutsum[0]" to "outoutsum0"
+    Warning (275081): Converted element name(s) from "outoutsum[1]" to "outoutsum1"
+    Warning (275081): Converted element name(s) from "outoutsum[2]" to "outoutsum2"
+    Warning (275081): Converted element name(s) from "outoutsum[3]" to "outoutsum3"
+    Warning (275081): Converted element name(s) from "outoutsum[4..0]" to "outoutsum4..0"
+Warning (275080): Converted elements in bus name "outoutsum2" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "outoutsum2[0]" to "outoutsum20"
+    Warning (275081): Converted element name(s) from "outoutsum2[1]" to "outoutsum21"
+    Warning (275081): Converted element name(s) from "outoutsum2[2]" to "outoutsum22"
+    Warning (275081): Converted element name(s) from "outoutsum2[3]" to "outoutsum23"
+    Warning (275081): Converted element name(s) from "outoutsum2[4]" to "outoutsum24"
+    Warning (275081): Converted element name(s) from "outoutsum2[4..0]" to "outoutsum24..0"
+Warning (275008): Primitive "GND" of instance "inst17" not used
+Warning (275008): Primitive "GND" of instance "inst24" not used
+Warning (275008): Primitive "GND" of instance "inst27" not used
+Warning (275008): Primitive "GND" of instance "inst37" not used
+Warning (12125): Using design file rn2_fullcoler.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: rn2_fullcoler File: C:/intelFPGA_lite/20.1/project1/rn2_fullcoler.v Line: 23
+Info (12128): Elaborating entity "rn2_fullcoler" for hierarchy "rnd2_player:inst1|rn2_fullcoler:inst51"
+Info (12128): Elaborating entity "trigger" for hierarchy "rnd2_player:inst1|trigger:inst1113"
+Info (12128): Elaborating entity "Four_bit_Register_v3" for hierarchy "rnd2_player:inst1|Four_bit_Register_v3:inst2021"
+Info (12128): Elaborating entity "mx_2x1" for hierarchy "rnd2_player:inst1|Four_bit_Register_v3:inst2021|mx_2x1:inst4"
+Info (12128): Elaborating entity "b2seg_bus" for hierarchy "rnd2_player:inst1|b2seg_bus:inst1121"
+Warning (275011): Block or symbol "AND2" of instance "inst11" overlaps another block or symbol
+Warning (275011): Block or symbol "OR2" of instance "inst19" overlaps another block or symbol
+Warning (275008): Primitive "NOT" of instance "inst" not used
+Warning (12125): Using design file mx_4bit_2x1.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: mx_4bit_2x1 File: C:/intelFPGA_lite/20.1/project1/mx_4bit_2x1.v Line: 20
+Warning (12300): Found the following files while searching for definition of entity "mx_4bit_2x1", but did not use these files because already using a different file containing the entity definition
+    Warning (12126): File: mx_4bit_2x1.bdf
+Info (12128): Elaborating entity "mx_4bit_2x1" for hierarchy "rnd2_player:inst1|mx_4bit_2x1:inst15"
+Info (12128): Elaborating entity "five_counter" for hierarchy "rnd2_player:inst1|five_counter:inst"
+Warning (275011): Block or symbol "NOT" of instance "inst4" overlaps another block or symbol
+Info (12128): Elaborating entity "BW" for hierarchy "rnd2_player:inst1|BW:ins3333"
+Info (12128): Elaborating entity "week3_3" for hierarchy "rnd2_player:inst1|week3_3:inst371"
+Warning (12125): Using design file week3_1_2.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: week3_1_2 File: C:/intelFPGA_lite/20.1/project1/week3_1_2.v Line: 20
+Warning (12300): Found the following files while searching for definition of entity "week3_1_2", but did not use these files because already using a different file containing the entity definition
+    Warning (12126): File: week3_1_2.bdf
+Info (12128): Elaborating entity "week3_1_2" for hierarchy "rnd2_player:inst1|week3_3:inst371|week3_1_2:inst"
+Info (12128): Elaborating entity "rnd2_ledcontrol" for hierarchy "rnd2_player:inst1|rnd2_ledcontrol:inst13"
+Info (12128): Elaborating entity "four_bit_ripple_carry_adder_v4" for hierarchy "rnd2_player:inst1|four_bit_ripple_carry_adder_v4:inst34"
+Warning (275011): Block or symbol "GND" of instance "inst1" overlaps another block or symbol
+Warning (275011): Block or symbol "GND" of instance "inst6" overlaps another block or symbol
+Info (12128): Elaborating entity "week3_1_4" for hierarchy "rnd2_player:inst1|four_bit_ripple_carry_adder_v4:inst34|week3_1_4:inst4"
+Info (12128): Elaborating entity "week3_1_3" for hierarchy "rnd2_player:inst1|four_bit_ripple_carry_adder_v4:inst34|week3_1_4:inst4|week3_1_3:inst"
+Info (12128): Elaborating entity "four_bit_ripple_carry_adder_v3" for hierarchy "rnd2_player:inst1|four_bit_ripple_carry_adder_v3:inst32"
+Info (12128): Elaborating entity "four_bit_Register_v4" for hierarchy "rnd2_player:inst1|four_bit_Register_v4:inst36"
+Info (12128): Elaborating entity "mapping" for hierarchy "rnd2_player:inst1|mapping:inst456"
+Warning (275011): Block or symbol "NOT" of instance "inst41" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst45" overlaps another block or symbol
+Warning (12125): Using design file four_bit_ripple_carry_adder_v2.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: four_bit_ripple_carry_adder_v2 File: C:/intelFPGA_lite/20.1/project1/four_bit_ripple_carry_adder_v2.v Line: 20
+Warning (12300): Found the following files while searching for definition of entity "four_bit_ripple_carry_adder_v2", but did not use these files because already using a different file containing the entity definition
+    Warning (12126): File: four_bit_ripple_carry_adder_v2.bdf
+Info (12128): Elaborating entity "four_bit_ripple_carry_adder_v2" for hierarchy "rnd2_player:inst1|four_bit_ripple_carry_adder_v2:inst1819"
+Info (12128): Elaborating entity "player_change" for hierarchy "player_change:inst50"
+Info (12128): Elaborating entity "test5" for hierarchy "test5:inst13"
+Warning (275011): Block or symbol "AND2" of instance "inst1112" overlaps another block or symbol
+Warning (275011): Block or symbol "AND2" of instance "inst1114" overlaps another block or symbol
+Warning (275011): Block or symbol "OR2" of instance "inst17" overlaps another block or symbol
+Warning (275085): Found inconsistent dimensions for element "b"
+Warning (275080): Converted elements in bus name "B" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "B[2..0]" to "B2..0"
+    Warning (275081): Converted element name(s) from "B[0]" to "B0"
+    Warning (275081): Converted element name(s) from "B[1]" to "B1"
+    Warning (275081): Converted element name(s) from "B[2]" to "B2"
+Info (12128): Elaborating entity "four_bit_reg_ce" for hierarchy "test5:inst13|four_bit_reg_ce:inst1116"
+Info (12128): Elaborating entity "Decimal_to_binary" for hierarchy "test5:inst13|Decimal_to_binary:inst1115"
+Info (12128): Elaborating entity "sb_calculate" for hierarchy "test5:inst13|sb_calculate:inst8"
+Info (12128): Elaborating entity "two_bit_reg_ce" for hierarchy "test5:inst13|two_bit_reg_ce:inst"
+Info (12128): Elaborating entity "SBO" for hierarchy "test5:inst13|SBO:inst1"
+Warning (10235): Verilog HDL Always Construct warning at SBO.v(75): variable "key2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/20.1/project1/SBO.v Line: 75
+Warning (10235): Verilog HDL Always Construct warning at SBO.v(75): variable "key3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/20.1/project1/SBO.v Line: 75
+Warning (10235): Verilog HDL Always Construct warning at SBO.v(75): variable "key4" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/20.1/project1/SBO.v Line: 75
+Info (12128): Elaborating entity "test4" for hierarchy "test5:inst13|test4:inst11"
+Info (12128): Elaborating entity "com" for hierarchy "test5:inst13|test4:inst11|com:inst14"
+Info (12128): Elaborating entity "con1" for hierarchy "test5:inst13|test4:inst11|con1:inst1"
+Warning (10235): Verilog HDL Always Construct warning at con1.v(76): variable "temprandom" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/20.1/project1/con1.v Line: 76
+Warning (10235): Verilog HDL Always Construct warning at con1.v(80): variable "temprandom" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/20.1/project1/con1.v Line: 80
+Warning (10235): Verilog HDL Always Construct warning at con1.v(88): variable "temprandom" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/20.1/project1/con1.v Line: 88
+Warning (10240): Verilog HDL Always Construct warning at con1.v(50): inferring latch(es) for variable "temprandom", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/20.1/project1/con1.v Line: 50
+Info (10041): Inferred latch for "temprandom[0]" at con1.v(50) File: C:/intelFPGA_lite/20.1/project1/con1.v Line: 50
+Info (10041): Inferred latch for "temprandom[1]" at con1.v(50) File: C:/intelFPGA_lite/20.1/project1/con1.v Line: 50
+Info (10041): Inferred latch for "temprandom[2]" at con1.v(50) File: C:/intelFPGA_lite/20.1/project1/con1.v Line: 50
+Info (10041): Inferred latch for "temprandom[3]" at con1.v(50) File: C:/intelFPGA_lite/20.1/project1/con1.v Line: 50
+Info (12128): Elaborating entity "con2" for hierarchy "test5:inst13|test4:inst11|con2:inst9"
+Warning (10235): Verilog HDL Always Construct warning at con2.v(89): variable "temprandom" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/20.1/project1/con2.v Line: 89
+Warning (10235): Verilog HDL Always Construct warning at con2.v(91): variable "temprandom" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/20.1/project1/con2.v Line: 91
+Warning (10235): Verilog HDL Always Construct warning at con2.v(99): variable "temprandom" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/20.1/project1/con2.v Line: 99
+Warning (10240): Verilog HDL Always Construct warning at con2.v(52): inferring latch(es) for variable "temprandom", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/20.1/project1/con2.v Line: 52
+Info (10041): Inferred latch for "temprandom[0]" at con2.v(52) File: C:/intelFPGA_lite/20.1/project1/con2.v Line: 52
+Info (10041): Inferred latch for "temprandom[1]" at con2.v(52) File: C:/intelFPGA_lite/20.1/project1/con2.v Line: 52
+Info (10041): Inferred latch for "temprandom[2]" at con2.v(52) File: C:/intelFPGA_lite/20.1/project1/con2.v Line: 52
+Info (10041): Inferred latch for "temprandom[3]" at con2.v(52) File: C:/intelFPGA_lite/20.1/project1/con2.v Line: 52
+Info (12128): Elaborating entity "con3" for hierarchy "test5:inst13|test4:inst11|con3:inst13"
+Warning (10235): Verilog HDL Always Construct warning at con3.v(80): variable "temprandom" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/20.1/project1/con3.v Line: 80
+Warning (10235): Verilog HDL Always Construct warning at con3.v(84): variable "temprandom" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/20.1/project1/con3.v Line: 84
+Warning (10235): Verilog HDL Always Construct warning at con3.v(92): variable "temprandom" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/20.1/project1/con3.v Line: 92
+Warning (10240): Verilog HDL Always Construct warning at con3.v(54): inferring latch(es) for variable "temprandom", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/20.1/project1/con3.v Line: 54
+Info (10041): Inferred latch for "temprandom[0]" at con3.v(54) File: C:/intelFPGA_lite/20.1/project1/con3.v Line: 54
+Info (10041): Inferred latch for "temprandom[1]" at con3.v(54) File: C:/intelFPGA_lite/20.1/project1/con3.v Line: 54
+Info (10041): Inferred latch for "temprandom[2]" at con3.v(54) File: C:/intelFPGA_lite/20.1/project1/con3.v Line: 54
+Info (10041): Inferred latch for "temprandom[3]" at con3.v(54) File: C:/intelFPGA_lite/20.1/project1/con3.v Line: 54
+Info (12128): Elaborating entity "con4" for hierarchy "test5:inst13|test4:inst11|con4:inst15"
+Info (12128): Elaborating entity "before_game" for hierarchy "before_game:inst3333"
+Warning (10762): Verilog HDL Case Statement warning at before_game.v(89): can't check case statement for completeness because the case expression has too many possible states File: C:/intelFPGA_lite/20.1/project1/before_game.v Line: 89
+Warning (10762): Verilog HDL Case Statement warning at before_game.v(150): can't check case statement for completeness because the case expression has too many possible states File: C:/intelFPGA_lite/20.1/project1/before_game.v Line: 150
+Info (10264): Verilog HDL Case Statement information at before_game.v(73): all case item expressions in this case statement are onehot File: C:/intelFPGA_lite/20.1/project1/before_game.v Line: 73
+Info (12128): Elaborating entity "final_winner" for hierarchy "final_winner:inst4"
+Warning (10762): Verilog HDL Case Statement warning at final_winner.v(90): can't check case statement for completeness because the case expression has too many possible states File: C:/intelFPGA_lite/20.1/project1/final_winner.v Line: 90
+Warning (10762): Verilog HDL Case Statement warning at final_winner.v(159): can't check case statement for completeness because the case expression has too many possible states File: C:/intelFPGA_lite/20.1/project1/final_winner.v Line: 159
+Info (10264): Verilog HDL Case Statement information at final_winner.v(74): all case item expressions in this case statement are onehot File: C:/intelFPGA_lite/20.1/project1/final_winner.v Line: 74
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "psegb" is stuck at VCC
+    Warning (13410): Pin "psegf" is stuck at GND
+    Warning (13410): Pin "com2" is stuck at VCC
+    Warning (13410): Pin "com3" is stuck at VCC
+    Warning (13410): Pin "com4" is stuck at VCC
+Info (18000): Registers with preset signals will power-up high File: C:/intelFPGA_lite/20.1/project1/before_game.v Line: 5
+Info (17049): 97 registers lost all their fanouts during netlist optimizations.
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "Keypad[10]"
+Info (21057): Implemented 699 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 59 output pins
+    Info (21061): Implemented 622 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 117 warnings
+    Info: Peak virtual memory: 4731 megabytes
+    Info: Processing ended: Thu Dec 23 15:15:30 2021
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:20
+
+
